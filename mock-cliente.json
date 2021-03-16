@@ -13,8 +13,8 @@
         "complemento":"",
         "numero":""
     },
-    "email":""
-
+    "email":"",
+    "senha":""
 }
 
 //Guia
@@ -25,14 +25,15 @@
     "sobrenome":"",
     "rg/cnpj":"",
     "telefone":"",
-    "identificacao":"",
+    "cadastur":"",
     "endereco": {
         "rua":"",
         "bairro":"",
         "cep":"",
         "complemento":"",
         "numero":""
-    }
+    },
+    "senha":""
 }
 
 //passeio
