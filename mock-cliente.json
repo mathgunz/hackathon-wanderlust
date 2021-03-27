@@ -4,14 +4,16 @@
     "id":"",
     "nome":"",
     "sobrenome":"",
-    "rg/cnpj":"",
+    "documento":"",
     "telefone":"",
     "endereco": {
         "rua":"",
         "bairro":"",
         "cep":"",
         "complemento":"",
-        "numero":""
+        "numero":"",
+        "cidade":"",
+        "estado":""
     },
     "email":"",
     "senha":""
@@ -23,15 +25,18 @@
     "id":"",
     "nome":"",
     "sobrenome":"",
-    "rg/cnpj":"",
+    "documento":"",
     "telefone":"",
     "cadastur":"",
+    "email":"",
     "endereco": {
         "rua":"",
         "bairro":"",
         "cep":"",
         "complemento":"",
-        "numero":""
+        "numero":"",
+        "estado":"",
+        "cidade":""
     },
     "senha":""
 }
@@ -41,7 +46,13 @@
 {
     "passeioId":"",
     "guiaId":"",
-    "descricao":""
+    "descricao":"",
+    "nome":"",
+    "inicio":"",
+    "fim":"",
+    "duracao":"",
+    "tipo":"RADICAL, GASTRONOMICO"
+
 }
 
 //passeio agendado
