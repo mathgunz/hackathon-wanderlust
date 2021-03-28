@@ -58,11 +58,18 @@
 //passeio agendado
 
 {
-    "passeioPrincipal":"",
     "guiaId":"",
-    "clienteId":"",
-    "passeio":"",
-    "dataInicio":"",
+    "passeioId":"",
+    "Inicio":"",
+    "fim":"",
     "status":"",
-    "tipo":""
+    "tipo":"FIXO, CUSTIMIZADO",
+    "clientes":""
+}
+
+agenda_cliente
+{
+    "id":"",
+    "passeioAgendadoId":"",
+    "clienteId":""
 }
