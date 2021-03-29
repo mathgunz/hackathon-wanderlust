@@ -1,8 +1,8 @@
-import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { get } from 'node:http';
 import { Agendas, ClientesAgendados } from 'src/entities/agenda.entity';
 import { AgendasService } from './agendas.service';
-import { CreateAgendaDto } from './dtos/agendas.dto';
+import { CreateAgendaDto, FilterAgendasDto } from './dtos/agendas.dto';
 
 @Controller('agendas')
 export class AgendasController {
@@ -13,6 +13,12 @@ export class AgendasController {
     async get(@Param('id') id: number): Promise<Agendas>  {
       return await this.agendasService.get(id);
     }
+
+    @Get()
+    async findAll(@Query() query: FilterAgendasDto): Promise<Agendas[]> {
+      return await this.agendasService.findAll(query);
+    }
+
 
     @Post()
     async create(@Body() createAgendaDto: CreateAgendaDto): Promise<Agendas> {

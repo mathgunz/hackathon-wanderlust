@@ -4,7 +4,7 @@ import { Agendas, ClientesAgendados } from 'src/entities/agenda.entity';
 import { GuiasRepository } from 'src/guias/guias.repository';
 import { PasseiosRepository } from 'src/passeios/passeios.repository';
 import { AgendasRepository, ClientesAgendadosRepository } from './agendas.repository';
-import { CreateAgendaDto } from './dtos/agendas.dto';
+import { CreateAgendaDto, FilterAgendasDto } from './dtos/agendas.dto';
 
 @Injectable()
 export class AgendasService {
@@ -14,6 +14,11 @@ export class AgendasService {
     , private readonly passeiosRepository: PasseiosRepository
     , private readonly clientesRepository: ClientesRepository
     , private readonly clientesAgendadosRepository: ClientesAgendadosRepository) {}
+
+    async findAll(query: FilterAgendasDto): Promise<Agendas[]> {
+      const agendas = await this.agendasRepository.findByFilter(query);
+      return agendas;
+    }
 
     async create(createAgendaDto: CreateAgendaDto): Promise<Agendas> {
 
