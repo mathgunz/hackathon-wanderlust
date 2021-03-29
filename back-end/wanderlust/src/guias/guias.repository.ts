@@ -20,11 +20,13 @@ export class GuiasRepository extends Repository<Guias> {
     async findByFilter(query: FilterGuiasDto): Promise<Guias[]> {
 
       const guias = await this.createQueryBuilder('guias')
-      // .where('email = :emailParameter', {emailParameter: query.email})
+      .leftJoinAndSelect('guias.endereco', 'endereco')
       .orWhere('nome = :nomeParameter', {nomeParameter: query.nome})
       .orWhere('sobrenome = :sobrenomeParameter', {sobrenomeParameter: query.sobrenome})
       .orWhere('email = :emailParameter', {emailParameter: query.email})
       .orWhere('cadastur = :cadasturParameter', {cadasturParameter: query.cadastur})
+      .orWhere('endereco.cidade like :cidade', {cidade: `%${query.cidade}%`})
+      .orWhere('endereco.estado like :estado', {estado: `%${query.estado}%`})
       .getMany();
 
       return guias;
