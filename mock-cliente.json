@@ -67,9 +67,32 @@
     "clientes":""
 }
 
-agenda_cliente
+//agenda_cliente
 {
     "id":"",
     "passeioAgendadoId":"",
     "clienteId":""
+}
+
+
+//mock
+
+POST
+
+login/clientes
+
+{
+    "email":"",
+    "senha":""
+}
+
+
+
+POST
+
+login/guias
+
+{
+    "email":"",
+    "senha":""
 }
