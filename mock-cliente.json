@@ -44,13 +44,22 @@
 //passeio
 
 {
-    "passeioId":"",
+    "id":"",
     "guiaId":"",
     "descricao":"",
     "nome":"",
     "inicio":"",
     "fim":"",
     "duracao":"",
+    "endereco": {
+        "rua":"",
+        "bairro":"",
+        "cep":"",
+        "complemento":"",
+        "numero":"",
+        "estado":"",
+        "cidade":""
+    },
     "tipo":"RADICAL, GASTRONOMICO"
 
 }

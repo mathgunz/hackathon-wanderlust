@@ -29,4 +29,7 @@ export class UpdateAgendaDto extends CreateAgendaDto {}
 
 export class FilterAgendasDto {
 
+    @IsNumber()
+    guiaId: number;
+
 }

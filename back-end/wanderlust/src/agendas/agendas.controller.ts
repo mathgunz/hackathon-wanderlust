@@ -19,7 +19,6 @@ export class AgendasController {
       return await this.agendasService.findAll(query);
     }
 
-
     @Post()
     async create(@Body() createAgendaDto: CreateAgendaDto): Promise<Agendas> {
       return await this.agendasService.create(createAgendaDto);    
