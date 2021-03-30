@@ -21,13 +21,13 @@
     .header-bottom{
         // // mobile menu show
         @media #{$md}{
-            padding: 15px 0;
+            padding: 10px 0;
          }
         @media #{$sm}{
-            padding: 15px 0;
+            padding: 10px 0;
          }
         @media #{$xs}{
-            padding: 15px 0;
+            padding: 10px 0;
          }
     }
 }
@@ -188,7 +188,7 @@
 
 // header Sticky Responsive
 .header-sticky ul li a {
-	padding: 10px 19px;
+	padding: 5px 14px;
 }
 
 .header-sticky.sticky-bar.sticky .main-menu ul>li>a {

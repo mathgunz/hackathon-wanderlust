@@ -10,14 +10,14 @@
             }
         }
         .place-cap{
-            padding:28px 40px;
+            padding:16px 28px;
             border: 1px solid #f0f1f2;
             border-top: 0;
             @media #{$lg}{
-                padding: 28px 18px;
+                padding: 18px 8px;
             }
             @media #{$xs}{
-                padding: 28px 18px;
+                padding: 18px 8px;
             }
             .place-cap-top{
                 border-bottom: 1px solid#f6f7f7;

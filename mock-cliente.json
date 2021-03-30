@@ -4,17 +4,19 @@
     "id":"",
     "nome":"",
     "sobrenome":"",
-    "rg/cnpj":"",
+    "documento":"",
     "telefone":"",
     "endereco": {
         "rua":"",
         "bairro":"",
         "cep":"",
         "complemento":"",
-        "numero":""
+        "numero":"",
+        "cidade":"",
+        "estado":""
     },
-    "email":""
-
+    "email":"",
+    "senha":""
 }
 
 //Guia
@@ -23,34 +25,83 @@
     "id":"",
     "nome":"",
     "sobrenome":"",
-    "rg/cnpj":"",
+    "documento":"",
     "telefone":"",
-    "identificacao":"",
+    "cadastur":"",
+    "email":"",
     "endereco": {
         "rua":"",
         "bairro":"",
         "cep":"",
         "complemento":"",
-        "numero":""
-    }
+        "numero":"",
+        "estado":"",
+        "cidade":""
+    },
+    "senha":""
 }
 
 //passeio
 
 {
-    "passeioId":"",
+    "id":"",
     "guiaId":"",
-    "descricao":""
+    "descricao":"",
+    "nome":"",
+    "inicio":"",
+    "fim":"",
+    "duracao":"",
+    "endereco": {
+        "rua":"",
+        "bairro":"",
+        "cep":"",
+        "complemento":"",
+        "numero":"",
+        "estado":"",
+        "cidade":""
+    },
+    "tipo":"RADICAL, GASTRONOMICO"
+
 }
 
 //passeio agendado
 
 {
-    "passeioPrincipal":"",
     "guiaId":"",
-    "clienteId":"",
-    "passeio":"",
-    "dataInicio":"",
+    "passeioId":"",
+    "Inicio":"",
+    "fim":"",
     "status":"",
-    "tipo":""
+    "tipo":"FIXO, CUSTIMIZADO",
+    "clientes":""
+}
+
+//agenda_cliente
+{
+    "id":"",
+    "passeioAgendadoId":"",
+    "clienteId":""
+}
+
+
+//mock
+
+POST
+
+login/clientes
+
+{
+    "email":"",
+    "senha":""
+}
+
+
+
+POST
+
+login/guias
+
+{
+    "email":"",
+    "senha":""
 }
