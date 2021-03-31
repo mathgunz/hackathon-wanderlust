@@ -2,10 +2,10 @@ version: '3.3'
 
 services:
 
-  postgres-fiap-final:
-    image: mathgunz16/postgres-fiap-final-image:latest
+  wanderlust-postgres:
+    image: mathgunz16/wanderlust-postgres:latest
     restart: always
-    container_name: postgres-fiap-final
+    container_name: wanderlust-postgres
     ports:
       - 5432:5432
     environment:
@@ -14,17 +14,13 @@ services:
       - backend
 
   wanderlust:
-    image: mathgunz16/wanderlust_v1:latest
+    image: mathgunz16/wanderlust:latest
     ports:
       - 3000:3000
     depends_on:
-      - postgres-fiap-final
+      - wanderlust-postgres
     networks:
       - backend
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-fiap-final:5432/postgres
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=1234
 
 networks:
   backend:

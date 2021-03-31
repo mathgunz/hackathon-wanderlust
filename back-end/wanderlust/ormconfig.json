@@ -1,0 +1,13 @@
+
+{
+    "schema": "wanderlust", 
+    "type": "postgres",
+    "host": "wanderlust-postgres",
+    "port": 5432,
+    "username": "postgres",
+    "password": "1234",
+    "database": "postgres",
+    "entities": ["dist/**/*.entity{.ts,.js}"],
+    "synchronize": true,
+    "autoLoadEntities": true
+  }
