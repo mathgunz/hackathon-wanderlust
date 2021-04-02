@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Cadastro Passeio</title>
+    <title>Contratação Personalizado</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="manifest" href="site.webmanifest"> -->
@@ -103,7 +103,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap text-center">
-                        <h2>Cadastro Passeios</h2>
+                        <h2>Contratação Personalizado</h2>
                     </div>
                 </div>
             </div>
@@ -117,39 +117,31 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-tittle text-center">
-                    <h1>Vamos realizar o sonho de mais um Wanderlusteiro(a)?</h1>
+                    <h1>Vamos realizar o sonho de mais um Wanderlusteiro?</h1>
                 </div>
             </div>
-
                     </div>
                     <div class="single-post">
                         <div class="blog_details" align="left">
-
-                            <p><i class="fa fa-user"></i> Id do Guia: <output name="guia">40300</output></p>
-                            <p><i class="fa fa-user"></i> Nome do Cliente: <input name="nomeCliente"></input></p>
-                            <p><i class="fa fa-location-arrow"></i> Descrição dos Passeios:
-                            <div class="form-group">
-                                <input class="form-control valid" name="descricaoPasseio" id="descricaoPasseio" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = ''" placeholder="">
-                            </div>
-                            <p><i class="fa fa-calendar"></i> Data Inicial: <input name="data"></input></p>
-                            <p><i class="fa fa-calendar"></i> Data Final: <input name="data"></input></p>
-                            <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração(Horas): <input name="duracao"></input></p>
-
-                            <p><i class="fa fa-location-arrow"></i> Ponto de Encontro: </p>
+                            <h2>Informações da contratação:</h2>
+                            <p><i class="fa fa-map-marker"></i> Descrever os Passeios
                             <div class="form-group">
                                 <input class="form-control valid" name="endereco" id="endereco" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Informe o local de encontro. Ex: Pousada Maria Bonita'" placeholder="Informe o local de encontro. Ex: Pousada Maria Bonita">
                             </div>
-                            <p><i class="fa fa-map"></i> Tipo de Passeio (Fixo/Personalizado): <input name="tipoPasseio"></input></p>
-                            <p><i class="fa fa-map"></i> Tipo (Radical/Gastronômico e etc): <input name="tipoPasseio"></input></p>
+                            <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração: <input name="duracao"></input></p>
+                            <p><i class="fa fa-calendar"></i> Data: <input name="data"></input></p>
                             <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor: R$ <input name="valor"></input></p>
+                            <p><i class="fa fa-user"></i> Cliente: <input name="cliente"></input></p>
+                            <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Personalizado</output></p>
                         </div>
                     </div>
                 </div>
             </form>
             <form class="col-lg-9 col-md-12" method="post">
                 <div class="col-lg-12" align="center">
+
                         <div class="col-lg-6 col-md-12 col-10 nav-right flex-row d-flex justify-content-end align-items-center">
-                            <button onclick="cadastrar()" type="submit" class="button button-contactForm boxed-btn">Cadastrar</button>
+                            <button onclick="contratar()" type="submit" class="button button-contactForm boxed-btn">Enviar Aprovação</button>
                         </div>
                     </div>
                 </div>
