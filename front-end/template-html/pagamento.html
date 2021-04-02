@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Contratação</title>
+    <title>Pagamento</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
@@ -37,7 +39,7 @@
         </div>
     </div>
 </div>
-<!-- Preloader Start-->
+<!-- Preloader Start -->
 <header>
     <!-- Header Start -->
     <div class="header-area">
@@ -95,6 +97,7 @@
             </div>
         </div>
     </div>
+
     <!-- Header End -->
 </header>
 <!-- slider Area Start-->
@@ -105,7 +108,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap text-center">
-                        <h2>Contratação</h2>
+                        <h2>Pagamento</h2>
                     </div>
                 </div>
             </div>
@@ -113,64 +116,67 @@
     </div>
 </div>
 <!-- slider Area End-->
-<!--================Blog Area =================-->
-<section class="blog_area single-post-area section-padding">
+<!-- ================ contact section start ================= -->
+<section class="contact-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-tittle text-center">
                     <span>Wanderlusteiro(a)</span>
-                    <h2>Confira as informações do seu passeio</h2>
+                    <h2>Informe os dados para pagamento</h2>
                 </div>
             </div>
-            <form class="col-lg-12" method="get">
-                <div class="col-lg-12" align="center">
-                    <div class="section-top-border">
-                        <h2><output name="cidade">Jericoacoara - Ceará</output></h2>
-                        <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                            <div class="founder-img">
-                                <img src="assets/img/testmonial/guia7.jpg" alt="">
+            <div class="col-lg-12">
+                <form method="post" id="pagamento" novalidate="novalidate">
+                    <div class="row">
+
+                        <div class="col-lg-6 offset-lg-12">
+                            <div class="form-group">
+                                <p><i class="fa fa-address-card" aria-hidden="true"></i> Nome Titular
+                                    <input class="form-control" name="nome" id="nome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escreva o nome que encontra-se no cartão'" placeholder="Escreva o nome que encontra-se no cartão">
+                                </p>
                             </div>
-                            <div class="section-tittle text-center">
-                                <div class="founder-text founder-text2">
-                                    <span><output name="guia">Maria Tereza Buarque</output></span>
-                                    <p>Nº Cadastur: <output name="cadastur">147852</output></p>
-                                </div>
+                        </div>
+                        <div class="col-lg-6 offset-lg-12">
+                            <div class="form-group">
+                                <p><i class="fa fa-address-card" aria-hidden="true"></i> CPF/CNPJ
+                                    <input class="form-control" name="cpf" id="cpf" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'CPF/CNPJ'" placeholder="CPF/CNPJ">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 offset-lg-12">
+                            <div class="form-group">
+                                <p><i class="fa fa-credit-card" aria-hidden="true"></i> Nr. Cartão
+                                    <input class="form-control" name="nrCartao" id="nrCartao" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Informe o numero do seu cartão'" placeholder="Informe o numero do seu cartão">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 offset-lg-12">
+                            <div class="form-group">
+                                <p><i class="fa fa-credit-card" aria-hidden="true"></i> CVV
+                                    <input class="form-control" name="cvv" id="cvv" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = '000'" placeholder="000">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-12 offset-lg-12">
+                            <div class="form-group">
+                                <p><i class="fa fa-calendar" aria-hidden="true"></i> Data Validade
+                                    <input class="form-control" name="data" id="data" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'MM/AA'" placeholder="MM/AA">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-12 offset-lg-12">
+                            <div class="form-group">
+                                <p><i class="fa fa-info" aria-hidden="true"></i> Valor: R$ <output name="valor"> 310,00</output></p>
                             </div>
                         </div>
 
-                    </div>
-                    <div class="single-post">
-                        <div class="blog_details" align="left">
-                            <h2>Informações da contratação:</h2>
-                            <p><i class="fa fa-map-marker"></i> Passeio Contratado: <output name="descricao">Lado Leste - Pedra Furada, Buraco Azul, Lagoa do Paraíso, Dunas do Pôr do Sol e Árvore da Preguiça</output></p>
-                            <p><i class="fa fa-user"></i> Guia contratado(a): <output name="guia">Maria Tereza Buarque</output></p>
-                            <p><i class="fa fa-calendar"></i> Data: <output name="data">25/04/2021</output></p>
-                            <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração: <output name="duracao">8hrs</output></p>
-                            <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Sol e Praia</output></p>
-                            <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Fixo</output></p>
-                            <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor: R$ <output name="valor"> 310,00</output></p>
-                            <p><i class="fa fa-location-arrow"></i> Ponto de Encontro
-                            <div class="form-group">
-                                <input class="form-control valid" name="endereco" id="endereco" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Informe o local de encontro. Ex: Pousada Maria Bonita'" placeholder="Informe o local de encontro. Ex: Pousada Maria Bonita">
-                            </div>
+                        <div class="col-lg-12 col-md-4 offset-lg-12" align="center">
+                            <button type="submit" class="button button-contactForm boxed-btn" onclick="pagar()">Pagar</button>
                         </div>
                     </div>
-                </div>
-            </form>
-            <form class="col-lg-12 col-md-12" method="post">
-                <div class="col-lg-12" align="center">
-                    <div class="col-lg-6 col-md-12 col-10 nav-left flex-row d-flex justify-content-start align-items-center">
-                        <button onclick="chat()" class="button button-contactForm boxed-btn">Chat com Guia</button>
-                        <div class="col-lg-6 col-md-12 col-10 nav-right flex-row d-flex justify-content-end align-items-center">
-                            <button onclick="contratar()" type="submit" class="button button-contactForm boxed-btn">Contratar</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-
 </section>
 <!-- ================ contact section end ================= -->
 
@@ -193,8 +199,9 @@
             </div>
         </div>
     </div>
+    <!-- Footer End-->
 </footer>
-<!-- Footer End-->
+
 <!-- JS here -->
 
 <!-- All JS Custom Plugins Link Here here -->
@@ -210,17 +217,16 @@
 <!-- Jquery Slick , Owl-Carousel Plugins -->
 <script src="./assets/js/owl.carousel.min.js"></script>
 <script src="./assets/js/slick.min.js"></script>
-<!-- Date Picker -->
-<script src="./assets/js/gijgo.min.js"></script>
+
 <!-- One Page, Animated-HeadLin -->
 <script src="./assets/js/wow.min.js"></script>
 <script src="./assets/js/animated.headline.js"></script>
-<script src="./assets/js/jquery.magnific-popup.js"></script>
 
 <!-- Scrollup, nice-select, sticky -->
 <script src="./assets/js/jquery.scrollUp.min.js"></script>
 <script src="./assets/js/jquery.nice-select.min.js"></script>
 <script src="./assets/js/jquery.sticky.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
 
 <!-- contact js -->
 <script src="./assets/js/contact.js"></script>
@@ -234,4 +240,5 @@
 <script src="./assets/js/main.js"></script>
 
 </body>
+
 </html>
