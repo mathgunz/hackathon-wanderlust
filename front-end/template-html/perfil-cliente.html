@@ -77,12 +77,10 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="#">Busca de Guias</a></li>
-                                        <li><a href="passeios.html">Passeios</a></li>
+                                        <li><a href="index.html">Busca de Guias</a></li>
+                                        <li><a href="passeios.html">Meus Passeios</a></li>
                                         <li><a href="notificacoes.html">Notificações</a></li>
                                         <li><a href="contact.html">Contato</a></li>
-                                        <li><a href="ajuda.html">Ajuda</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -120,56 +118,47 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-tittle text-center">
-                    <span>Olá, Thais</span>
-                    <h2>Editar Dados Pessoais</h2>
+                    <span>Hey, Wanderlusteiro(as)</span>
+                    <h2>Minhas Infos </h2>
                 </div>
-                <form  method="post" id="cadastroCliente" novalidate="novalidate">
+                <form  method="post" id="perfil" novalidate="novalidate">
                     <div class="col-lg-12" align="text-center">
                         <div class="row">
                             <div class="col-lg-6 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-address-card" aria-hidden="true"></i> Nome
-                                        <input class="form-control w-100" name="nome" id="nome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'" placeholder=" Thais">
+                                        <output class="form-control w-100" name="nome" id="nome"></output>
                                 </div>
                             </div>
                             <div class="col-lg-6 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-address-card" aria-hidden="true"></i> Sobrenome
-                                        <input class="form-control w-100" name="sobrenome" id="sobrenome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sobrenome'" placeholder=" Lisboa">
+                                        <output class="form-control w-100" name="sobrenome" id="sobrenome"></output>
                                 </div>
                             </div>
                             <div class="col-md-4 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-birthday-cake" aria-hidden="true"></i> Data Nascimento
-                                        <input class="form-control" name="dataNasc" id="dataNasc" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'DD/MM/AAAA'" placeholder="20/07/1990">
+                                        <output class="form-control" name="dataNasc" id="dataNasc"></output>
                                 </div>
                             </div>
                             <div class="col-md-4 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade
-                                        <input class="form-control" name="cidade" id="cidade" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Cidade'" placeholder="São Paulo">
+                                        <output class="form-control" name="cidade" id="cidade"></output>
                                 </div>
                             </div>
                             <div class="col-md-4 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-phone" aria-hidden="true"></i> Telefone
-                                        <input class="form-control" name="telefone" id="telefone" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telefone'" placeholder="11-964566377">
+                                        <output class="form-control" name="telefone" id="telefone"></output>
                                 </div>
                             </div>
-                            <div class="col-lg-6 offset-lg-12">
+                            <div class="col-lg-12 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-envelope" aria-hidden="true"></i> E-mail
-                                        <input class="form-control w-100" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" placeholder="thais@gmail.com.br">
+                                        <output class="form-control w-100" name="email" id="email"></output>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-key" aria-hidden="true"></i> Senha
-                                        <input class="form-control w-100" name="password" id="password" type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'" placeholder=" Password">
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-4 offset-lg-12" align="center">
-                                <button type="submit" class="button button-contactForm boxed-btn" onclick="cadastrarCliente()">Salvar</button>
                             </div>
                         </div>
                     </div>

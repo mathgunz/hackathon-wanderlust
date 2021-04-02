@@ -5,7 +5,9 @@
     "nome":"",
     "sobrenome":"",
     "dataNascimento":"",
-    "cidade":"",
+    "endereco": {
+        "cidade":""
+    },
     "telefone":"",
     "email":"",
     "senha":""
