@@ -4,17 +4,9 @@
     "id":"",
     "nome":"",
     "sobrenome":"",
-    "documento":"",
+    "dataNascimento":"",
+    "cidade":"",
     "telefone":"",
-    "endereco": {
-        "rua":"",
-        "bairro":"",
-        "cep":"",
-        "complemento":"",
-        "numero":"",
-        "cidade":"",
-        "estado":""
-    },
     "email":"",
     "senha":""
 }
@@ -25,19 +17,14 @@
     "id":"",
     "nome":"",
     "sobrenome":"",
-    "documento":"",
+    "endereco": {
+        "rua":"",
+        "cidade":""
+    },
+    "dataNascimento":"",
     "telefone":"",
     "cadastur":"",
     "email":"",
-    "endereco": {
-        "rua":"",
-        "bairro":"",
-        "cep":"",
-        "complemento":"",
-        "numero":"",
-        "estado":"",
-        "cidade":""
-    },
     "senha":""
 }
 
