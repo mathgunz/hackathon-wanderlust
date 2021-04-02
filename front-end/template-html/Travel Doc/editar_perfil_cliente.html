@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Passeios</title>
+    <title>Editar Perfil</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-
 <body>
 <!-- Preloader Start -->
 <div id="preloader-active">
@@ -39,7 +38,7 @@
         </div>
     </div>
 </div>
-<!-- Preloader Start-->
+<!-- Preloader Start -->
 <header>
     <!-- Header Start -->
     <div class="header-area">
@@ -49,8 +48,6 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-8">
                             <div class="header-info-left">
-                                <ul>
-                                </ul>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -81,7 +78,8 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="index.html">Home</a></li>
-                                        <li><a href="editar_perfil_cliente.html">Perfil</a></li>
+                                        <li><a href="#">Busca de Guias</a></li>
+                                        <li><a href="passeios.html">Passeios</a></li>
                                         <li><a href="notificacoes.html">Notificações</a></li>
                                         <li><a href="contact.html">Contato</a></li>
                                         <li><a href="ajuda.html">Ajuda</a></li>
@@ -100,7 +98,6 @@
     </div>
     <!-- Header End -->
 </header>
-
 <!-- slider Area Start-->
 <div class="slider-area ">
     <!-- Mobile Menu -->
@@ -109,7 +106,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap text-center">
-                        <h2>Meus Passeios</h2>
+                        <h2>Perfil</h2>
                     </div>
                 </div>
             </div>
@@ -117,71 +114,72 @@
     </div>
 </div>
 <!-- slider Area End-->
-<!--================passeios Area =================-->
-<section class="blog_area section-padding">
+<!-- ================ contact section start ================= -->
+<section class="contact-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-tittle text-center">
-                    <span>Wanderlusteiro(a)</span>
-                    <h2>Divirta-se com suas viagens!</h2>
+                    <span>Olá, Thais</span>
+                    <h2>Editar Dados Pessoais</h2>
                 </div>
-            </div>
-        </div>
-        <form method="get">
-            <div class="row">
-                <div class="col-lg-8 mb-5 mb-lg-0">
-                    <div class="blog_left_sidebar">
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/jeri.jpg" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3><output name="dia">25</output></h3>
-                                    <p><output name="mes">Abr</output></p>
-                                </a>
+                <form  method="post" id="cadastroCliente" novalidate="novalidate">
+                    <div class="col-lg-12" align="text-center">
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-address-card" aria-hidden="true"></i> Nome
+                                        <input class="form-control w-100" name="nome" id="nome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'" placeholder=" Thais">
+                                </div>
                             </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="detalhe-passeios.html">
-                                    <h2><output name="cidade">Jericoacoara - Ceará</output></h2>
-                                </a>
-                                <p><i class="fa fa-calendar"></i> Data: <output name="data">25/04/2021</output></p>
-                                <p><i class="fa fa-user"></i> Guia contratado(a): <output name="guia">Maria Tereza Buarque</output></p>
-                                <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Fixo</output></p>
+                            <div class="col-lg-6 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-address-card" aria-hidden="true"></i> Sobrenome
+                                        <input class="form-control w-100" name="sobrenome" id="sobrenome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sobrenome'" placeholder=" Lisboa">
+                                </div>
                             </div>
-                        </article>
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/chapada-das-mesas.jpg" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3><output name="dia">10</output></h3>
-                                    <p><output name="mes">Out</output></p>
-                                </a>
+                            <div class="col-md-4 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-birthday-cake" aria-hidden="true"></i> Data Nascimento
+                                        <input class="form-control" name="dataNasc" id="dataNasc" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'DD/MM/AAAA'" placeholder="20/07/1990">
+                                </div>
                             </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="detalhe-passeios.html">
-                                    <h2><output name="cidade">Chapada das Mesas - Maranhão</output></h2>
-                                </a>
-                                <p><i class="fa fa-calendar"></i> Data:<output name="data"> 10/10/2021</output></p>
-                                <p><i class="fa fa-user"></i> Guia contratado: <output name="guia">Pablo de Oliveira</output></p>
-                                <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Personalizado</output></p>
+                            <div class="col-md-4 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade
+                                        <input class="form-control" name="cidade" id="cidade" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Cidade'" placeholder="São Paulo">
+                                </div>
                             </div>
-                        </article>
+                            <div class="col-md-4 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                        <input class="form-control" name="telefone" id="telefone" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telefone'" placeholder="11-964566377">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                        <input class="form-control w-100" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" placeholder="thais@gmail.com.br">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-key" aria-hidden="true"></i> Senha
+                                        <input class="form-control w-100" name="password" id="password" type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'" placeholder=" Password">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-4 offset-lg-12" align="center">
+                                <button type="submit" class="button button-contactForm boxed-btn" onclick="cadastrarCliente()">Salvar</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
-        </form>
-        <div class="col-lg-8 mb-5 mb-lg-0">
-            <a href="passeios-anteriores.html">
-                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                        type="submit">Antigas Trips</button>
-            </a>
         </div>
     </div>
 </section>
 <!-- ================ contact section end ================= -->
+
 <footer>
     <!-- Footer Start-->
     <div class="footer-area">
@@ -201,8 +199,8 @@
             </div>
         </div>
     </div>
+    <!-- Footer End-->
 </footer>
-<!-- Footer End-->
 
 <!-- JS here -->
 
@@ -242,4 +240,5 @@
 <script src="./assets/js/main.js"></script>
 
 </body>
+
 </html>
