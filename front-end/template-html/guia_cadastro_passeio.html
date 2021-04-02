@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Contratação</title>
+    <title>Cadastro Passeio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="manifest" href="site.webmanifest"> -->
@@ -78,10 +78,9 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">Busca de Guias</a></li>
                                         <li><a href="passeios.html">Minhas Viagens</a></li>
                                         <li><a href="perfil.html">Perfil</a></li>
-                                        <li><a href="contact.html">Help!</a></li>
+                                        <li><a href="contact.html">Contato</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -105,7 +104,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap text-center">
-                        <h2>Contratação</h2>
+                        <h2>Cadastro Passeios</h2>
                     </div>
                 </div>
             </div>
@@ -119,51 +118,40 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-tittle text-center">
-                    <span>Wanderlusteiro(a)</span>
-                    <h2>Confira as informações do seu passeio</h2>
+                    <h2>Vamos registrar o passeio do próximo aventureiro?</h2>
                 </div>
             </div>
-            <form class="col-lg-12" method="get">
-                <div class="col-lg-12" align="center">
-                    <div class="section-top-border">
-                        <h2><output name="cidade">Jericoacoara - Ceará</output></h2>
-                        <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                            <div class="founder-img">
-                                <img src="assets/img/testmonial/guia7.jpg" alt="">
-                            </div>
-                            <div class="section-tittle text-center">
-                                <div class="founder-text founder-text2">
-                                    <span><output name="guia">Maria Tereza Buarque</output></span>
-                                    <p>Nº Cadastur: <output name="cadastur">147852</output></p>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                     <div class="single-post">
                         <div class="blog_details" align="left">
-                            <h2>Informações da contratação:</h2>
-                            <p><i class="fa fa-map-marker"></i> Passeio Contratado: <output name="descricao">Lado Leste - Pedra Furada, Buraco Azul, Lagoa do Paraíso, Dunas do Pôr do Sol e Árvore da Preguiça</output></p>
-                            <p><i class="fa fa-user"></i> Guia contratado(a): <output name="guia">Maria Tereza Buarque</output></p>
-                            <p><i class="fa fa-calendar"></i> Data: <output name="data">25/04/2021</output></p>
-                            <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração: <output name="duracao">8hrs</output></p>
-                            <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Sol e Praia</output></p>
-                            <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Fixo</output></p>
-                            <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor: R$ <output name="valor"> 310,00</output></p>
-                            <p><i class="fa fa-location-arrow"></i> Ponto de Encontro
+                            <h2>Informações:</h2>
+
+                            <p><i class="fa fa-user"></i> Id do Guia: <output name="guia">40300</output></p>
+                            <p><i class="fa fa-user"></i> Nome do Cliente: <input name="nomeCliente"></input></p>
+                            <p><i class="fa fa-location-arrow"></i> Descrição dos Passeios:
+                            <div class="form-group">
+                                <input class="form-control valid" name="descricaoPasseio" id="descricaoPasseio" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = ''" placeholder="">
+                            </div>
+                            <p><i class="fa fa-calendar"></i> Data Inicial: <input name="data"></input></p>
+                            <p><i class="fa fa-calendar"></i> Data Final: <input name="data"></input></p>
+                            <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração(Horas): <input name="duracao"></input></p>
+
+                            <p><i class="fa fa-location-arrow"></i> Ponto de Encontro: </p>
                             <div class="form-group">
                                 <input class="form-control valid" name="endereco" id="endereco" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Informe o local de encontro. Ex: Pousada Maria Bonita'" placeholder="Informe o local de encontro. Ex: Pousada Maria Bonita">
                             </div>
+                            <p><i class="fa fa-map"></i> Tipo de Passeio (Fixo/Personalizado): <input name="tipoPasseio"></input></p>
+                            <p><i class="fa fa-map"></i> Tipo (Radical/Gastronômico e etc): <input name="tipoPasseio"></input></p>
+                            <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor: R$ <input name="valor"></input></p>
                         </div>
                     </div>
                 </div>
             </form>
-            <form class="col-lg-12 col-md-12" method="post">
+            <form class="col-lg-9 col-md-12" method="post">
                 <div class="col-lg-12" align="center">
-                    <div class="col-lg-6 col-md-12 col-10 nav-left flex-row d-flex justify-content-start align-items-center">
-                        <button onclick="chat()" class="button button-contactForm boxed-btn">Chat com Guia</button>
                         <div class="col-lg-6 col-md-12 col-10 nav-right flex-row d-flex justify-content-end align-items-center">
-                            <button onclick="contratar()" type="submit" class="button button-contactForm boxed-btn">Contratar</button>
+                            <button onclick="cadastrar()" type="submit" class="button button-contactForm boxed-btn">Cadastrar</button>
                         </div>
                     </div>
                 </div>
