@@ -1,31 +1,28 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Meus Dados</title>
+    <title>Home Guia </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
+
 <body>
 <!-- Preloader Start -->
 <div id="preloader-active">
@@ -48,6 +45,8 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-8">
                             <div class="header-info-left">
+                                <ul>
+                                </ul>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -69,7 +68,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/wanderlust-logo.png" alt=""></a>
+                                <a href="home-guia.html"><img src="assets/img/logo/wanderlust-logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -77,9 +76,7 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">Busca de Guias</a></li>
-                                        <li><a href="passeios.html">Meus Passeios</a></li>
-                                        <li><a href="notificacoes.html">Notificações</a></li>
+                                        <li><a href="perfil-guia.html">Perfil</a></li>
                                         <li><a href="contact.html">Contato</a></li>
                                     </ul>
                                 </nav>
@@ -96,79 +93,99 @@
     </div>
     <!-- Header End -->
 </header>
-<!-- slider Area Start-->
-<div class="slider-area ">
-    <!-- Mobile Menu -->
-    <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/contact_hero.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="hero-cap text-center">
-                        <h2>Perfil</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- slider Area End-->
-<!-- ================ contact section start ================= -->
-<section class="contact-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-tittle text-center">
-                    <span>Hey, Wanderlusteiro(a)</span>
-                    <h2>Minhas Infos </h2>
-                </div>
-                <form  method="post" id="perfil" novalidate="novalidate">
-                    <div class="col-lg-12" align="text-center">
-                        <div class="row">
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-address-card" aria-hidden="true"></i> Nome
-                                        <output class="form-control w-100" name="nome" id="nome"></output>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-address-card" aria-hidden="true"></i> Sobrenome
-                                        <output class="form-control w-100" name="sobrenome" id="sobrenome"></output>
-                                </div>
-                            </div>
-                            <div class="col-md-4 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-birthday-cake" aria-hidden="true"></i> Data Nascimento
-                                        <output class="form-control" name="dataNasc" id="dataNasc"></output>
-                                </div>
-                            </div>
-                            <div class="col-md-4 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade
-                                        <output class="form-control" name="cidade" id="cidade"></output>
-                                </div>
-                            </div>
-                            <div class="col-md-4 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-phone" aria-hidden="true"></i> Telefone
-                                        <output class="form-control" name="telefone" id="telefone"></output>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-envelope" aria-hidden="true"></i> E-mail
-                                        <output class="form-control w-100" name="email" id="email"></output>
-                                </div>
+<main>
+    <!-- slider Area Start-->
+    <div class="slider-area ">
+        <!-- Mobile Menu -->
+        <div class="slider-active">
+            <div class="single-slider hero-overly  slider-height d-flex align-items-center" data-background="assets/img/hero/h1_hero.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-9 col-md-9" align="center">
+                            <div class="hero__caption">
+                                <h1>Bem vindo <span>Guia!</span> </h1>
+                                <p>Torne a viagem de um Wanderlusteiro incrível!</p>
                             </div>
                         </div>
                     </div>
-                </form>
+                    <!-- Search Box -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <!-- form -->
+                            <form action="#" class="search-box">
+                                <div class="input-form mb-30">
+                                    <input type="text" placeholder="When Would you like to go ?">
+                                </div>
+                                <div class="select-form mb-30">
+                                    <div class="select-itms">
+                                        <select name="select" id="select1">
+                                            <option value="">When</option>
+                                            <option value="">Services-1</option>
+                                            <option value="">Services-2</option>
+                                            <option value="">Services-3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-form mb-30">
+                                    <a href="#">Search</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
-<!-- ================ contact section end ================= -->
-
+    <!-- slider Area End-->
+    <!-- Our Services Start -->
+    <div class="our-services servic-padding">
+        <div class="container">
+            <div class="row d-flex justify-contnet-center">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                    <div class="single-services text-center mb-30">
+                        <div class="services-ion">
+                            <span class="flaticon-tour"></span>
+                        </div>
+                        <div class="services-cap">
+                            <h5>8000+ Our Local<br>Guides</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                    <div class="single-services text-center mb-30">
+                        <div class="services-ion">
+                            <span class="flaticon-pay"></span>
+                        </div>
+                        <div class="services-cap">
+                            <h5>100% Trusted Tour<br>Agency</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                    <div class="single-services text-center mb-30">
+                        <div class="services-ion">
+                            <span class="flaticon-experience"></span>
+                        </div>
+                        <div class="services-cap">
+                            <h5>28+ Years of Travel<br>Experience</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                    <div class="single-services text-center mb-30">
+                        <div class="services-ion">
+                            <span class="flaticon-good"></span>
+                        </div>
+                        <div class="services-cap">
+                            <h5>98% Our Travelers<br>are Happy</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Services End -->
+</main>
 <footer>
     <!-- Footer Start-->
     <div class="footer-area">
@@ -206,16 +223,15 @@
 <!-- Jquery Slick , Owl-Carousel Plugins -->
 <script src="./assets/js/owl.carousel.min.js"></script>
 <script src="./assets/js/slick.min.js"></script>
-
 <!-- One Page, Animated-HeadLin -->
 <script src="./assets/js/wow.min.js"></script>
 <script src="./assets/js/animated.headline.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
 
 <!-- Scrollup, nice-select, sticky -->
 <script src="./assets/js/jquery.scrollUp.min.js"></script>
 <script src="./assets/js/jquery.nice-select.min.js"></script>
 <script src="./assets/js/jquery.sticky.js"></script>
-<script src="./assets/js/jquery.magnific-popup.js"></script>
 
 <!-- contact js -->
 <script src="./assets/js/contact.js"></script>
@@ -229,5 +245,4 @@
 <script src="./assets/js/main.js"></script>
 
 </body>
-
 </html>
