@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Passeios Anteriores</title>
+    <title>Meus Dados</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-
 <body>
 <!-- Preloader Start -->
 <div id="preloader-active">
@@ -39,7 +38,7 @@
         </div>
     </div>
 </div>
-<!-- Preloader Start-->
+<!-- Preloader Start -->
 <header>
     <!-- Header Start -->
     <div class="header-area">
@@ -49,8 +48,6 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-8">
                             <div class="header-info-left">
-                                <ul>
-                                </ul>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -81,8 +78,8 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="index.html">Busca de Guias</a></li>
-                                        <li><a href="passeios.html">Minhas Viagens</a></li>
-                                        <li><a href="perfil-cliente.html">Perfil</a></li>
+                                        <li><a href="passeios.html">Meus Passeios</a></li>
+                                        <li><a href="notificacoes.html">Notificações</a></li>
                                         <li><a href="contact.html">Contato</a></li>
                                     </ul>
                                 </nav>
@@ -99,16 +96,15 @@
     </div>
     <!-- Header End -->
 </header>
-
 <!-- slider Area Start-->
 <div class="slider-area ">
     <!-- Mobile Menu -->
     <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/contact_hero.jpg">
-        <div class="container" >
+        <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap text-center">
-                        <h2>Passeios</h2>
+                        <h2>Perfil</h2>
                     </div>
                 </div>
             </div>
@@ -116,82 +112,62 @@
     </div>
 </div>
 <!-- slider Area End-->
-<!--================Section Area =================-->
-<section class="blog_area section-padding">
+<!-- ================ contact section start ================= -->
+<section class="contact-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-tittle text-center">
-                    <span>Wanderlusteiro(a)</span>
-                    <h2>Bateu saudade de suas viagens? Aqui estão algumas para recordar!</h2>
+                    <span>Hey, Wanderlusteiro(a)</span>
+                    <h2>Minhas Infos </h2>
                 </div>
-            </div>
-        </div>
-        <form method="get">
-            <div class="row">
-                <div class="col-lg-14 mb-10 mb-lg-6" >
-                    <div class="blog_left_sidebar" >
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/porto-seguro-ba.jpg" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3><output name="dia">15</output></h3>
-                                    <p><output name="mes">Nov</output></p>
-                                </a>
+                <form  method="post" id="perfil" novalidate="novalidate">
+                    <div class="col-lg-12" align="text-center">
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-address-card" aria-hidden="true"></i> Nome
+                                        <output class="form-control w-100" name="nome" id="nome"></output>
+                                </div>
                             </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block">
-                                    <h2><output name="cidade">Porto Seguro - Bahia</output></h2>
-                                </a>
-                                <p><i class="fa fa-calendar"></i> Data: <output name="data">15/11/2020</output></p>
-                                <p><i class="fa fa-user"></i> Guia contratado: <output name="guia">Marcos de Oliveira</output></p>
-                                <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Sol e Praia</output></p>
-                                <p><i class="fa fa-map-marker"></i> Passeios Feitos: <output name="passeios">Centro Histórico, Praia de Taperapuã,Praia do Espelho, Praia do Mutuá</output></p>
-                                <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Fixo</output></p>
-                                <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor Pago: R$<output name="valor">180</output></p>
-                                <p><i class="fa fa-comments" aria-hidden="true"></i> Avaliação: <output name="avaliacao">4.8 - Excelente guia</output></p>
+                            <div class="col-lg-6 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-address-card" aria-hidden="true"></i> Sobrenome
+                                        <output class="form-control w-100" name="sobrenome" id="sobrenome"></output>
+                                </div>
                             </div>
-                        </article>
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/RJ.jpg" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3><output name="dia">05</output></h3>
-                                    <p><output name="mes">Fev</output></p>
-                                </a>
+                            <div class="col-md-4 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-birthday-cake" aria-hidden="true"></i> Data Nascimento
+                                        <output class="form-control" name="dataNasc" id="dataNasc"></output>
+                                </div>
                             </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block">
-                                    <h2><output name="cidade">Rio de Janeiro</output></h2>
-                                </a>
-                                <p><i class="fa fa-calendar"></i> Data: <output name="data">05/02/2021</output></p>
-                                <p><i class="fa fa-user"></i> Guia contratado: <output name="guia">Laura Castilho</output></p>
-                                <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Aventura</output></p>
-                                <p><i class="fa fa-map-marker"></i> Passeios Feitos: <output name="descricao">Trilha Pedra da Gávea</output></p>
-                                <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Personalizado</output></p>
-                                <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor Pago: R$<output name="valor">250</output></p>
-                                <p><i class="fa fa-comments" aria-hidden="true"></i> Avaliação: <output name="avaliacao">4.4 - Ótimo Guia </output></p>
+                            <div class="col-md-4 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade
+                                        <output class="form-control" name="cidade" id="cidade"></output>
+                                </div>
                             </div>
-
-                        </article>
-
+                            <div class="col-md-4 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                        <output class="form-control" name="telefone" id="telefone"></output>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 offset-lg-12">
+                                <div class="form-group">
+                                    <p><i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                        <output class="form-control w-100" name="email" id="email"></output>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
-        </form>
-        <div class="col-lg-8 mb-5 mb-lg-0">
-            <a href="passeios.html">
-                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                        type="submit">Próximas Trips</button>
-            </a>
         </div>
     </div>
-
 </section>
-<!--================Section Area =================-->
+<!-- ================ contact section end ================= -->
 
 <footer>
     <!-- Footer Start-->
@@ -212,8 +188,8 @@
             </div>
         </div>
     </div>
+    <!-- Footer End-->
 </footer>
-<!-- Footer End-->
 
 <!-- JS here -->
 
@@ -253,4 +229,5 @@
 <script src="./assets/js/main.js"></script>
 
 </body>
+
 </html>
