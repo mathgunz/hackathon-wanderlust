@@ -224,6 +224,52 @@
     }
     mailChimp();
 
+//teste
+//var disableDates = ["01-04-2021"];
+//$('datepicker').datepicker({
+//format: 'dd/mm/yyyy',
+//datesDisabled: disableDates
+//});
+
+//$(document).ready(function(){
+//
+//var disableDates = ["01-04-2021"];
+//$('datepicker').datepicker({
+//format: 'dd/mm/yyyy',
+//
+//beforeShowDay: function(date){
+//    dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+//    if(disableDates.indexOf(dmy) != -1){
+//        return false;
+//    }
+//    else{
+//        return true;
+//    }
+//}
+//
+//
+//
+//});
+//
+//});
+
+
+//teste
+//$('.datepicker').datepicker({
+//    format: 'dd/mm/yyyy',
+//    beforeShowDay: function(date){
+//        dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+//        if(disableDates.indexOf(dmy) != -1){
+//            return false;
+//        }
+//        else{
+//            return true;
+//        }
+//    }
+//});
+
+
+
 
 // 12 Pop Up Img
     var popUp = $('.single_gallery_part, .img-pop-up');
