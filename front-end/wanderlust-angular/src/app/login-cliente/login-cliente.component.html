@@ -1,0 +1,58 @@
+    <!-- slider Area Start-->
+    <div class="slider-area ">
+      <!-- Mobile Menu -->
+      <div class="single-slider slider-height2 d-flex align-items-center"
+        data-background="assets/img/hero/contact_hero.jpg">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="hero-cap text-center">
+                <h2>Bem vindo Wanderlusteiro! </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- slider Area End-->
+    <!-- ================ contact section start ================= -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="login-tittle text-center">
+              <h1>Login</h1>
+            </div>
+          </div>
+          <div class="col-lg-8" align="text-center">
+            <form [formGroup]="loginForm" class="form-contact contact_form" id="contactForm"
+              novalidate="novalidate" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-6 offset-md-6">
+                  <div class="form-group">
+                    <input class="form-control valid" name="email" id="email" type="email"
+                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'"
+                      placeholder="Email" formControlName="email">
+                  </div>
+                </div>
+                <div class="col-md-6 offset-md-6">
+                  <div class="form-group">
+                    <input class="form-control" name="password" id="password" type="password"
+                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter password'"
+                      placeholder="Password" formControlName="password">
+                  </div>
+                  <nav>
+                    <ul id="senha">
+                      <h6><a href="login.html">Esqueceu a senha?</a></h6>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="form-group col-md-8 offset-md-8">
+                  <button type="submit" class="button button-contactForm boxed-btn">Logar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
