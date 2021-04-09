@@ -29,21 +29,17 @@ export class ClientesService {
   
   async create(clienteDto: CreateClienteDto): Promise<Clientes> {
 
-    const { nome, documento, email, senha, sobrenome, telefone, endereco } = clienteDto;
+    const { nome, email, senha, sobrenome, telefone, endereco, dataNascimento } = clienteDto;
     
     const cliente: Clientes = {
         nome: nome,
-        documento: documento,
         email: email,
         senha: senha,
         telefone: telefone,
         sobrenome: sobrenome,
+        dataNascimento: dataNascimento,
         endereco: {
-          bairro: endereco.bairro,
-          cep: endereco.cep,
           endereco: endereco.endereco,
-          numero: endereco.numero,
-          complemento: endereco.complemento,
           cidade: endereco.cidade,
           estado: endereco.estado
         }

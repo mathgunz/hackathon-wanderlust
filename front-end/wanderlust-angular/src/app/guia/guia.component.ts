@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from '../_services';
+import { GuiaService } from './guia.service.service';
 
 @Component({
   selector: 'app-guia',
@@ -29,7 +30,8 @@ export class GuiaComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private guiaService: GuiaService
   ) {
   }
 
@@ -44,7 +46,13 @@ export class GuiaComponent implements OnInit {
     this.alertService.clear();
     // stop here if form is invalid
 
+    this.loading = true;
 
+    console.log(this.cadastroGuiaForm.value);
+
+    this.cadastroGuiaForm.value;
+
+    this.guiaService.create(this.cadastroGuiaForm.value);
 
   }
 }

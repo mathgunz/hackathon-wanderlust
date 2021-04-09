@@ -1,4 +1,4 @@
-import { MaxLength, IsNotEmpty, IsString, IsNumber, isEmail, IsEmail } from 'class-validator';
+import { MaxLength, IsNotEmpty, IsString, IsNumber, isEmail, IsEmail, IsDate } from 'class-validator';
 import { EnderecosDto } from './endereco.dto';
 
 export class CreateClienteDto {
@@ -10,10 +10,10 @@ export class CreateClienteDto {
     sobrenome: string;
 
     @IsNumber()
-    documento: number;
-
-    @IsNumber()
     telefone: number;
+
+    @IsDate()
+    dataNascimento: Date;
 
     @IsNotEmpty()
     endereco?: EnderecosDto;

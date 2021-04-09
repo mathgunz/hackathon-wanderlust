@@ -27,22 +27,18 @@ export class GuiasService {
 
   async create(createGuiaDto: CreateGuiaDto): Promise<Guias> {
 
-    const { nome, sobrenome, documento, cadastur, email, endereco, senha, telefone} = createGuiaDto;
+    const { nome, sobrenome, cadastur, email, endereco, senha, telefone, dataNascimento} = createGuiaDto;
 
     const guia: Guias = {
       nome: nome,
       sobrenome: sobrenome,
       cadastur: cadastur,
-      documento: documento,
       email: email,
       senha: senha,
       telefone: telefone,
+      dataNascimento: dataNascimento,
       endereco:{
-        bairro: endereco.bairro,
-        cep: endereco.cep,
         endereco: endereco.endereco,
-        numero: endereco.numero,
-        complemento: endereco.complemento,
         cidade: endereco.cidade,
         estado: endereco.estado
       }

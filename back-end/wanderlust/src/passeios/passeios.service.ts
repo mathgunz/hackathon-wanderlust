@@ -33,11 +33,7 @@ export class PasseiosService {
             nome: nome,
             tipo: tipo,
             endereco: {
-                bairro: endereco.bairro,
-                cep: endereco.cep,
                 endereco: endereco.endereco,
-                numero: endereco.numero,
-                complemento: endereco.complemento,
                 cidade: endereco.cidade,
                 estado: endereco.estado
             }

@@ -1,4 +1,4 @@
-import { MaxLength, IsNotEmpty, IsString, IsNumber, IsOptional } from 'class-validator';
+import { MaxLength, IsNotEmpty, IsString, IsNumber, IsOptional, IsDate } from 'class-validator';
 import { EnderecosDto } from 'src/clientes/dtos/endereco.dto';
 
 export class CreateGuiaDto {
@@ -9,8 +9,8 @@ export class CreateGuiaDto {
     @IsString()
     sobrenome: string;
 
-    @IsNumber()
-    documento: number;
+    @IsDate()
+    dataNascimento: Date;
 
     @IsNumber()
     telefone: number
