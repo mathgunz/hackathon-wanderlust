@@ -5,18 +5,22 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ModalModule } from './_modal';
+import { CadastroPasseioComponent } from './guia/cadastro-passeio/cadastro-passeio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
-import { GuiaComponent } from './guia';
 import { PasseiosComponent } from './passeios/passeios.component';
 import { NotificacoesComponent } from './notificacoes/notificacoes.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
+import { GuiaComponent } from './guia';
 @NgModule({
   declarations: [
     AppComponent,
     LoginClienteComponent,
+
+    GuiaComponent,
+    CadastroPasseioComponent,
     PasseiosComponent,
     PerfilClientesComponent,
     NotificacoesComponent,
@@ -24,7 +28,6 @@ import { AjudarComponent } from './ajudar/ajudar.component';
     PasseiosComponent,
     AjudarComponent,
     NotificacoesComponent,
-    GuiaComponent
   ],
   imports: [
     BrowserModule,
