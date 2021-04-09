@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { GuiaRequest } from './dtos/guia.request';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,10 @@ export class GuiaService {
 
   create(value: any) {
 
-    const { nome,
+    console.log('GuiaService:value:'+ value);
+
+    const {
+    nome,
     sobrenome,
     endereco,
     cidade,
@@ -19,16 +24,36 @@ export class GuiaService {
     telefone,
     numeroCadastur,
     email,
-    senha } = value;
+    senha} = value;
 
-    this.http.post<any>(
-      `http://localhost:3000/login/clientes`
-      , { email, senha })
-        .pipe(map(user => {
+    const cadastur = numeroCadastur;
+
+    const guiaRequest: GuiaRequest = {
+      dataNascimento: dataNascimento,
+      email: email,
+      nome: nome,
+      senha: senha,
+      sobrenome: sobrenome,
+      telefone: telefone,
+      cadastur: cadastur,
+      endereco: {
+        cidade: cidade,
+        endereco: endereco
+      }
+
+    }
+
+    console.log('GuiaService:guiaRequest:'+ guiaRequest);
+
+    return this.http.post<GuiaRequest>(
+      `http://localhost:3000/guias`
+      , guiaRequest)
+        .pipe(map(guia => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
-            localStorage.setItem('currentUser', JSON.stringify(user));
-            this.currentUserSubject.next(user);
-            return user;
+
+            console.log('guia:'+guia);
+
+            return guia;
         }));
 
   }

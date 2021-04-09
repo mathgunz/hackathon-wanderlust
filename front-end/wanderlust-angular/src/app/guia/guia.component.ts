@@ -48,11 +48,17 @@ export class GuiaComponent implements OnInit {
 
     this.loading = true;
 
-    console.log(this.cadastroGuiaForm.value);
+    this.guiaService.create(this.cadastroGuiaForm.value).subscribe({
+      next: () => {
+        // get return url from query parameters or default to home page
+        console.log('next');
+      },
+      error: error => {
 
-    this.cadastroGuiaForm.value;
-
-    this.guiaService.create(this.cadastroGuiaForm.value);
+        console.log('erroe');
+        this.loading = false;
+      }
+    });
 
   }
 }
