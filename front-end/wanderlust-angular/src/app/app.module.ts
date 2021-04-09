@@ -9,11 +9,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from './_modal';
 import { GuiaComponent } from './guia/cadastro/guia.cadastro.component';
+import { CadastroPasseioComponent } from './guia/cadastro-passeio/cadastro-passeio.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginClienteComponent,
-    GuiaComponent
+    GuiaComponent,
+    CadastroPasseioComponent
   ],
   imports: [
     BrowserModule,
