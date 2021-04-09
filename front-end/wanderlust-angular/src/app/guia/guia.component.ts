@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ModalService } from '../_modal';
 import { AlertService } from '../_services';
 import { GuiaService } from './guia.service.service';
 
@@ -11,6 +12,7 @@ import { GuiaService } from './guia.service.service';
 })
 
 export class GuiaComponent implements OnInit {
+
   cadastroGuiaForm = this.formBuilder.group({
     nome: "",
     sobrenome:"",
@@ -23,6 +25,8 @@ export class GuiaComponent implements OnInit {
     senha: "",
   });
 
+  nomeGuia: string = "";
+
   loading = false;
   submitted = false;
 
@@ -31,12 +35,12 @@ export class GuiaComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private alertService: AlertService,
-    private guiaService: GuiaService
+    private guiaService: GuiaService,
+    private modalService: ModalService
   ) {
   }
 
   ngOnInit() {
-
   }
 
   onSubmit() {
@@ -49,9 +53,10 @@ export class GuiaComponent implements OnInit {
     this.loading = true;
 
     this.guiaService.create(this.cadastroGuiaForm.value).subscribe({
-      next: () => {
+      next: (guia) => {
         // get return url from query parameters or default to home page
-        console.log('next');
+        this.nomeGuia = guia.nome;
+        this.openModal('custom-modal-1');
       },
       error: error => {
 
@@ -61,4 +66,18 @@ export class GuiaComponent implements OnInit {
     });
 
   }
+
+openModal(id: string) {
+    this.modalService.open(id);
+}
+
+closeModal(id: string) {
+    this.modalService.close(id);
+}
+
+irParaLoginModal() {
+  const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/login-guia';
+  this.router.navigateByUrl(returnUrl);
+}
+
 }

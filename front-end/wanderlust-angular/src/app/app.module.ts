@@ -8,6 +8,7 @@ import {APP_BASE_HREF} from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GuiaComponent } from './guia/guia.component';
+import { ModalModule } from './_modal';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { GuiaComponent } from './guia/guia.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
