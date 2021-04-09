@@ -156,10 +156,16 @@
   </div>
 </section>
 
-<jw-modal id="custom-modal-1">
+<jw-modal id="sucesso-cadastro-guia-modal">
   <h1>Sucesso!</h1>
   <p>{{nomeGuia}} seu cadastro foi realizado com sucesso!</p>
   <button class="button button-contactForm boxed-btn" (click)="irParaLoginModal();">Fazer Login!</button>
+</jw-modal>
+
+<jw-modal id="erro-cadastro-guia-modal">
+  <h1>Error!</h1>
+  <p>Não foi ?ossivel realizar o cadastro, por favor tente novamente!</p>
+  <button class="button button-contactForm boxed-btn" (click)="closeModal('erro-cadastro-guia-modal');">Fechar</button>
 </jw-modal>
 
 <footer>

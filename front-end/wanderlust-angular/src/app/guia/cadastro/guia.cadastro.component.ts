@@ -55,12 +55,12 @@ export class GuiaComponent implements OnInit {
       next: (guia) => {
         // get return url from query parameters or default to home page
         this.nomeGuia = guia.nome;
-        this.openModal('custom-modal-1');
+        this.openModal('sucesso-cadastro-guia-modal');
       },
       error: error => {
-
-        console.log('erroe');
+        console.log('error');
         this.loading = false;
+        this.openModal('erro-cadastro-guia-modal');
       }
     });
 
