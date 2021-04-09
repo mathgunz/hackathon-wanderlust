@@ -10,20 +10,8 @@ export class Enderecos {
      endereco: string;
 
      @Column()
-     bairro: string;
-
-     @Column()
-     cep: number;
-
-     @Column()
-     complemento?: string;
-
-     @Column()
-     numero: number;
-
-     @Column()
      cidade: string;
 
-     @Column()
+     @Column({nullable:true})
      estado: string;
 }

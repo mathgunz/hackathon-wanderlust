@@ -14,8 +14,8 @@ export class Guias {
      @Column()
      sobrenome: string;
 
-     @Column("int8")
-     documento: number;
+     @Column({nullable: false})
+     dataNascimento?: Date
 
      @Column("int8")
      telefone: number

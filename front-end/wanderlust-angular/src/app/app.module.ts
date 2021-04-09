@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LoginClienteComponent } from './login-cliente/login-cliente.component';
-import {APP_BASE_HREF} from '@angular/common';
+import { APP_BASE_HREF } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+import { ModalModule } from './_modal';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
+import { GuiaComponent } from './guia';
 import { PasseiosComponent } from './passeios/passeios.component';
-import { PerfilClientesComponent } from './perfil-clientes/perfil-clientes.component';
 import { NotificacoesComponent } from './notificacoes/notificacoes.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
@@ -23,14 +24,16 @@ import { AjudarComponent } from './ajudar/ajudar.component';
     PasseiosComponent,
     AjudarComponent,
     NotificacoesComponent,
+    GuiaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

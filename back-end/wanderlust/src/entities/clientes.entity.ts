@@ -13,8 +13,8 @@ export class Clientes {
      @Column({nullable: false})
      sobrenome: string;
 
-     @Column("int8", {nullable: false})
-     documento: number;
+     @Column({nullable: false})
+     dataNascimento: Date;
 
      @Column("int8", {nullable: false})
      telefone: number;
