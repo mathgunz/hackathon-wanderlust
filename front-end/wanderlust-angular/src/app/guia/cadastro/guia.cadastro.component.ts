@@ -6,8 +6,8 @@ import { AlertService, GuiaService } from 'src/app/_services';
 
 @Component({
   selector: 'app-guia',
-  templateUrl: './guia.component.html',
-  styleUrls: ['./guia.component.scss']
+  templateUrl: './guia.cadastro.component.html',
+  styleUrls: ['./guia.cadastro.component.scss']
 })
 
 export class GuiaComponent implements OnInit {
