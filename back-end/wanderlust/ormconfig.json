@@ -2,7 +2,7 @@
 {
     "schema": "wanderlust", 
     "type": "postgres",
-    "host": "wanderlust-postgres",
+    "host": "localhost",
     "port": 5432,
     "username": "postgres",
     "password": "1234",
