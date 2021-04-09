@@ -7,10 +7,12 @@ import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import {APP_BASE_HREF} from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { GuiaComponent } from './guia/guia.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginClienteComponent
+    LoginClienteComponent,
+    GuiaComponent
   ],
   imports: [
     BrowserModule,
