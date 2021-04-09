@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { GuiaRequest } from './dtos/guia.request';
+import { GuiaRequest } from '../guia/dtos/guia.request';
 
 @Injectable({
   providedIn: 'root'

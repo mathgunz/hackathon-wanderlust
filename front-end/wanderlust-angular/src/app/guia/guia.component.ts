@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../_modal';
 import { AlertService } from '../_services';
-import { GuiaService } from './guia.service.service';
+import { GuiaService } from '../_services/guia.service';
 
 @Component({
   selector: 'app-guia',
