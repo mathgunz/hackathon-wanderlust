@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ModalService } from '../_modal';
-import { AlertService } from '../_services';
-import { GuiaService } from '../_services/guia.service';
+import { ModalService } from 'src/app/_modal';
+import { AlertService, GuiaService } from 'src/app/_services';
 
 @Component({
   selector: 'app-guia',

@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AlertService, AuthenticationService } from '../_services';
+import { AlertService, AuthenticationService } from '../../_services';
 
 @Component({
-  selector: 'app-login-cliente',
-  templateUrl: './login-cliente.component.html',
-  styleUrls: ['./login-cliente.component.scss']
+  selector: 'app-login-guia',
+  templateUrl: './login-guia.component.html',
+  styleUrls: ['./login-guia.component.scss']
 })
 
-export class LoginClienteComponent implements OnInit {
-  loginForm = this.formBuilder.group({
+export class LoginGuiaComponent implements OnInit {
+  loginGuiaForm = this.formBuilder.group({
     email: "",
     password: "",
   });
@@ -36,12 +36,12 @@ export class LoginClienteComponent implements OnInit {
     // reset alerts on submit
     this.alertService.clear();
     // stop here if form is invalid
-    if (this.loginForm.invalid) {
+    if (this.loginGuiaForm.invalid) {
       return;
     }
 
     this.loading = true;
-    this.authenticationService.login(this.loginForm.value.email, this.loginForm.value.password)
+    this.authenticationService.login(this.loginGuiaForm.value.email, this.loginGuiaForm.value.password)
       .subscribe({
         next: () => {
           // get return url from query parameters or default to home page
