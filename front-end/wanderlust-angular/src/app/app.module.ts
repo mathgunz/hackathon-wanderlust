@@ -29,7 +29,7 @@ import { CadastroPasseioPersonalizadoComponent } from './guia/cadastro-passeio-p
     PasseiosComponent,
     AjudarComponent,
     NotificacoesComponent,
-    CadastroPasseioPersonalizadoComponent,
+    CadastroPasseioPersonalizadoComponent
   ],
   imports: [
     BrowserModule,

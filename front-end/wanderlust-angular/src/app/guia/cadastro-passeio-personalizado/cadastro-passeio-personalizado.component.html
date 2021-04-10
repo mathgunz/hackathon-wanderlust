@@ -23,16 +23,23 @@
                   <h4><span>Hey, Guia</span></h4>
                   <h2>Vamos realizar o sonho de mais um Wanderlusteiro? </h2>
               </div>
-              <form  method="post" id="personalizado" novalidate="novalidate">
+              <form [formGroup]="cadastroPasseioPersonalizadoGuiaForm" id="personalizado" novalidate="novalidate">
 
                   <div class="col-lg-12" align="text-center">
                       <h3>Informações da contratação:</h3>
                       <div class="row">
-
-                          <div class="col-lg-10 offset-lg-12">
+                          <div class="col-lg-6 offset-lg-12">
                               <div class="form-group">
-                                  <p><i class="fa fa-map-signs" aria-hidden="true"></i> Nome do Passeio:
-                                      <input class="form-control valid" name="nomePasseio" id="nomePasseio" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Informe o passeio. Ex: Lado leste Jeri'" placeholder="Informe o passeio. Ex: Lado leste Jeri">
+                                    <div class="input-group-icon mt-10">
+                                      <div id="default-select">
+                                          <p><i class="fa fa-map-signs" aria-hidden="true"></i> Selecione Passeio:
+                                          <select class="form-select">
+                                              <option *ngFor="let passeio of passeios; let i = index" [value]="passeios[i].id">
+                                                {{passeios[i].nome}}
+                                              </option>
+                                          </select>
+                                      </div>
+                                  </div>
                               </div>
                           </div>
                           <div class="col-md-2 offset-lg-12">
