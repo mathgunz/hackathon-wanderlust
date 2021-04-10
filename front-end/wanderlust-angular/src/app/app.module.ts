@@ -16,6 +16,7 @@ import { AjudarComponent } from './ajudar/ajudar.component';
 import { GuiaComponent } from './guia';
 import { HeadersComponent } from './_components/headers/headers.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { HomeComponent } from './home/home.component';
     NotificacoesComponent,
     HeadersComponent,
     HomeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
