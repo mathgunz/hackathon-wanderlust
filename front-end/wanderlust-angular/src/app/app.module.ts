@@ -14,9 +14,8 @@ import { NotificacoesComponent } from './notificacoes/notificacoes.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
 import { GuiaComponent } from './guia';
-import { HeadersComponent } from './_components/headers/headers.component';
+import { HeadersComponent, FooterComponent, AlertComponent } from './_components';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +32,7 @@ import { FooterComponent } from './footer/footer.component';
     HeadersComponent,
     HomeComponent,
     FooterComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
