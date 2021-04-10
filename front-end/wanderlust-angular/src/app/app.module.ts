@@ -5,7 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ModalModule } from './_modal';
-import { CadastroPasseioComponent } from './guia/cadastro-passeio/cadastro-passeio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
@@ -14,6 +13,7 @@ import { NotificacoesComponent } from './notificacoes/notificacoes.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
 import { GuiaComponent } from './guia';
+import { CadastroPasseioComponent } from './guia/cadastro-passeio-fixo/cadastro-passeio.component';
 @NgModule({
   declarations: [
     AppComponent,
