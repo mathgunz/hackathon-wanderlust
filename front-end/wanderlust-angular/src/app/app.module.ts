@@ -14,6 +14,7 @@ import { ContatosComponent } from './contatos/contatos.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
 import { GuiaComponent } from './guia';
 import { CadastroPasseioComponent } from './guia/cadastro-passeio-fixo/cadastro-passeio.component';
+import { CadastroPasseioPersonalizadoComponent } from './guia/cadastro-passeio-personalizado/cadastro-passeio-personalizado.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { CadastroPasseioComponent } from './guia/cadastro-passeio-fixo/cadastro-
     PasseiosComponent,
     AjudarComponent,
     NotificacoesComponent,
+    CadastroPasseioPersonalizadoComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { NotificacoesComponent } from './notificacoes/notificacoes.component';
 import { PasseiosComponent } from './passeios/passeios.component';
 import { PerfilClientesComponent } from './cliente';
 import { CadastroPasseioComponent } from './guia/cadastro-passeio-fixo/cadastro-passeio.component';
+import { CadastroPasseioPersonalizadoComponent } from './guia/cadastro-passeio-personalizado/cadastro-passeio-personalizado.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'notificacoes', component: NotificacoesComponent },
   { path: 'cadastro-guia', component: GuiaComponent },
   { path: 'cadastro-guia', component: GuiaComponent },
-  { path: 'cadastro-passeio-guia', component: CadastroPasseioComponent }
+  { path: 'cadastro-passeio-guia-fixo', component: CadastroPasseioComponent },
+  { path: 'cadastro-passeio-guia-personalizado', component: CadastroPasseioPersonalizadoComponent }
 ];
 
 @NgModule({
