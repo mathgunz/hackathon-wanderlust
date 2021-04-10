@@ -10,9 +10,11 @@ import { ContatosComponent } from './contatos/contatos.component';
 import { NotificacoesComponent } from './notificacoes/notificacoes.component';
 import { PasseiosComponent } from './passeios/passeios.component';
 import { PerfilClientesComponent } from './cliente';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'login', component: LoginClienteComponent },
   { path: 'login-guia', component: LoginGuiaComponent },
   { path: 'ajuda', component: AjudarComponent },

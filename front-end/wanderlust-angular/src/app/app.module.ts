@@ -14,11 +14,12 @@ import { NotificacoesComponent } from './notificacoes/notificacoes.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
 import { GuiaComponent } from './guia';
+import { HeadersComponent } from './_components/headers/headers.component';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginClienteComponent,
-
     GuiaComponent,
     CadastroPasseioComponent,
     PasseiosComponent,
@@ -28,6 +29,8 @@ import { GuiaComponent } from './guia';
     PasseiosComponent,
     AjudarComponent,
     NotificacoesComponent,
+    HeadersComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
