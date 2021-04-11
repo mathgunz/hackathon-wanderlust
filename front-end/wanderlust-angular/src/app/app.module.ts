@@ -5,17 +5,28 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ModalModule } from './_modal';
-import { CadastroPasseioComponent } from './guia/cadastro-passeio/cadastro-passeio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
 import { PasseiosComponent } from './passeios/passeios.component';
 import { NotificacoesComponent } from './notificacoes/notificacoes.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
-import { GuiaComponent } from './guia';
-import { HeadersComponent, FooterComponent, AlertComponent } from './_components';
 import { HomeComponent } from './home/home.component';
+
+import {
+  CadastroPasseioComponent,
+  CadastroPasseioPersonalizadoComponent,
+  GuiaComponent,
+} from './guia';
+
+import {
+  HeadersComponent,
+  FooterComponent,
+  AlertComponent,
+  HeaderSlideComponent,
+} from './_components';
+
+import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +44,8 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     FooterComponent,
     AlertComponent,
+    CadastroPasseioPersonalizadoComponent,
+    HeaderSlideComponent
   ],
   imports: [
     BrowserModule,

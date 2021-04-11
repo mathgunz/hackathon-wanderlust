@@ -28,11 +28,13 @@ export class AgendasService {
 
       const agenda: Agendas = {
         tipo: createAgendaDto.tipo,
-        inicio: createAgendaDto.inicio,
-        fim: createAgendaDto.fim,
-        status: 'Agendado',
+        data: createAgendaDto.data,
+        duracao: createAgendaDto.duracao,
+        status: 'PENDENTE_CONFIRMACAO_CLIENTE',
+        descricao: createAgendaDto.descricao,
         guia: guia,
-        passeio: passeio
+        passeio: passeio,
+        valor: createAgendaDto.valor
       }
 
       return await this.agendasRepository.save(agenda);
