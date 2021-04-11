@@ -22,7 +22,6 @@ import { CadastroPasseioPersonalizadoComponent } from './guia/cadastro-passeio-p
 
     GuiaComponent,
     CadastroPasseioComponent,
-    PasseiosComponent,
     PerfilClientesComponent,
     NotificacoesComponent,
     ContatosComponent,

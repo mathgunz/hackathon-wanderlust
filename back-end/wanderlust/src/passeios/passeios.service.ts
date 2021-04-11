@@ -22,14 +22,12 @@ export class PasseiosService {
 
         const guia = await this.guiasRepository.findById(userId);
 
-        const { nome, descricao, duracao, endereco, fim, inicio, tipo } = createPasseioDto;
+        const { nome, descricao, duracao, endereco, tipo } = createPasseioDto;
         
         const passeio: Passeios = {
             descricao: descricao,
             duracao: duracao,
-            fim: fim,
             guia: guia,
-            inicio: inicio,
             nome: nome,
             tipo: tipo,
             endereco: {

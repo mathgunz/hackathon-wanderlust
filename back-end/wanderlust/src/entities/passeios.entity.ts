@@ -16,13 +16,7 @@ export class Passeios {
      
      @Column()
      descricao: string;
-     
-     @Column()
-     inicio: Date;
-     
-     @Column()
-     fim: Date;
-     
+          
      @Column()
      duracao: string;
 

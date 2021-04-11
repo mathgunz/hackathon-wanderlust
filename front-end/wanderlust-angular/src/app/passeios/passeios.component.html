@@ -1,101 +1,109 @@
 <div class="slider-area ">
-    <!-- Mobile Menu -->
-    <div class="single-slider slider-height2 d-flex align-items-center"
-      [ngStyle]="{backgroundImage:'url(../../assets/img/hero/contact_hero.jpg)'}">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="hero-cap text-center">
-                        <h2>Meus Passeios</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <!-- Mobile Menu -->
+  <div class="single-slider slider-height2 d-flex align-items-center"
+  [ngStyle]="{backgroundImage:'url(../../assets/img/hero/contact_hero.jpg)'}">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-12">
+                  <div class="hero-cap text-center">
+                      <h2>Cadastro Passeios</h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
-<!-- slider Area End-->
-<!--================passeios Area =================-->
-<section class="blog_area section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-tittle text-center">
-                    <h4><span>Wanderlusteiro(a)</span></h4>
-                    <h2>Divirta-se com suas viagens!</h2>
-                </div>
-            </div>
-        </div>
-        <form method="get">
-            <div class="row">
-                <div class="col-lg-8 mb-5 mb-lg-0">
-                    <div class="blog_left_sidebar">
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/jeri.jpg" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3><output name="dia">25</output></h3>
-                                    <p><output name="mes">Abr</output></p>
-                                </a>
-                            </div>
 
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="detalhe-passeios.html">
-                                    <h2><output name="cidade">Jericoacoara - Ceará</output></h2>
-                                </a>
-                                <p><i class="fa fa-calendar"></i> Data: <output name="data">25/04/2021</output></p>
-                                <p><i class="fa fa-user"></i> Guia contratado(a): <output name="guia">Maria Tereza Buarque</output></p>
-                                <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Fixo</output></p>
-                            </div>
-                        </article>
+<section class="contact-section">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="section-tittle text-center">
+                  <h4><span>Hey, Guia</span></h4>
+                  <h2>Preencha abaixo para cadastrar seus passeios</h2>
+              </div>
+              <form  method="post" id="cadastroPasseio">
+                  <div class="col-lg-12" align="text-center">
 
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/chapada-das-mesas.jpg" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3><output name="dia">10</output></h3>
-                                    <p><output name="mes">Out</output></p>
-                                </a>
-                            </div>
+                      <div class="row">
+                          <div class="col-md-3 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-user"></i> Numero Cadastur: <output name="cadastur">12334</output>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="col-lg-10 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-map-signs" aria-hidden="true"></i> Nome do Passeio:
+                                      <input class="form-control valid" name="nomePasseio" id="nomePasseio" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Informe o passeio. Ex: Lado leste Jeri'" placeholder="Informe o passeio. Ex: Lado leste Jeri">
+                              </div>
+                          </div>
+                          <div class="col-md-2 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração:
+                                      <input class="form-control valid" name="duracao" id="duracao" type="time">
+                              </div>
+                          </div>
+                          <div class="col-lg-12 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-map-marker"></i> Descrição do Passeio:
+                                      <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Decreva informações do Passeio.'" placeholder="Decreva informações do Passeio."></textarea>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="col-lg-12 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-location-arrow"></i> Ponto de Encontro:
+                                      <input class="form-control valid" name="endereco" id="endereco" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Informe o Ponto de Encontro. Ex: Praça Central'" placeholder="Informe o Ponto de Encontro. Ex: Praça Central">
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="col-md-3 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-calendar"></i> Data:
+                                      <input class="form-control valid" name="data" id="data" type="date">
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="col-md-2 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor:
+                                      <input class="form-control valid" name="valor" id="valor" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'R$250,00'" placeholder="R$250,00">
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="col-lg-7 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-info-circle"></i> Tipo de Passeio:
+                                      <input class="form-control valid" name="tipoPasseio" id="tipoPasseio" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tipo de Passeio. Ex: Sol e Praia'" placeholder="Tipo de Passeio. Ex: Sol e Praia">
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="col-lg-10 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro:
 
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="detalhe-passeios.html">
-                                    <h2><output name="cidade">Chapada das Mesas - Maranhão</output></h2>
-                                </a>
-                                <p><i class="fa fa-calendar"></i> Data:<output name="data"> 10/10/2021</output></p>
-                                <p><i class="fa fa-user"></i> Guia contratado: <output name="guia">Pablo de Oliveira</output></p>
-                                <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Personalizado</output></p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </form>
-        <div class="col-lg-8 mb-5 mb-lg-0">
-            <a href="passeios-anteriores.html">
-                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                        type="submit">Antigas Trips</button>
-            </a>
-        </div>
-    </div>
+                                      <input type="radio" id="personalizado"  name="roteiro" value="personalizado" >
+                                      <label for="personalizado">Personalizado</label>
+
+                                      <input type="radio" id="fixo" name="roteiro"  value="fixo"  >
+                                      <label for="fixo">Fixo</label>
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <form class="col-lg-9 col-md-12" method="post">
+      <div class="col-lg-12" align="center">
+          <div class="col-lg-6 col-md-12 col-10 nav-right flex-row d-flex justify-content-end align-items-center">
+              <button onclick="cadastrar()" type="submit" class="button button-contactForm boxed-btn">Cadastrar Passeio</button>
+          </div>
+      </div>
+  </form>
+
 </section>
-<!-- ================ contact section end ================= -->
-<footer>
-    <!-- Footer Start-->
-    <div class="footer-area">
-        <div class="main-footer">
-            <div class="footer-top top-bg d-none d-lg-block">
-                <div class="container">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-lg-8">
-                            <div class="hero-cap text-center" >
-                                <ul>
-                                    <li ><</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
