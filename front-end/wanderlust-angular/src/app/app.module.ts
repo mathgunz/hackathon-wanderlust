@@ -7,19 +7,30 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from './_modal';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
 import { PasseiosComponent } from './passeios/passeios.component';
 import { NotificacoesComponent } from './notificacoes/notificacoes.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
-import { GuiaComponent } from './guia';
-import { CadastroPasseioComponent } from './guia/cadastro-passeio-fixo/cadastro-passeio.component';
-import { CadastroPasseioPersonalizadoComponent } from './guia/cadastro-passeio-personalizado/cadastro-passeio-personalizado.component';
+import { HomeComponent } from './home/home.component';
+
+import {
+  CadastroPasseioComponent,
+  CadastroPasseioPersonalizadoComponent,
+  GuiaComponent,
+} from './guia';
+
+import {
+  HeadersComponent,
+  FooterComponent,
+  AlertComponent,
+  HeaderSlideComponent,
+} from './_components';
+
+import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
 @NgModule({
   declarations: [
     AppComponent,
     LoginClienteComponent,
-
     GuiaComponent,
     CadastroPasseioComponent,
     PerfilClientesComponent,
@@ -28,7 +39,12 @@ import { CadastroPasseioPersonalizadoComponent } from './guia/cadastro-passeio-p
     PasseiosComponent,
     AjudarComponent,
     NotificacoesComponent,
-    CadastroPasseioPersonalizadoComponent
+    HeadersComponent,
+    HomeComponent,
+    FooterComponent,
+    AlertComponent,
+    CadastroPasseioPersonalizadoComponent,
+    HeaderSlideComponent
   ],
   imports: [
     BrowserModule,
