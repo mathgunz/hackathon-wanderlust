@@ -1,4 +1,4 @@
-﻿export class User {
+﻿export class Guia {
     "nome": string;
     "sobrenome": string;
     "documento": number;
