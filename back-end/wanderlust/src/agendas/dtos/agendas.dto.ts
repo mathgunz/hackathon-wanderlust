@@ -1,4 +1,4 @@
-import { MaxLength, IsNotEmpty, IsString, IsNumber, isEmail, IsEmail, IsOptional, IsDate } from 'class-validator';
+import { IsString, IsNumber, IsOptional, IsDate } from 'class-validator';
 
 export class CreateAgendaDto {
 
@@ -9,13 +9,10 @@ export class CreateAgendaDto {
     passeioId: number;
 
     @IsDate()
-    inicio: Date;
-
-    @IsDate()
-    fim: Date;
+    data: Date;
 
     @IsString()
-    status: string;
+    duracao: string;
 
     @IsString()
     tipo: string;
@@ -23,6 +20,12 @@ export class CreateAgendaDto {
     @IsOptional()
     @IsNumber()
     clienteId: number;
+
+    @IsString()
+    descricao: string;
+
+    @IsNumber()
+    valor: number;
 }
 
 export class UpdateAgendaDto extends CreateAgendaDto {}

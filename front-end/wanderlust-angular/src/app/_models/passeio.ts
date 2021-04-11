@@ -12,3 +12,16 @@ export class Passseio {
 
 
 export class PasseioResponseModel extends Passseio {}
+
+
+export class CreateAgendaModel {
+
+  "guiaId": number;
+  "passeioId": number;
+  "data": Date;
+  "duracao": Date;
+  "tipo": string;
+  "clienteId"?: number;
+  "descricao": string;
+  "valor": number;
+}

@@ -23,7 +23,7 @@
                   <h4><span>Hey, Guia</span></h4>
                   <h2>Vamos realizar o sonho de mais um Wanderlusteiro? </h2>
               </div>
-              <form [formGroup]="cadastroPasseioPersonalizadoGuiaForm" id="personalizado" novalidate="novalidate">
+              <form [formGroup]="cadastroPasseioPersonalizadoGuiaForm" id="personalizado" novalidate="novalidate" (ngSubmit)="onSubmit()" >
 
                   <div class="col-lg-12" align="text-center">
                       <h3>Informações da contratação:</h3>
@@ -33,7 +33,10 @@
                                     <div class="input-group-icon mt-10">
                                       <div id="default-select">
                                           <p><i class="fa fa-map-signs" aria-hidden="true"></i> Selecione Passeio:
-                                          <select class="form-select">
+                                          <select formControlName="passeioIdSelecionado" class="form-select">
+                                            <option value=0>
+                                              Selecione o Passeio
+                                            </option>
                                               <option *ngFor="let passeio of passeios; let i = index" [value]="passeios[i].id">
                                                 {{passeios[i].nome}}
                                               </option>
@@ -45,54 +48,39 @@
                           <div class="col-md-2 offset-lg-12">
                               <div class="form-group">
                                   <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração:
-                                      <input class="form-control valid" name="duracao" id="duracao" type="time">
+                                      <input formControlName="duracao" class="form-control valid" name="duracao" id="duracao" type="time">
                               </div>
                           </div>
                           <div class="col-lg-12 offset-lg-12">
                               <div class="form-group">
                                   <p><i class="fa fa-map-marker"></i> Descrição do Passeio:
-                                      <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Decreva informações do Passeio.'" placeholder="Decreva informações do Passeio."></textarea>
+                                      <textarea formControlName="descricao" class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Decreva informações do Passeio.'" placeholder="Decreva informações do Passeio."></textarea>
                                   </p>
                               </div>
                           </div>
                           <div class="col-lg-12 offset-lg-12">
                               <div class="form-group">
                                   <p><i class="fa fa-user"></i> Cliente:
-                                      <input class="form-control valid" name="cliente" id="cliente" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome do Cliente'" placeholder="Nome do Cliente">
+                                      <input formControlName="cliente" value="{{cliente.nome}}" class="form-control valid" name="cliente" id="cliente" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome do Cliente'" placeholder="Nome do Cliente">
                                   </p>
                               </div>
                           </div>
                           <div class="col-md-3 offset-lg-12">
                               <div class="form-group">
                                   <p><i class="fa fa-calendar"></i> Data:
-                                      <input class="form-control valid" name="data" id="data" type="date">
+                                      <input formControlName="dataDoPasseio" class="form-control valid" name="data" id="data" type="date">
                                   </p>
                               </div>
                           </div>
                           <div class="col-md-2 offset-lg-12">
                               <div class="form-group">
                                   <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor:
-                                      <input class="form-control valid" name="valor" id="valor" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'R$250,00'" placeholder="R$250,00">
-                                  </p>
-                              </div>
-                          </div>
-                          <div class="col-lg-7 offset-lg-12">
-                              <div class="form-group">
-                                  <p><i class="fa fa-info-circle"></i> Tipo de Passeio:
-                                      <input class="form-control valid" name="tipoPasseio" id="tipoPasseio" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tipo de Passeio. Ex: Sol e Praia'" placeholder="Tipo de Passeio. Ex: Sol e Praia">
-                                  </p>
-                              </div>
-                          </div>
-                          <div class="col-lg-4 offset-lg-12">
-                              <div class="form-group">
-                                  <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro:
-                                      <input name="roteiro"  id="roteiro" type="checkbox">
-                                      <label for="personalizado">Personalizado</label>
+                                      <input formControlName="valorPasseio" class="form-control valid" name="valor" id="valor" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'R$250,00'" placeholder="R$250,00">
                                   </p>
                               </div>
                           </div>
                           <div class="col-lg-12 col-md-4 offset-lg-12" align="center">
-                              <button type="submit" class="button button-contactForm boxed-btn" onclick="aprovacao()">Enviar para aprovação do Cliente</button>
+                              <button type="submit" class="button button-contactForm boxed-btn">Enviar para aprovação do Cliente</button>
                           </div>
                       </div>
                   </div>
@@ -101,3 +89,16 @@
       </div>
   </div>
 </section>
+
+<jw-modal id="sucesso-agendamento-passeio-modal">
+  <h1>Sucesso!</h1>
+  <p>Agendamento realizado com sucesso!</p>
+  <p>O Pedido de confirmação foi enviado para o cliente!</p>
+  <button class="button button-contactForm boxed-btn" (click)="closeModal('sucesso-agendamento-passeio-modal');">Fazer Login!</button>
+</jw-modal>
+
+<jw-modal id="erro-agendamento-passeio-modal">
+  <h1>Error!</h1>
+  <p>N�o foi possivel realizar o agendamento, por favor tente novamente!</p>
+  <button class="button button-contactForm boxed-btn" (click)="closeModal('erro-agendamento-passeio-modal');">Fechar</button>
+</jw-modal>
