@@ -4,12 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Cadastro Guia</title>
+    <title>Detalhes Guia</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -20,12 +19,12 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
+
 <body>
 <!-- Preloader Start -->
 <div id="preloader-active">
@@ -38,7 +37,7 @@
         </div>
     </div>
 </div>
-<!-- Preloader Start -->
+<!-- Preloader Start-->
 <header>
     <!-- Header Start -->
     <div class="header-area">
@@ -48,6 +47,8 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-8">
                             <div class="header-info-left">
+                                <ul>
+                                </ul>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -77,7 +78,10 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="login-guia.html">Login</a></li>
+                                        <li><a href="index-cliente.html">Busca de Guias</a></li>
+                                        <li><a href="passeios.html">Meus Passeios</a></li>
+                                        <li><a href="perfil-cliente.html">Perfil</a></li>
+                                        <li><a href="contato-cliente.html">Contato</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -101,7 +105,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap text-center">
-                        <h2>Cadastre!</h2>
+                        <h2>Detalhes Guia</h2>
                     </div>
                 </div>
             </div>
@@ -109,86 +113,95 @@
     </div>
 </div>
 <!-- slider Area End-->
-<!-- ================ contact section start ================= -->
-<section class="contact-section">
+<!--================Detalhe Area =================-->
+<section class="favourite-place place-padding">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-tittle text-center">
-                    <h4><span>Bem vindo, seja um guia Wanderlusteiro(a)!</span></h4>
-                    <h2>Conecte-se com milhares de viajantes</h2>
+                    <h4><span>Wanderlusteiro(a)</span></h4>
+                    <h2>Aqui encontra-se informações do seu guia!</h2>
                 </div>
-                <form  method="post" id="cadastroGuia" novalidate="novalidate">
-                    <div class="col-lg-12" align="text-center">
-                        <div class="row">
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-address-card" aria-hidden="true"></i> Nome
-                                        <input class="form-control w-100" name="nome" id="nome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'" placeholder=" Nome">
-                                </div>
+            </div>
+            <form class="col-lg-12"  method="get">
+                <div class="col-lg-12 posts-list" align="center">
+                    <div class="col-xl-5 col-lg-6 col-md-6">
+                        <div class="single-place mb-40">
+                            <div class="place-img">
+                                <img src="assets/img/service/guia7.jpg" alt="">
                             </div>
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-address-card" aria-hidden="true"></i> Sobrenome
-                                        <input class="form-control w-100" name="sobrenome" id="sobrenome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sobrenome'" placeholder=" Sobrenome">
+                            <div class="place-cap">
+                                <div class="place-cap-top">
+
+                                    <h2><output name="nome"> Maria Tereza Buarque</output></h2>
+                                    <p><i class="fa fa-id-card" aria-hidden="true"></i> Nr. Cadastur: <output name="cadastur"> 12345</output></p>
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i> (85)99584-5675</p>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-comments"></i> Nos conte um pouco mais sobre você:
-                                        <textarea class="form-control w-100" name="guia" id="guia" cols="30" rows="4" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ex:Atuo no turismo ha mais de 10 anos nos tipos de passeio Sol e Praia'" placeholder="Ex:Atuo no turismo ha mais de 10 anos nos tipos de passeios Sol e Praia - Seja Criativo! ;D"></textarea>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-globe" aria-hidden="true"></i> Endereço
-                                        <input class="form-control" name="endereco" id="endereco" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Rua, Avenida, Travessa'" placeholder="Rua, Avenida, Travessa">
-                                </div>
-                            </div>
-                            <div class="col-md-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade
-                                        <input class="form-control" name="cidade" id="cidade" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Cidade'" placeholder="Cidade">
-                                </div>
-                            </div>
-                            <div class="col-md-4 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-birthday-cake" aria-hidden="true"></i> Data Nascimento
-                                        <input class="form-control" name="dataNasc" id="dataNasc" type="date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'DD/MM/AAAA'" placeholder="DD/MM/AAAA">
-                                </div>
-                            </div>
-                            <div class="col-md-4 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-phone" aria-hidden="true"></i> Telefone
-                                        <input class="form-control" name="telefone" id="telefone" type="text" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'DDD+Tel'" placeholder="DDD+Tel">
-                                </div>
-                            </div>
-                            <div class="col-md-4 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-info" aria-hidden="true"></i> Nr. Cadastur
-                                        <input class="form-control" name="cadastur" id="cadastur" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Numero Cadastur'" placeholder="Numero Cadastur">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-envelope" aria-hidden="true"></i> E-mail
-                                        <input class="form-control w-100" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" placeholder=" E-mail">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-key" aria-hidden="true"></i> Senha
-                                        <input class="form-control w-100" name="password" id="password" type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'" placeholder=" Senha">
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-4 offset-lg-12" align="center">
-                                <button type="submit" class="button button-contactForm boxed-btn" onclick="cadastrarGuia()">Cadastrar</button>
                             </div>
                         </div>
                     </div>
-                </form>
-            </div>
+                    <div class="single-post">
+                        <div class="blog_details" align="left">
+                            <h2>Informações do Guia:</h2>
+                            <p><i class="fa fa-user"></i> Guia: <output name="guia">Maria Tereza Buarque</output></p>
+                            <p><i class="fa fa-map-marker"></i> Passeio Contratado: <output name="descricao">Lado Leste - Pedra Furada, Buraco Azul, Lagoa do Paraíso, Dunas do Pôr do Sol e Árvore da Preguiça</output></p>
+
+                            <p><i class="fa fa-calendar"></i> Data: <output name="data">25/04/2021</output></p>
+                            <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração: <output name="duracao">8hrs</output></p>
+                            <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Sol e Praia</output></p>
+                            <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Fixo</output></p>
+                            <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor Pago: <output name="valor">R$310,00</output></p>
+                            <p><i class="fa fa-location-arrow"></i> Ponto de Encontro: <output name="endereco">Praça Central</output></p>
+                            <p><i class="fa fa-check-square" aria-hidden="true"></i> Status: <output name="status">Á iniciar</output></p>
+                        </div>
+                    </div>
+
+                    <div class="navigation-top">
+                        <div class="navigation-area">
+                            <div class="row">
+                                <div
+                                        class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/porto-seguro-ba.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="arrow">
+                                        <a href="#">
+                                            <span class="lnr text-white ti-arrow-left"></span>
+                                        </a>
+                                    </div>
+                                    <div class="detials">
+                                        <p>Viagem Anterior</p>
+                                        <a href="#">
+                                            <h4><output name="anterior">Porto Seguro</output></h4>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div
+                                        class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                                    <div class="detials">
+                                        <p>Próxima Viagem</p>
+                                        <a href="#">
+                                            <h4><output name="proxima">Chapada das Mesas</output></h4>
+                                        </a>
+                                    </div>
+                                    <div class="arrow">
+                                        <a href="#">
+                                            <span class="lnr text-white ti-arrow-right"></span>
+                                        </a>
+                                    </div>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/chapada-das-mesas.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </section>
@@ -213,9 +226,8 @@
             </div>
         </div>
     </div>
-    <!-- Footer End-->
 </footer>
-
+<!-- Footer End-->
 <!-- JS here -->
 
 <!-- All JS Custom Plugins Link Here here -->
@@ -231,16 +243,17 @@
 <!-- Jquery Slick , Owl-Carousel Plugins -->
 <script src="./assets/js/owl.carousel.min.js"></script>
 <script src="./assets/js/slick.min.js"></script>
-
+<!-- Date Picker -->
+<script src="./assets/js/gijgo.min.js"></script>
 <!-- One Page, Animated-HeadLin -->
 <script src="./assets/js/wow.min.js"></script>
 <script src="./assets/js/animated.headline.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
 
 <!-- Scrollup, nice-select, sticky -->
 <script src="./assets/js/jquery.scrollUp.min.js"></script>
 <script src="./assets/js/jquery.nice-select.min.js"></script>
 <script src="./assets/js/jquery.sticky.js"></script>
-<script src="./assets/js/jquery.magnific-popup.js"></script>
 
 <!-- contact js -->
 <script src="./assets/js/contact.js"></script>
@@ -254,5 +267,4 @@
 <script src="./assets/js/main.js"></script>
 
 </body>
-
 </html>
