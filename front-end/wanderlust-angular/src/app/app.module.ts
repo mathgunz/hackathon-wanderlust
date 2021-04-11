@@ -26,7 +26,12 @@ import {
   HeaderSlideComponent,
 } from './_components';
 
-import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
+import {
+  PerfilClientesComponent,
+  LoginClienteComponent,
+  CadastroClienteComponent
+} from './cliente';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +49,8 @@ import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
     FooterComponent,
     AlertComponent,
     CadastroPasseioPersonalizadoComponent,
-    HeaderSlideComponent
+    HeaderSlideComponent,
+    CadastroClienteComponent
   ],
   imports: [
     BrowserModule,
