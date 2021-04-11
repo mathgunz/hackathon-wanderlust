@@ -33,7 +33,6 @@ import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
     LoginClienteComponent,
     GuiaComponent,
     CadastroPasseioComponent,
-    PasseiosComponent,
     PerfilClientesComponent,
     NotificacoesComponent,
     ContatosComponent,

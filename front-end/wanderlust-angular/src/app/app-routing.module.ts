@@ -28,7 +28,6 @@ const routes: Routes = [
   { path: 'passeios', component: PasseiosComponent },
   { path: 'notificacoes', component: NotificacoesComponent },
   { path: 'cadastro-guia', component: GuiaComponent },
-  { path: 'cadastro-guia', component: GuiaComponent },
   { path: 'cadastro-passeio-guia-fixo', component: CadastroPasseioComponent },
   { path: 'cadastro-passeio-guia-personalizado', component: CadastroPasseioPersonalizadoComponent }
 ];
