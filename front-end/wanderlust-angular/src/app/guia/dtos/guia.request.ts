@@ -10,4 +10,5 @@ export class GuiaRequest {
   "email": string;
   "senha": string;
   "cadastur": string;
+  "descricao": string;
 }

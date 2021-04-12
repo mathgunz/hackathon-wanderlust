@@ -24,7 +24,8 @@ export class GuiaService {
     telefone,
     numeroCadastur,
     email,
-    senha} = value;
+    senha,
+    descricao} = value;
 
     const cadastur = numeroCadastur;
 
@@ -36,11 +37,11 @@ export class GuiaService {
       sobrenome: sobrenome,
       telefone: telefone,
       cadastur: cadastur,
+      descricao: descricao,
       endereco: {
         cidade: cidade,
         endereco: endereco
       }
-
     }
 
     console.log('GuiaService:guiaRequest:'+ guiaRequest);

@@ -53,6 +53,14 @@
                                       formControlName="sobrenome">
                               </div>
                           </div>
+
+                          <div class="col-lg-12 offset-lg-12">
+                            <div class="form-group">
+                                <p><i class="fa fa-comments"></i> Nos conte um pouco mais sobre você:
+                                    <textarea formControlName="descricao" class="form-control w-100" name="guiaDescricao" id="guiaDescricao" cols="30" rows="4" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ex:Atuo no turismo ha mais de 10 anos nos tipos de passeio Sol e Praia'" placeholder="Ex:Atuo no turismo ha mais de 10 anos nos tipos de passeios Sol e Praia - Seja Criativo! ;D"></textarea>
+                                </p>
+                            </div>
+                          </div>
                           <div class="col-md-6 offset-lg-12">
                               <div class="form-group">
                                   <p><i class="fa fa-globe" aria-hidden="true"></i> Endereço
@@ -164,6 +172,6 @@
 
 <jw-modal id="erro-cadastro-guia-modal">
   <h1>Error!</h1>
-  <p>N�o foi possivel realizar o cadastro, por favor tente novamente!</p>
+  <p>N�o foi possivel realizar o cadastro, por favor tente novamente!</p>
   <button class="button button-contactForm boxed-btn" (click)="closeModal('erro-cadastro-guia-modal');">Fechar</button>
 </jw-modal>
