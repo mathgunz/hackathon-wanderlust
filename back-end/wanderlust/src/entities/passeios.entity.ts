@@ -26,4 +26,7 @@ export class Passeios {
      @OneToOne(type => Enderecos, {cascade:true, eager:true})
      @JoinColumn({ name: "enderecoId", referencedColumnName: "id" })
      endereco: Enderecos;
+
+     @Column({nullable: true})
+     valor: number;
 }

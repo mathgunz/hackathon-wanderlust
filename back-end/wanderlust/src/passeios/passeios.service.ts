@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { validateOrReject } from 'class-validator';
 import { Passeios } from 'src/entities/passeios.entity';
 import { GuiasRepository } from 'src/guias/guias.repository';
 import { CreatePasseioDto, FilterPasseios } from './dtos/passeios.dto';
@@ -22,7 +23,7 @@ export class PasseiosService {
 
         const guia = await this.guiasRepository.findById(userId);
 
-        const { nome, descricao, duracao, endereco, tipo } = createPasseioDto;
+        const { valor, nome, descricao, duracao, endereco, tipo } = createPasseioDto;
         
         const passeio: Passeios = {
             descricao: descricao,
@@ -30,6 +31,7 @@ export class PasseiosService {
             guia: guia,
             nome: nome,
             tipo: tipo,
+            valor: valor,
             endereco: {
                 endereco: endereco.endereco,
                 cidade: endereco.cidade,

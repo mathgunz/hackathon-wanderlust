@@ -20,6 +20,9 @@ export class CreatePasseioDto {
 
     @IsNotEmpty()
     endereco: EnderecosDto;
+
+    @IsNumber()
+    valor: number;
 }
 
 export class UpdatePasseioDto extends CreatePasseioDto {}
