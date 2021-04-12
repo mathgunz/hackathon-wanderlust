@@ -30,8 +30,7 @@ export class PasseiosComponent implements OnInit {
     cidade: "",
     tipo:"",
     valor:0,
-    duracao:"",
-    tipoPasseio:""
+    duracao:""
   });
 
   ngOnInit(): void {

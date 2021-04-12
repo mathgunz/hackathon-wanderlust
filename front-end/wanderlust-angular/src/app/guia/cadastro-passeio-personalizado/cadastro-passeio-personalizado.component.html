@@ -35,7 +35,7 @@
                                           <p><i class="fa fa-map-signs" aria-hidden="true"></i> Selecione Passeio:
                                           <select formControlName="passeioIdSelecionado" class="form-select">
                                             <option value=0>
-                                              Selecione o Passeio
+                                              Selecione um Passeio
                                             </option>
                                               <option *ngFor="let passeio of passeios; let i = index" [value]="passeios[i].id">
                                                 {{passeios[i].nome}}
@@ -45,6 +45,14 @@
                                   </div>
                               </div>
                           </div>
+
+                          <div class="col-lg-10 offset-lg-12">
+                            <div class="form-group">
+                                <p><i class="fa fa-map-signs" aria-hidden="true"></i> Nome do Passeio Novo:
+                                    <input formControlName="novoPasseio" class="form-control valid" name="nomePasseio" id="nomePasseio" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Informe o passeio. Ex: Lado leste Jeri'" placeholder="Informe o passeio. Ex: Lado leste Jeri">
+                            </div>
+                          </div>
+
                           <div class="col-md-2 offset-lg-12">
                               <div class="form-group">
                                   <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração:

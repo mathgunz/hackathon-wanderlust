@@ -55,7 +55,7 @@ export class PasseioService {
       descricao: value.descricao,
       duracao: value.duracao,
       nome: value.nome,
-      tipo: value.tipoPasseio,
+      tipo: value.tipo,
       endereco: {
           cidade: value.cidade,
           endereco: value.endereco

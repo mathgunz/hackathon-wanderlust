@@ -17,7 +17,7 @@ export class PasseioResponseModel extends Passeio {}
 export class CreateAgendaModel {
 
   "guiaId": number;
-  "passeioId": number;
+  "passeioId"?: number;
   "data": Date;
   "duracao": Date;
   "tipo": string;
