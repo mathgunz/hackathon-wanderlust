@@ -1,79 +1,89 @@
 <div class="slider-area ">
-    <!-- Mobile Menu -->
-    <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/contact_hero.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="hero-cap text-center">
-                        <h2>Cadastre!</h2>
-                    </div>
-                </div>
-            </div>
+  <!-- Mobile Menu -->
+  <div class="single-slider slider-height2 d-flex align-items-center"
+    [ngStyle]="{backgroundImage:'url(../../assets/img/hero/contact_hero.jpg)'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="hero-cap text-center">
+            <h2>Cadastre!</h2>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 <!-- slider Area End-->
 <!-- ================ contact section start ================= -->
 <section class="contact-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-tittle text-center">
-                    <h4><span>Hey, Wanderlusteiro(a)</span></h4>
-                    <h2>Faça parte da comunidade viajante! </h2>
-                </div>
-                <form  method="post" id="cadastroCliente" novalidate="novalidate">
-                    <div class="col-lg-12" align="text-center">
-                        <div class="row">
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-address-card" aria-hidden="true"></i> Nome
-                                        <input class="form-control w-100" name="nome" id="nome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'" placeholder=" Nome">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-address-card" aria-hidden="true"></i> Sobrenome
-                                        <input class="form-control w-100" name="sobrenome" id="sobrenome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sobrenome'" placeholder=" Sobrenome">
-                                </div>
-                            </div>
-                            <div class="col-md-4 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-birthday-cake" aria-hidden="true"></i> Data Nascimento
-                                        <input class="form-control" name="dataNasc" id="dataNasc" type="date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'DD/MM/AAAA'" placeholder="DD/MM/AAAA">
-                                </div>
-                            </div>
-                            <div class="col-md-4 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade
-                                        <input class="form-control" name="cidade" id="cidade" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Cidade'" placeholder="Cidade">
-                                </div>
-                            </div>
-                            <div class="col-md-4 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-phone" aria-hidden="true"></i> Telefone
-                                        <input class="form-control" name="telefone" id="telefone" type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telefone'" placeholder="Telefone">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-envelope" aria-hidden="true"></i> E-mail
-                                        <input class="form-control w-100" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" placeholder=" E-mail">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 offset-lg-12">
-                                <div class="form-group">
-                                    <p><i class="fa fa-key" aria-hidden="true"></i> Senha
-                                        <input class="form-control w-100" name="password" id="password" type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'" placeholder=" Senha">
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-4 offset-lg-12" align="center">
-                                <button type="submit" class="button button-contactForm boxed-btn" onclick="cadastrarCliente()">Cadastrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-tittle text-center">
+          <h4><span>Hey, Wanderlusteiro(a)</span></h4>
+          <h2>Faça parte da comunidade viajante! </h2>
         </div>
+        <form [formGroup]="cadastroClienteForm" class="form-contact contact_form" id="contactForm"
+          novalidate="novalidate" (ngSubmit)="onSubmit()">
+          <div class="col-lg-12" align="text-center">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-12">
+                <div class="form-group">
+                  <p><i class="fa fa-address-card" aria-hidden="true"></i> Nome
+                    <input class="form-control w-100" name="nome" id="nome" type="text" onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Nome'" placeholder=" Nome">
+                </div>
+              </div>
+              <div class="col-lg-6 offset-lg-12">
+                <div class="form-group">
+                  <p><i class="fa fa-address-card" aria-hidden="true"></i> Sobrenome
+                    <input class="form-control w-100" name="sobrenome" id="sobrenome" type="text"
+                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sobrenome'" placeholder=" Sobrenome">
+                </div>
+              </div>
+              <div class="col-md-4 offset-lg-12">
+                <div class="form-group">
+                  <p><i class="fa fa-birthday-cake" aria-hidden="true"></i> Data Nascimento
+                    <input class="form-control" name="dataNasc" id="dataNasc" type="date"
+                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'DD/MM/AAAA'" placeholder="DD/MM/AAAA">
+                </div>
+              </div>
+              <div class="col-md-4 offset-lg-12">
+                <div class="form-group">
+                  <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade
+                    <input class="form-control" name="cidade" id="cidade" type="text" onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Cidade'" placeholder="Cidade">
+                </div>
+              </div>
+              <div class="col-md-4 offset-lg-12">
+                <div class="form-group">
+                  <p><i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                    <input class="form-control" name="telefone" id="telefone" type="tel"
+                      pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Telefone'" placeholder="Telefone">
+                </div>
+              </div>
+              <div class="col-lg-6 offset-lg-12">
+                <div class="form-group">
+                  <p><i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                    <input class="form-control w-100" name="email" id="email" type="email"
+                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" placeholder=" E-mail">
+                </div>
+              </div>
+              <div class="col-lg-6 offset-lg-12">
+                <div class="form-group">
+                  <p><i class="fa fa-key" aria-hidden="true"></i> Senha
+                    <input class="form-control w-100" name="password" id="password" type="password"
+                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'" placeholder=" Senha">
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-4 offset-lg-12" align="center">
+                <button type="submit" class="button button-contactForm boxed-btn">Cadastrar</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </section>

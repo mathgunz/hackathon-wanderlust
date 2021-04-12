@@ -26,8 +26,16 @@ export class ClienteService {
       }));
   }
 
-  criarCliente(user: User){
-
+  criarCliente(user: User) {
+    try {
+      return this.http.post<ClienteResponse>(
+        `http://localhost:3000/clientes`, user)
+        .pipe(map(cliente => {
+          return cliente;
+        }));
+    } catch (error) {
+      throw new Error(error)
+    }
   }
 
 

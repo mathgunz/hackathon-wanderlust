@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {
   PerfilClientesComponent,
   LoginClienteComponent,
+  CadastroClienteComponent,
 } from './cliente';
 import {
   GuiaComponent,
@@ -29,7 +30,8 @@ const routes: Routes = [
   { path: 'notificacoes', component: NotificacoesComponent },
   { path: 'cadastro-guia', component: GuiaComponent },
   { path: 'cadastro-passeio-guia-fixo', component: CadastroPasseioComponent },
-  { path: 'cadastro-passeio-guia-personalizado', component: CadastroPasseioPersonalizadoComponent }
+  { path: 'cadastro-passeio-guia-personalizado', component: CadastroPasseioPersonalizadoComponent },
+  { path: 'cadastro', component: CadastroClienteComponent },
 ];
 
 @NgModule({
