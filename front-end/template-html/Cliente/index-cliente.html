@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Wanderlust </title>
+    <title>Home Cliente</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -46,9 +46,7 @@
                         <div class="col-lg-8">
                             <div class="header-info-left">
                                 <ul>
-                                    <li>wanderlust@wanderlust.com.br</li>
-                                    <li>+55 11 4440-2303</li>
-                                    <li>São Paulo-Brasil</li>
+
                                 </ul>
                             </div>
                         </div>
@@ -58,7 +56,7 @@
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                    <li> <a href="#"><i class="fab fa-pinterest-p"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -81,7 +79,7 @@
                                     <ul id="navigation">
                                         <li><a href="passeios.html">Meus Passeios</a></li>
                                         <li><a href="perfil-cliente.html">Perfil</a></li>
-                                        <li><a href="notificacoes.html">Notificações</a></li>
+                                        <li><a href="notificacoes-cliente.html">Notificações</a></li>
                                         <li><a href="contato-cliente.html">Contato</a></li>
                                     </ul>
                                 </nav>
@@ -100,96 +98,89 @@
 </header>
 
 <main>
-
     <!-- slider Area Start-->
     <div class="slider-area ">
         <!-- Mobile Menu -->
         <div class="slider-active">
-            <div class="single-slider hero-overly  slider-height d-flex align-items-center"
-                 data-background="assets/img/hero/home_banner.jpg">
+            <div class="single-slider hero-overly  slider-height d-flex " data-background="assets/img/hero/h1_hero.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-9 col-lg-9 col-md-9">
                             <div class="hero__caption">
-                                <h1>Monte <span>Seu Roteiro!</span></h1>
-                                <p>Aonde você gostaria de ir?</p>
+                                <h1>Encontre <span>seu Guia!</span> </h1>
+                                <p>Qual a próxima trip?</p>
                             </div>
                         </div>
                     </div>
-                    <!-- form -->
-                    <form action="#" class="search-box">
-                        <div class="input-form mb-10">
-                            <input type="text" id="ondeIr" placeholder="Digite o Destino" style="height:55px;width:410px;">
+                    <!-- Search Box -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <!-- form -->
+                            <form action="post" class="search-box">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class=" input-form p-6 mb-6 bg-gradient-primary text-white">Data Inícial</div>
+                                        <input name="calInicio" type="date" id="dataInicial" class="form-control" placeholder="DD/MM/AAAA" style="height:50px;width:180px;">
+                                    </div>
+                                    <div class="col">
+                                        <div class=" input-form p-6 mb-6 bg-gradient-primary text-white">Data Final</div>
+                                        <input name="calInicio" type="date" id="dataFinal" class="form-control" placeholder="DD/MM/AAAA" style="height:50px;width:180px;">
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-form p-6 mb-6 bg-gradient-primary text-white">Roteiro</div>
+                                        <select name="select" id="select1" >
+                                            <option value="">Roteiro Fixo</option>
+                                            <option value="">Roteiro Personalizado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-form mb-10">
+                                    <input type="text" placeholder="Digite o Destino" >
+                                </div>
+                                <div class="select-form mb-10">
+                                    <div class="select-itms">
+                                        <select name="select" id="selectPessoas">
+                                            <option value="">Pessoas</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3 ou  + </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-form mb-10">
+                                    <a href="lista-guia.html">Buscar</a>
+                                </div>
+
+                            </form>
                         </div>
-
-                        <div class="row" class="input-form mb-10">
-                            <div class="col">
-                                <div class="p-3 mb-2 bg-gradient-primary text-white">Data Inícial</div>
-                                <input name="calInicio" type="date" id="dataInicial" class="form-control" placeholder="DD/MM/AAAA" style="height:60px;width:190px;">
-                            </div>
-                            <div class="col">
-                                <div class="p-3 mb-2 bg-gradient-primary text-white">Data Final</div>
-                                <input name="calInicio" type="date" id="dataFinal" class="form-control" placeholder="DD/MM/AAAA" style="height:60px;width:190px;">
-                            </div>
-
-                            <div class="col">
-                                <select name="select" id="selectPessoas" >
-                                    <option value="">Pessoas</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4 ou +</option>
-                                </select>
-                            </div>
-
-                            <div class="col">
-                                <select name="select" id="select1" >
-                                    <option value="">Roteiro Fixo</option>
-                                    <option value="">Roteiro Personalizado</option>
-                                </select>
-                            </div>
-
-                            <div class="col" class="button-group-area mt-30">
-                                <a href="lista-guia.html" class="genric-btn danger circle">Buscar</a>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- slider Area End-->
+    <!-- Home End -->
 </main>
 <footer>
     <!-- Footer Start-->
-    <div class="footer-area footer-padding footer-bg" data-background="assets/img/service/footer_bg.jpg">
-        <div class="container">
-            <div class="row d-flex justify-content-between">
-                <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
-                    <div class="single-footer-caption mb-50">
-                        <div class="single-footer-caption mb-30">
-                            <!-- logo -->
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                            </div>
-
-                            <!-- Footer bottom -->
-                            <div class="footer-tittle">
-                                <div class="footer-pera">
-                                    <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                                        All rights reserved.</p>
-                                </div>
+    <div class="footer-area">
+        <div class="main-footer">
+            <div class="footer-top top-bg d-none d-lg-block">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-8">
+                            <div class="hero-cap text-center" >
+                                <ul>
+                                    <li ><</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer bottom -->
     </div>
     <!-- Footer End-->
 </footer>
-
 <!-- JS here -->
 
 <!-- All JS Custom Plugins Link Here here -->
