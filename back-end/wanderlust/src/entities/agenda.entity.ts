@@ -20,10 +20,10 @@ export class Agendas {
      passeio: Passeios;
 
      @Column()
-     inicio: Date;
+     data: Date;
 
      @Column()
-     fim: Date;
+     duracao: string;
 
      @Column()
      status: string;
@@ -33,6 +33,12 @@ export class Agendas {
 
      @OneToMany(type => ClientesAgendados, clientesAgendados => clientesAgendados.agenda)
      clientesAgendados?: ClientesAgendados[];
+
+     @Column()
+     descricao: string;
+
+     @Column()
+     valor: number;
 
 }
 
