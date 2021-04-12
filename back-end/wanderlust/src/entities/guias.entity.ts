@@ -35,4 +35,7 @@ export class Guias {
 
      @OneToMany(type => Passeios, passeios => passeios.guia)
      passeios?: Passeios[];
+
+     @Column()
+     descricao: string;
 }
