@@ -18,7 +18,12 @@ import { HomeGuiaComponent } from './guia/home-guia/home-guia.component';
 import { HomeComponent } from './home/home.component';
 
 
-import { PerfilClientesComponent, LoginClienteComponent } from './cliente';
+import {
+  PerfilClientesComponent,
+  LoginClienteComponent,
+  CadastroClienteComponent,
+  ContatoClienteComponent,
+} from './cliente';
 import { HeadersComponent } from './_components/headers/headers.component';
 import { FooterComponent } from './_components/footer/footer.component';
 import { AlertComponent } from './_components/alert/alert.component';
@@ -41,6 +46,10 @@ import { HeaderSlideComponent } from './_components/header-slide/header-slide.co
     HomeComponent,
     FooterComponent,
     AlertComponent,
+    CadastroPasseioPersonalizadoComponent,
+    HeaderSlideComponent,
+    CadastroClienteComponent,
+    ContatoClienteComponent,
     HeaderSlideComponent
   ],
   imports: [

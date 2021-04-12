@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-perfil-clientes',
-  templateUrl: './perfil-clientes.component.html',
-  styleUrls: ['./perfil-clientes.component.scss']
+  selector: 'app-perfil',
+  templateUrl: './perfil-cliente.component.html',
+  styleUrls: ['./perfil-cliente.component.scss']
 })
 export class PerfilClientesComponent implements OnInit {
 

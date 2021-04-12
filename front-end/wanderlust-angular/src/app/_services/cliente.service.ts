@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { ClienteResponse } from '../_models/cliente';
+import { User, ClienteResponse } from '../_models';
+import { LocalStorageService } from './local-storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,22 +10,33 @@ import { ClienteResponse } from '../_models/cliente';
 
 export class ClienteService {
 
-  constructor(private http: HttpClient) {
+  constructor(
+    private http: HttpClient,
+    private localstorage: LocalStorageService,
+  ) {
   }
 
   buscarClientePorId(clienteId: number) {
-
-    console.log('ClienteService:clienteId:'+ clienteId);
-
     return this.http.get<ClienteResponse>(
-      `http://localhost:3000/clientes/`+clienteId)
-        .pipe(map(cliente => {
-            // store user details and jwt token in local storage to keep user logged in between page refreshes
-
-            console.log('cliente:'+cliente);
-
-            return cliente;
-        }));
+      `http://localhost:3000/clientes/` + clienteId)
+      .pipe(map(cliente => {
+        // store user details and jwt token in local storage to keep user logged in between page refreshes
+        this.localstorage.set("user", cliente);
+        return cliente;
+      }));
   }
+
+  criarCliente(user: User) {
+    try {
+      return this.http.post<ClienteResponse>(
+        `http://localhost:3000/clientes`, user)
+        .pipe(map(cliente => {
+          return cliente;
+        }));
+    } catch (error) {
+      throw new Error(error)
+    }
+  }
+
 
 }
