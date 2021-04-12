@@ -39,7 +39,7 @@ export class CadastroPasseioPersonalizadoComponent implements OnInit {
     dataDoPasseio: '',
     descricao:'',
     valorPasseio: 0,
-    passeioIdSelecionado: 0,
+    passeioIdSelecionado: 0
   });
 
 

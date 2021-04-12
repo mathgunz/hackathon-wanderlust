@@ -1,23 +1,23 @@
-export class Passseio {
+import { EnderecosModel } from "./endereco";
 
-  "id": number;
+export class Passeio {
+
+  "id"?: number;
   "nome": string;
   "descricao": string;
-  "inicio": Date;
-  "fim": Date;
   "duracao": string;
   "tipo": string;
-  // "endereco": EnderecosDto;
+  "endereco": EnderecosModel;
 }
 
 
-export class PasseioResponseModel extends Passseio {}
+export class PasseioResponseModel extends Passeio {}
 
 
 export class CreateAgendaModel {
 
   "guiaId": number;
-  "passeioId": number;
+  "passeioId"?: number;
   "data": Date;
   "duracao": Date;
   "tipo": string;

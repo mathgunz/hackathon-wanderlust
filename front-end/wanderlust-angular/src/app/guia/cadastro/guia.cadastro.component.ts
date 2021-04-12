@@ -22,6 +22,7 @@ export class GuiaComponent implements OnInit {
     numeroCadastur:"",
     email: "",
     senha: "",
+    descricao:"",
   });
 
   nomeGuia: string = "";

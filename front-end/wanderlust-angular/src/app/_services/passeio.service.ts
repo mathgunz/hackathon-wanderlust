@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { CreateAgendaModel, PasseioResponseModel } from '../_models/passeio';
+import { EnderecosModel } from '../_models/endereco';
+import { CreateAgendaModel, Passeio, PasseioResponseModel } from '../_models/passeio';
 
 @Injectable({
   providedIn: 'root'
@@ -47,4 +48,29 @@ export class PasseioService {
     }));
 
   }
+
+  create(value: any, guiaId: number) {
+
+    const passeioRequest: Passeio = {
+      descricao: value.descricao,
+      duracao: value.duracao,
+      nome: value.nome,
+      tipo: value.tipo,
+      endereco: {
+          cidade: value.cidade,
+          endereco: value.endereco
+      }
+    }
+
+    console.log('PasseioService:create:'+JSON.stringify(passeioRequest));
+
+    return this.http.post<Passeio>(
+      `http://localhost:3000/passeios?guiaId=`+guiaId, passeioRequest
+    ).pipe(map(passeio => {
+
+      console.log('passeio:'+passeio);
+      return passeio;
+    }));
+  }
+
 }

@@ -27,7 +27,7 @@ export class GuiasService {
 
   async create(createGuiaDto: CreateGuiaDto): Promise<Guias> {
 
-    const { nome, sobrenome, cadastur, email, endereco, senha, telefone, dataNascimento} = createGuiaDto;
+    const { descricao ,nome, sobrenome, cadastur, email, endereco, senha, telefone, dataNascimento} = createGuiaDto;
 
     const guia: Guias = {
       nome: nome,
@@ -37,6 +37,7 @@ export class GuiasService {
       senha: senha,
       telefone: telefone,
       dataNascimento: dataNascimento,
+      descricao: descricao,
       endereco:{
         endereco: endereco.endereco,
         cidade: endereco.cidade,

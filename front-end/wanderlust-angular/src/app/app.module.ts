@@ -11,26 +11,23 @@ import { PasseiosComponent } from './passeios/passeios.component';
 import { NotificacoesComponent } from './notificacoes/notificacoes.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
+import { GuiaComponent } from './guia';
+import { CadastroPasseioComponent } from './guia/cadastro-passeio-fixo/cadastro-passeio.component';
+import { CadastroPasseioPersonalizadoComponent } from './guia/cadastro-passeio-personalizado/cadastro-passeio-personalizado.component';
+import { HomeGuiaComponent } from './guia/home-guia/home-guia.component';
 import { HomeComponent } from './home/home.component';
 
-import {
-  CadastroPasseioComponent,
-  CadastroPasseioPersonalizadoComponent,
-  GuiaComponent,
-} from './guia';
-
-import {
-  HeadersComponent,
-  FooterComponent,
-  AlertComponent,
-  HeaderSlideComponent,
-} from './_components';
 
 import {
   PerfilClientesComponent,
   LoginClienteComponent,
-  CadastroClienteComponent
+  CadastroClienteComponent,
+  ContatoClienteComponent,
 } from './cliente';
+import { HeadersComponent } from './_components/headers/headers.component';
+import { FooterComponent } from './_components/footer/footer.component';
+import { AlertComponent } from './_components/alert/alert.component';
+import { HeaderSlideComponent } from './_components/header-slide/header-slide.component';
 
 @NgModule({
   declarations: [
@@ -43,14 +40,17 @@ import {
     ContatosComponent,
     PasseiosComponent,
     AjudarComponent,
-    NotificacoesComponent,
+    CadastroPasseioPersonalizadoComponent,
+    HomeGuiaComponent,
     HeadersComponent,
     HomeComponent,
     FooterComponent,
     AlertComponent,
     CadastroPasseioPersonalizadoComponent,
     HeaderSlideComponent,
-    CadastroClienteComponent
+    CadastroClienteComponent,
+    ContatoClienteComponent,
+    HeaderSlideComponent
   ],
   imports: [
     BrowserModule,

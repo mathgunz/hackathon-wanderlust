@@ -26,6 +26,9 @@ export class CreateGuiaDto {
 
     @IsString()
     senha: string;
+
+    @IsString()
+    descricao: string;
 }
 
 export class UpdateGuiaDto extends CreateGuiaDto {}
