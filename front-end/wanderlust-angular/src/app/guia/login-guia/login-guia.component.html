@@ -2,7 +2,7 @@
     <div class="slider-area ">
       <!-- Mobile Menu -->
       <div class="single-slider slider-height2 d-flex align-items-center"
-      >
+      [ngStyle]="{backgroundImage:'url(../../assets/img/hero/contact_hero.jpg)'}">
       <!-- [ngStyle]="{backgroundImage:'url(../../assets/img/hero/contact_hero.jpg)'}" -->
         <div class="container">
           <div class="row">
@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="col-lg-8" align="text-center">
-            <form class="form-contact contact_form" id="contactForm" novalidate="novalidate" (ngSubmit)="onSubmit()">
+            <form [formGroup]="loginGuiaForm" class="form-contact contact_form" id="contactForm" novalidate="novalidate" (ngSubmit)="onSubmit()">
               <div class="row">
                 <div class="col-md-6 offset-md-6">
                   <div class="form-group">
@@ -56,3 +56,9 @@
         </div>
       </div>
     </section>
+
+<jw-modal id="erro-login-guia-modal">
+  <h1>Error!</h1>
+  <p>Não foi possivel realizar o login, por favor tente novamente!</p>
+  <button class="button button-contactForm boxed-btn" (click)="closeModal('erro-login-guia-modal');">Fechar</button>
+</jw-modal>

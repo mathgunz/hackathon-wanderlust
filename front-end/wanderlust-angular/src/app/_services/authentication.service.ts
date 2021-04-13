@@ -7,6 +7,7 @@ import { User } from '../_models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
+
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
 
@@ -29,6 +30,18 @@ export class AuthenticationService {
                 this.currentUserSubject.next(user);
                 return user;
             }));
+    }
+
+    loginGuia(email: any, senha: any) {
+      return this.http.post<any>(
+        `http://localhost:3000/login/guias`
+        , { email, senha })
+          .pipe(map(user => {
+              // store user details and jwt token in local storage to keep user logged in between page refreshes
+              localStorage.setItem('currentUser', JSON.stringify(user));
+              this.currentUserSubject.next(user);
+              return user;
+          }));
     }
 
     logout() {

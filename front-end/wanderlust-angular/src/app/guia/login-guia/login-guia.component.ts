@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ModalService } from 'src/app/_modal';
 import { AlertService, AuthenticationService } from '../../_services';
 
 @Component({
@@ -22,7 +23,8 @@ export class LoginGuiaComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private authenticationService: AuthenticationService,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private modalService: ModalService
   ) {
   }
 
@@ -41,18 +43,27 @@ export class LoginGuiaComponent implements OnInit {
     }
 
     this.loading = true;
-    this.authenticationService.login(this.loginGuiaForm.value.email, this.loginGuiaForm.value.password)
+    this.authenticationService.loginGuia(this.loginGuiaForm.value.email, this.loginGuiaForm.value.password)
       .subscribe({
-        next: () => {
-          // get return url from query parameters or default to home page
-          const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+        next: (user) => {
+
+          if (user === null) {
+            this.modalService.open('erro-login-guia-modal');
+            return;
+          }
+          const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home-guia';
           this.router.navigateByUrl(returnUrl);
         },
         error: error => {
           this.alertService.error(error);
           this.loading = false;
+          this.modalService.open('erro-login-guia-modal');
         }
       });
+  }
+
+  closeModal(id: string){
+      this.modalService.close(id);
   }
 
 }
