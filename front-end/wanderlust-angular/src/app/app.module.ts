@@ -8,7 +8,6 @@ import { ModalModule } from './_modal';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotificacoesComponent } from './notificacoes/notificacoes.component';
-import { ContatosComponent } from './guia/contato-sac/contato-sac.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
 import { HomeComponent } from './home/home.component';
 
@@ -19,7 +18,8 @@ import {
   HomeGuiaComponent,
   PasseiosComponent,
   LoginGuiaComponent,
-  PerfilGuiaComponent
+  PerfilGuiaComponent,
+  ContatosComponent,
 } from './guia';
 
 import {
@@ -31,7 +31,7 @@ import {
   DetalhePasseiosFixoComponent,
   DetalhePasseiosClienteComponent,
   IndexClienteComponent,
-  PasseiosAnterioresComponent
+  PasseiosAnterioresComponent,
 } from './cliente';
 
 import {
