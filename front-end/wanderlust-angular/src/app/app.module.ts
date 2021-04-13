@@ -7,9 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from './_modal';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PasseiosComponent } from './passeios/passeios.component';
 import { NotificacoesComponent } from './notificacoes/notificacoes.component';
-import { ContatosComponent } from './contatos/contatos.component';
+import { ContatosComponent } from './guia/contato-sac/contato-sac.component';
 import { AjudarComponent } from './ajudar/ajudar.component';
 import { HomeComponent } from './home/home.component';
 
@@ -17,7 +16,10 @@ import {
   GuiaComponent,
   CadastroPasseioComponent,
   CadastroPasseioPersonalizadoComponent,
-  HomeGuiaComponent
+  HomeGuiaComponent,
+  PasseiosComponent,
+  LoginGuiaComponent,
+  PerfilGuiaComponent
 } from './guia';
 
 import {
@@ -25,12 +27,18 @@ import {
   LoginClienteComponent,
   CadastroClienteComponent,
   ContatoClienteComponent,
+  ContratacaoFixoComponent,
+  DetalhePasseiosFixoComponent,
+  DetalhePasseiosClienteComponent,
+  IndexClienteComponent,
+  PasseiosAnterioresComponent
 } from './cliente';
+
 import {
   HeadersComponent,
   FooterComponent,
   AlertComponent,
-  HeaderSlideComponent
+  HeaderSlideComponent,
 } from './_components';
 
 
@@ -55,7 +63,14 @@ import {
     HeaderSlideComponent,
     CadastroClienteComponent,
     ContatoClienteComponent,
-    HeaderSlideComponent
+    HeaderSlideComponent,
+    ContratacaoFixoComponent,
+    DetalhePasseiosFixoComponent,
+    DetalhePasseiosClienteComponent,
+    IndexClienteComponent,
+    PasseiosAnterioresComponent,
+    LoginGuiaComponent,
+    PerfilGuiaComponent
   ],
   imports: [
     BrowserModule,
