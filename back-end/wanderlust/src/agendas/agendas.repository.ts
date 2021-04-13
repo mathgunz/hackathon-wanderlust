@@ -16,7 +16,6 @@ export class AgendasRepository extends Repository<Agendas> {
   
         return guias;
       }
-
 }
 
 @Injectable()

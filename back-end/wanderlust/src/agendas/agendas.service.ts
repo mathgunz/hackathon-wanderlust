@@ -37,7 +37,22 @@ export class AgendasService {
         valor: createAgendaDto.valor
       }
 
-      return await this.agendasRepository.save(agenda);
+      const agendaResult = await this.agendasRepository.save(agenda);
+
+      if (createAgendaDto.clienteId !== null) {
+
+        const cliente = await this.clientesRepository.findById(createAgendaDto.clienteId);
+
+        const clienteAgendado: ClientesAgendados = {
+          agenda: agendaResult,
+          cliente: cliente
+        }
+  
+        this.clientesAgendadosRepository.save(clienteAgendado);            
+      }
+
+
+      return agendaResult;
     }
 
     async get(id: number): Promise<Agendas> {
