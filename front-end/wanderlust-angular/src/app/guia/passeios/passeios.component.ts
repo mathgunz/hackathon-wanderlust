@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ModalService } from '../_modal';
-import { AlertService, PasseioService } from '../_services';
+import { ModalService } from '../../_modal';
+import { AlertService, PasseioService } from '../../_services';
 
 @Component({
   selector: 'app-passeios',
