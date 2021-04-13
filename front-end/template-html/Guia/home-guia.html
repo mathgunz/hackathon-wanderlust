@@ -93,167 +93,184 @@
     </div>
     <!-- Header End -->
 </header>
+<div class="slider-area ">
+    <!-- Mobile Menu -->
+    <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/contact_hero.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+                        <h2>Bem vindo Guia!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <main>
-
     <section class="blog_area section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle text-center">
-                        <span>Notificaçôes de atendimento dos clientes</span>
-                        <h2>Notificaçôes</h2>
+                        <h4><span>Hey, você tem novos atendimentos</span></h4>
+                        <h2>Notificações</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="col-xl-6 col-lg-4 col-md-4" align="center">
                     <div class="blog_left_sidebar">
                         <article class="blog_item">
                             <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Beach Park</h2>
-                                </a>
-                                <p><i class="fa"></i> Status: <output name="guia">Pendente</output></p>
-                                <p></p><i class="fa fa-calendar"></i> Data: <output name="data">25/04/2021</output></p>
-                                <p><i class="fa fa-user" aria-hidden="true"></i> Nome do Cliente: <output name="duracao">João</output></p>
-                                <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Fixo</output></p>
-                                <a href="#" class="btn border-btn">Aceitar</a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog_left_sidebar">
-                        <article class="blog_item">
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Beach Park</h2>
-                                </a>
-                                <p><i class="fa"></i> Status: <output name="guia">Pendente</output></p>
-                                <p></p><i class="fa fa-calendar"></i> Data: <output name="data">25/04/2021</output></p>
-                                <p><i class="fa fa-user" aria-hidden="true"></i> Nome do Cliente: <output name="duracao">João</output></p>
-                                <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Fixo</output></p>
-                                <a href="#" class="btn border-btn">Aceitar</a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog_left_sidebar">
-                        <article class="blog_item">
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Morro branco</h2>
-                                </a>
-                                <p><i class="fa"></i> Status: <output name="guia">Aguardando confirmação do cliente</output></p>
-                                <p></p><i class="fa fa-calendar"></i> Data: <output name="data">25/04/2021</output></p>
-                                <p><i class="fa fa-user" aria-hidden="true"></i> Nome do Cliente: <output name="duracao">João</output></p>
+                                <h2>Wanderlusteiro: <output name="cliente">João Paulo Bastos</output></h2>
+
+                                <p><i class="fa fa-info"></i> Status: <output name="guia">Pendente de Atendimento</output></p>
+                                <p><i class="fa fa-calendar"></i> Data do Passeio: <output name="data">25/05/2021</output></p>
+                                <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade: <output name="cidade">São Paulo</output></p>
                                 <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Personalizado</output></p>
+                                <p> <img src="assets/img/icon/whatsapp.png" alt="" style="height:30px;width:25px;">
+                                    <a href="chat.html"><i class="fa fa-whatsapp" aria-hidden="true"></i>Fale com seu cliente</a></p>
+                                <div class="col-lg-8 col-md-10 col-8 nav-left flex-row d-flex justify-content-start align-items-center">
+                                    <button onclick="encerrar()" class="button button-contactForm boxed-btn">Encerrar Atendimento</button>
+                                    <div class="col-lg-8 col-md-12 col-8 nav-right flex-row d-flex justify-content-end align-items-center">
+                                        <button onclick="contratarPersonalizado()" type="submit" class="button button-contactForm boxed-btn">Contratar Passeio</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-4 col-md-4" align="center">
+                    <div class="blog_left_sidebar">
+                        <article class="blog_item">
+                            <div class="blog_details">
+                                <h2>Wanderlusteiro: <output name="cliente">Laura Oliveira</output></h2>
+
+                                <p><i class="fa fa-info"></i> Status: <output name="guia">Aguardando aprovação cliente</output></p>
+                                <p><i class="fa fa-calendar"></i> Data do Passeio: <output name="data">30/04/2021</output></p>
+                                <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade: <output name="cidade">Porto Alegre</output></p>
+                                <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Personalizado</output></p>
+                                <p> <img src="assets/img/icon/whatsapp.png" alt="" style="height:30px;width:25px;">
+                                    <a href="chat.html"><i class="fa fa-whatsapp" aria-hidden="true"></i>Fale com seu cliente</a></p>
+                                <div class="col-lg-8 col-md-10 col-8 nav-left flex-row d-flex justify-content-start align-items-center">
+                                    <button onclick="encerrar()" class="button button-contactForm boxed-btn">Encerrar Atendimento</button>
+                                    <div class="col-lg-8 col-md-12 col-8 nav-right flex-row d-flex justify-content-end align-items-center">
+                                        <button onclick="contratarPersonalizado()" type="submit" class="button button-contactForm boxed-btn">Contratar Passeio</button>
+                                    </div>
+                                </div>
                             </div>
                         </article>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="blog_area section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle text-center">
-                        <span></span>
-                        <h2>Agendamentos</h2>
+                        <h4><span>Hey,confira seus próximos passeios</span></h4>
+                        <h2>Agendamentos </h2>
+                    </div>
+                    <div>
+                        <form  method="post" id="agendamentos">
+                            <div class="col-lg-12" align="text-center">
+                                <div class="row">
+                                    <div class="col-lg-5 offset-lg-12">
+                                        <div class="form-group">
+                                            <p><i class="fa fa-calendar" aria-hidden="true"></i> Data Inicial
+                                                <input class="form-control" name="dataInicial" id="dataInicial" type="date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'DD/MM/AAAA'" placeholder="DD/MM/AAAA">     </div>
+                                    </div>
+                                    <div class="col-lg-5 offset-lg-12">
+                                        <div class="form-group">
+                                            <p><i class="fa fa-calendar" aria-hidden="true"></i> Data Final
+                                                <input class="form-control" name="dataInicial" id="dataFinal" type="date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'DD/MM/AAAA'" placeholder="DD/MM/AAAA">     </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 offset-lg-12" align="center">
+                                        <button type="submit" class="button button-contactForm boxed-btn" onclick="buscarAgendamentos()">buscar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="main-box clearfix">
+                                            <div class="table-responsive">
+                                                <table class="table user-list">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="text-center"><span>Passeio</span></th>
+                                                        <th class="text-center"><span>Data</span></th>
+                                                        <th class="text-center"><span>Duração</span></th>
+                                                        <th class="text-center"><span>Status</span></th>
+                                                        <th class="text-center"><span>Cliente</span></th>
+                                                        <th class="text-center"><span>Detalhes </span></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <p><output name="passeio">Litoral Leste-Jericoacoara</output></p>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <p><output name="dataPasseio">25/04/2021</output></p>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <p><output name="duracao">8 hrs</output></p>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <p><output name="statusPasseio"> Agendado</output></p>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <p><output name="nomeCliente">Felipe Souza</output></p>
+                                                        </td>
+                                                        <td style="width: 14%;" align="center">
+                                                            <a href="detalhe_agendamento_guia.html" class="table-link">
+									                        <span class="fa-stack" aria-hidden="true">
+                                                                <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
+                                                                <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
+									                        </span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <p><output name="passeio">Rota dos Cristais-Jeri</output></p>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <p><output name="dataPasseio">26/04/2021</output></p>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <p><output name="duracao">9 hrs</output></p>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <p><output name="statusPasseio"> Agendado</output></p>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <p><output name="nomeCliente">Ariane Silva</output></p>
+                                                        </td>
+                                                        <td style="width: 14%;" align="center">
+                                                            <a href="detalhe_agendamento_guia.html" class="table-link">
+									                        <span class="fa-stack" aria-hidden="true">
+                                                                <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
+                                                                <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
+									                        </span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog_left_sidebar">
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>A lagoa Azul</h2>
-                                </a>
-                                <lu>
-                                    <li>
-                                        <i class="fa fa-user" aria-hidden="true"></i> Clientes:
-                                        <lu>
-                                            <li>
-                                                <output name="tipoPasseio">- João</output>
-                                            </li>
-
-                                            <li>
-                                                <output name="tipoPasseio">- Amanda</output>
-                                            </li>
-                                        </lu>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Personalizado</output>
-                                    </li>
-
-                                    <li>
-                                        <i class="fa fa-map"></i> status: <output name="tipoPasseio">Pendente</output>
-                                    </li>
-                                </lu>
-                            </div>
-                        </article>
-                </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog_left_sidebar">
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <a href="#" class="blog_item_date">
-                                    <h3>17</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Maragogi</h2>
-                                </a>
-                                <lu>
-                                    <li>
-                                        <i class="fa fa-user" aria-hidden="true"></i> Clientes:
-                                        <lu>
-                                            <li>
-                                                <output name="tipoPasseio">- João</output>
-                                            </li>
-
-                                            <li>
-                                                <output name="tipoPasseio">- Amanda</output>
-                                            </li>
-                                        </lu>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Personalizado</output>
-                                    </li>
-
-                                    <li>
-                                        <i class="fa fa-map"></i> status: <output name="tipoPasseio">Pendente</output>
-                                    </li>
-                                </lu>
-                            </div>
-                        </article>
-                </div>
-                </div>
-            </div>
-            </div>
         </div>
     </section>
-
 </main>
 <footer>
     <!-- Footer Start-->
@@ -263,7 +280,7 @@
                 <div class="container">
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-8">
-                            <div class="hero-cap text-center" >
+                            <div class="hero-cap text-center">
                                 <ul>
                                     <li ><</li>
                                 </ul>
