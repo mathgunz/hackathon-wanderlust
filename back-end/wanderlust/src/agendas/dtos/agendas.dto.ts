@@ -33,6 +33,11 @@ export class UpdateAgendaDto extends CreateAgendaDto {}
 export class FilterAgendasDto {
 
     @IsNumber()
-    guiaId: number;
+    @IsOptional()
+    guiaId?: number;
+
+    @IsNumber()
+    @IsOptional()
+    clienteId?: number;
 
 }
