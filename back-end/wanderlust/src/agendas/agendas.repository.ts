@@ -16,6 +16,7 @@ export class AgendasRepository extends Repository<Agendas> {
         .leftJoinAndSelect('agendas.passeio', 'passeio')
         .orWhere('guia.id = :guiaId', {guiaId: query.guiaId})
         .orWhere('cliente.id = :clienteId', {clienteId: query.clienteId})
+        .orWhere('agendas.status = :status', {status: query.status})
         .getMany();
   
         return guias;

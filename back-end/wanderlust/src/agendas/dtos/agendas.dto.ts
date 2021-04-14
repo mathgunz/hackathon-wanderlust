@@ -43,4 +43,8 @@ export class FilterAgendasDto {
     @IsOptional()
     clienteId?: number;
 
+    @IsString()
+    @IsOptional()
+    status?: string;
+
 }
