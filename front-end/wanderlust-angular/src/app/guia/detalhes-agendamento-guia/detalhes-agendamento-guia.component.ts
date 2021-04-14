@@ -23,7 +23,6 @@ export class DetalhesAgendamentoGuiaComponent implements OnInit {
 
   guiaId: number = 1;
   clienteId: number = 1;
-  agendaId: number = 6;
   agenda: Agenda = new Agenda();
 
   detalhesAgendaGuiaForm = this.formBuilder.group({
@@ -32,9 +31,9 @@ export class DetalhesAgendamentoGuiaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // const id = Number(this.route.snapshot.paramMap.get('agendaId'));
+    const agendaId = Number(this.route.snapshot.paramMap.get('agendaId'));
 
-    this.agendaService.findById(this.agendaId).subscribe({
+    this.agendaService.findById(agendaId).subscribe({
         next: (agenda) => {
             this.agenda = agenda;
             console.log('detalhes do guia:'+agenda);
