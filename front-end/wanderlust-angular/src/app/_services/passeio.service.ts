@@ -92,7 +92,8 @@ export class PasseioService {
       endereco: {
           cidade: value.cidade,
           endereco: value.endereco
-      }
+      },
+      valor: value.valor
     }
 
     return this.http.post<Passeio>(
