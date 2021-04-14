@@ -8,6 +8,7 @@ export class Passeio {
   "duracao": string;
   "tipo": string;
   "endereco": EnderecosModel;
+  "valor": string;
 }
 
 
