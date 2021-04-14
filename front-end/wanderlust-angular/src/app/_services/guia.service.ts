@@ -60,13 +60,6 @@ export class GuiaService {
   }
 
   getByCity(city: string){
-    // @IsString()
-    // @IsOptional()
-    // cidade?: string;
-
-    // @IsString()
-    // @IsOptional()
-    // estado?: string;
     return this.http.get(
       `http://localhost:3000/guias?city=${city}`)
         .pipe(map(guia => {
