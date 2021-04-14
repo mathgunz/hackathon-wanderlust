@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AjudarComponent } from './ajudar/ajudar.component';
 import { HomeComponent } from './home/home.component';
 
 import {
@@ -32,20 +31,19 @@ import {
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginClienteComponent },
-  { path: 'ajuda', component: AjudarComponent },
   { path: 'perfil', component: PerfilClientesComponent },
   { path: 'contato', component: ContatosComponent },
   { path: 'cadastro', component: CadastroClienteComponent },
   { path: 'contato', component: ContatoClienteComponent },
   { path: 'contratacao-fixo', component: ContratacaoFixoComponent },
-  { path: 'detalhes-passeios-fixo', component: DetalhePasseiosFixoComponent },
-  { path: 'detalhes-passeios-cliente', component: DetalhePasseiosClienteComponent },
-  { path: 'index-cliente', component: IndexClienteComponent },
+  { path: 'detalhes-fixo', component: DetalhePasseiosFixoComponent },
+  { path: 'detalhes', component: DetalhePasseiosClienteComponent },
+  { path: 'home-cliente', component: IndexClienteComponent },
   { path: 'passeios-anteriores', component: PasseiosAnterioresComponent },
   { path: 'lista-guias', component: ListaGuiaComponent },
   { path: 'detalhe-guia', component: DetalheGuiaComponent },
   { path: 'pagamento', component: PagamentoComponent },
-
+  
   //guia
   { path: 'home-guia', component: HomeGuiaComponent },
   { path: 'login-guia', component: LoginGuiaComponent },

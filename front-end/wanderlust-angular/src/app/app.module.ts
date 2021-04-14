@@ -8,7 +8,6 @@ import { ModalModule } from './_modal';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotificacoesComponent } from './notificacoes/notificacoes.component';
-import { AjudarComponent } from './ajudar/ajudar.component';
 import { HomeComponent } from './home/home.component';
 
 import {
@@ -54,7 +53,6 @@ import {
     NotificacoesComponent,
     ContatosComponent,
     PasseiosComponent,
-    AjudarComponent,
     CadastroPasseioPersonalizadoComponent,
     HomeGuiaComponent,
     HeadersComponent,
