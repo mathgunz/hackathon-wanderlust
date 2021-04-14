@@ -58,4 +58,13 @@ export class GuiaService {
         }));
 
   }
+
+  getByCity(city: string){
+    return this.http.get(
+      `http://localhost:3000/guias?city=${city}`)
+        .pipe(map(guia => {
+            return guia;
+        }));
+
+  }
 }
