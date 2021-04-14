@@ -38,14 +38,14 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroClienteComponent },
   { path: 'contato', component: ContatoClienteComponent },
   { path: 'contratacao-fixo', component: ContratacaoFixoComponent },
-  { path: 'detalhes-fixo', component: DetalhePasseiosFixoComponent },
-  { path: 'detalhes', component: DetalhePasseiosClienteComponent },
-  { path: 'home-cliente', component: IndexClienteComponent },
+  { path: 'detalhes-passeios-fixo', component: DetalhePasseiosFixoComponent },
+  { path: 'detalhes-passeios-cliente', component: DetalhePasseiosClienteComponent },
+  { path: 'index-cliente', component: IndexClienteComponent },
   { path: 'passeios-anteriores', component: PasseiosAnterioresComponent },
   { path: 'lista-guias', component: ListaGuiaComponent },
   { path: 'detalhe-guia', component: DetalheGuiaComponent },
   { path: 'pagamento', component: PagamentoComponent },
-  
+
   //guia
   { path: 'home-guia', component: HomeGuiaComponent },
   { path: 'login-guia', component: LoginGuiaComponent },
