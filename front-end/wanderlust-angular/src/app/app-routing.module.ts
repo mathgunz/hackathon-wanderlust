@@ -23,7 +23,10 @@ import {
   DetalhePasseiosFixoComponent,
   DetalhePasseiosClienteComponent,
   IndexClienteComponent,
-  PasseiosAnterioresComponent
+  PasseiosAnterioresComponent,
+  ListaGuiaComponent,
+  DetalheGuiaComponent,
+  PagamentoComponent,
 } from './cliente';
 
 const routes: Routes = [
@@ -39,6 +42,9 @@ const routes: Routes = [
   { path: 'detalhes', component: DetalhePasseiosClienteComponent },
   { path: 'home-cliente', component: IndexClienteComponent },
   { path: 'passeios-anteriores', component: PasseiosAnterioresComponent },
+  { path: 'lista-guias', component: ListaGuiaComponent },
+  { path: 'detalhe-guia', component: DetalheGuiaComponent },
+  { path: 'pagamento', component: PagamentoComponent },
   
   //guia
   { path: 'home-guia', component: HomeGuiaComponent },

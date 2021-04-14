@@ -52,7 +52,10 @@ export class CadastroClienteComponent implements OnInit {
       "sobrenome": this.cadastroClienteForm.value.lastName,
       "dataNascimento": this.cadastroClienteForm.value.birthday,
       "telefone": this.cadastroClienteForm.value.phone,
-      "endereco": this.cadastroClienteForm.value.city,
+      "endereco": {
+        "endereco": this.cadastroClienteForm.value.city,
+        "cidade": this.cadastroClienteForm.value.city
+      },
       "email": this.cadastroClienteForm.value.email,
       "senha": this.cadastroClienteForm.value.password,
     })
