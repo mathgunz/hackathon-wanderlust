@@ -10,3 +10,4 @@ export * from './pagamento/pagamento.component';
 export * from './lista-guia/lista-guia.component';
 export * from './passeios-anteriores/passeios-anteriores.component';
 export * from './perfil-cliente/perfil-cliente.component';
+export * from './passeios/passeios.component';

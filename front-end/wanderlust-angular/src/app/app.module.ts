@@ -32,7 +32,8 @@ import {
   PasseiosAnterioresComponent,
   ListaGuiaComponent,
   DetalheGuiaComponent,
-  PagamentoComponent
+  PagamentoComponent,
+  PasseiosClienteComponent,
 } from './cliente';
 
 import {
@@ -56,7 +57,7 @@ import { DetalhesAgendamentoGuiaComponent } from './guia/detalhes-agendamento-gu
     CadastroPasseioPersonalizadoComponent,
     HomeGuiaComponent,
     HeadersComponent,
-    HomeComponent,
+    PasseiosClienteComponent,
     FooterComponent,
     AlertComponent,
     CadastroPasseioPersonalizadoComponent,
