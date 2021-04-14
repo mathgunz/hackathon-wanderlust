@@ -25,6 +25,7 @@ import {
   ListaGuiaComponent,
   DetalheGuiaComponent,
   PagamentoComponent,
+  PasseiosClienteComponent,
 } from './cliente';
 import { DetalhesAgendamentoGuiaComponent } from './guia/detalhes-agendamento-guia/detalhes-agendamento-guia.component';
 
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'lista-guia', component: ListaGuiaComponent },
   { path: 'detalhe-guia', component: DetalheGuiaComponent },
   { path: 'pagamento', component: PagamentoComponent },
+  { path: 'passeios-cliente', component: PasseiosClienteComponent },
   
   //guia
   { path: 'home-guia', component: HomeGuiaComponent },
