@@ -65,7 +65,8 @@ export class AgendasService {
             leftJoinAndSelect: {
               passeio: 'agenda.passeio',
               clientesAgendados: 'agenda.clientesAgendados',
-              clientes: 'clientesAgendados.cliente'
+              clientes: 'clientesAgendados.cliente',
+              enderecos: 'clientes.endereco'
             }
       }});
     }

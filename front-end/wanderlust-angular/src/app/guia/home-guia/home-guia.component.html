@@ -79,7 +79,7 @@
                       <p><output name="passeio">{{agenda.passeio.nome}}</output></p>
                     </td>
                     <td class="text-center">
-                      <p><output name="dataPasseio">{{agenda.data | date: 'dd/MM/yyyy'}}</output></p>
+                      <p><output name="dataPasseio">{{agenda.data | date:'dd/MM/yyyy' }}</output></p>
                     </td>
                     <td class="text-center">
                       <p><output name="duracao">{{agenda.duracao}}</output></p>
@@ -116,12 +116,12 @@
 <jw-modal class="" id="detalhe-guia-modal">
 
   <div class="blog_details">
-    <h2>Wanderlusteiro: <output name="cliente">João Paulo Bastos</output></h2>
+    <h2>Wanderlusteiro: <output name="cliente">{{clienteSelecionado.nome}}</output></h2>
 
-    <p><i class="fa fa-info"></i> Status: Pendente de Atendimento</p>
-    <p><i class="fa fa-calendar"></i> Data do Passeio: 25/05/2021</p>
+    <p><i class="fa fa-info"></i> Status: {{agendaSelecionada.statusPage}}</p>
+    <p><i class="fa fa-calendar"></i> Data do Passeio: {{agendaSelecionada.data | date:'dd/MM/yyyy' }}</p>
     <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade: São Paulo</p>
-    <p><i class="fa fa-map"></i> Tipo de Passeio: Personalizado</p>
+    <p><i class="fa fa-map"></i> Tipo de Passeio: {{agendaSelecionada.tipo}}</p>
     <p> <img src="assets/img/icon/whatsapp.png" alt="" style="height:30px;width:25px;">
       <a href="chat.html"><i class="fa fa-whatsapp" aria-hidden="true"></i>Fale com seu cliente</a>
     </p>

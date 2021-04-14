@@ -63,7 +63,8 @@ export class HomeGuiaComponent implements OnInit {
 
     this.agendaService.findByGuiaId(this.guia.id).subscribe({
       next: (agendasNotificacoes) => {
-          this.agendasNotificacoes = agendasNotificacoes.filter(function(agenda){
+          this.agendasNotificacoes = agendasNotificacoes.filter((agenda) =>{
+            agenda.statusPage = this.getDescricao(agenda.status);
             return agenda.status === 'PENDENTE_CONFIRMACAO_GUIA'
           });
       },
@@ -118,6 +119,9 @@ export class HomeGuiaComponent implements OnInit {
 
     this.agendaSelecionada = agenda;
     this.clienteSelecionado = cliente;
+
+    console.log('SELECIONADO:'+JSON.stringify(this.clienteSelecionado));
+
     this.modalService.open(id);
   }
 
