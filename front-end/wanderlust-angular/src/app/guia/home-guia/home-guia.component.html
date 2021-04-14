@@ -26,11 +26,11 @@
                     <p><output name="passeio">{{clientesAgendado.cliente.nome}}</output></p>
                   </td>
                   <td class="text-center">
-                    <p><output name="dataPasseio">25/04/2021</output></p>
+                    <p><output name="dataPasseio">{{agendaNotificacao.data | date: 'dd/MM/yyyy'}}</output></p>
                   </td>
 
                   <td style="width: 14%;" align="center">
-                    <a (click)="detalhesNotificacao('detalhe-guia-modal', clientesAgendado.cliente);" class="table-link">
+                    <a (click)="detalhesNotificacao('detalhe-guia-modal', agendaNotificacao, clientesAgendado.cliente);" class="table-link">
                       <span class="fa-stack" aria-hidden="true">
                         <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
                         <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
@@ -79,13 +79,13 @@
                       <p><output name="passeio">{{agenda.passeio.nome}}</output></p>
                     </td>
                     <td class="text-center">
-                      <p><output name="dataPasseio">{{agenda.data}}</output></p>
+                      <p><output name="dataPasseio">{{agenda.data | date: 'dd/MM/yyyy'}}</output></p>
                     </td>
                     <td class="text-center">
                       <p><output name="duracao">{{agenda.duracao}}</output></p>
                     </td>
                     <td class="text-center">
-                      <p><output name="statusPasseio">{{agenda.duracao}}</output></p>
+                      <p><output name="statusPasseio">{{agenda.statusPage}}</output></p>
                     </td>
                     <td class="text-center">
                       <ul *ngFor="let clientesAgendado of agenda.clientesAgendados">

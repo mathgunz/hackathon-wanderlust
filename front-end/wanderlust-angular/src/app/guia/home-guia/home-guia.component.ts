@@ -26,9 +26,8 @@ export class HomeGuiaComponent implements OnInit {
   guia: Guia = new Guia();
   agendas: Agenda[] = [];
 
-  clienteId: number = 1;
-
   agendasNotificacoes: Agenda[] = [];
+  agendaSelecionada: Agenda = new Agenda();
   clienteSelecionado: Clientes = new Clientes();
 
   agendaGuiaForm = this.formBuilder.group({
@@ -52,8 +51,9 @@ export class HomeGuiaComponent implements OnInit {
 
         console.log('lista de agendas do Guia:'+JSON.stringify(agendas));
 
-        this.agendas = agendas.filter(function(agenda){
-          return agenda.status === 'AGENDADO'
+        this.agendas = agendas.filter((agenda) =>{
+          agenda.statusPage = this.getDescricao(agenda.status);
+          return agenda.status !== 'PENDENTE_CONFIRMACAO_GUIA'
         });
       },
       error: (error) => {
@@ -72,6 +72,19 @@ export class HomeGuiaComponent implements OnInit {
       }
     });
 
+  }
+
+  getDescricao(status: string): string{
+
+    if (status === 'PENDENTE_CONFIRMACAO_GUIA') {
+      return 'Aguardando confirmação do Guia'
+    } else if (status === 'PENDENTE_CONFIRMACAO_CLIENTE') {
+      return 'Aguardando confirmação do Cliente'
+    } else if(status === 'AGENDADO') {
+      return 'Agendado'
+    }
+
+    return 'Não definido';
   }
 
   filterByStatus(obj: Agenda){
@@ -101,8 +114,9 @@ export class HomeGuiaComponent implements OnInit {
 
   };
 
-  detalhesNotificacao(id: string, cliente: Clientes){
+  detalhesNotificacao(id: string, agenda: Agenda, cliente: Clientes){
 
+    this.agendaSelecionada = agenda;
     this.clienteSelecionado = cliente;
     this.modalService.open(id);
   }
@@ -110,7 +124,9 @@ export class HomeGuiaComponent implements OnInit {
   contratarPasseioPersonalizado(id: string){
 
 
-    const returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'cadastro-passeio-guia-personalizado/'+this.clienteSelecionado.id;
+    const returnUrl =
+    this.route.snapshot.
+    queryParams['returnUrl'] || 'cadastro-passeio-guia-personalizado/'+this.clienteSelecionado.id+'/'+this.agendaSelecionada.id;
     this.router.navigateByUrl(returnUrl);
 
     this.modalService.close(id);

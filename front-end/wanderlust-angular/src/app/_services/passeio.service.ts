@@ -22,9 +22,7 @@ export class PasseioService {
     }));
   }
 
-  agendarPersonalizado(value: any, guiaId: number, clienteId: number | undefined) {
-
-    console.log('PasseioService:agendarPersonalizado(value:'+JSON.stringify(value)+'guiaId:'+guiaId);
+  agendarPersonalizado(value: any, guiaId: number, clienteId: number | undefined, agendaId: number) {
 
     const createAgenda: CreateAgendaModel = {
       clienteId: clienteId,
@@ -35,19 +33,26 @@ export class PasseioService {
       passeioId: Number(value.passeioIdSelecionado),
       tipo: 'PERSONALIZADO',
       valor: Number(value.valorPasseio),
-      status: 'PENDENTE_CONFIRMACAO_CLIENTE'
+      status: 'PENDENTE_CONFIRMACAO_CLIENTE',
+      pontoReferencia: value.pontoReferencia
     }
 
-    console.log('PasseioService:createAgenda:'+JSON.stringify(createAgenda));
+    console.log('para excluir:'+ agendaId);
+    return this.http.delete<boolean>(
+      `http://localhost:3000/agendas/`+agendaId
+    ).pipe(map(excluido => {
+      console.log('foi excluido:'+ excluido);
 
     return this.http.post<CreateAgendaModel>(
       `http://localhost:3000/agendas`, createAgenda
     ).pipe(map(agenda => {
 
-      console.log('Agenda:'+agenda);
+      console.log('Agenda Criada:'+agenda);
       return agenda;
     }));
 
+
+    }));
   }
 
   create(value: any, guiaId: number) {
@@ -63,13 +68,10 @@ export class PasseioService {
       }
     }
 
-    console.log('PasseioService:create:'+JSON.stringify(passeioRequest));
-
     return this.http.post<Passeio>(
       `http://localhost:3000/passeios?guiaId=`+guiaId, passeioRequest
     ).pipe(map(passeio => {
 
-      console.log('passeio:'+passeio);
       return passeio;
     }));
   }

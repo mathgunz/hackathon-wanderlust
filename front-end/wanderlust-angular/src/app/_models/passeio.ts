@@ -25,4 +25,5 @@ export class CreateAgendaModel {
   "descricao": string;
   "valor": number;
   "status": string;
+  "pontoReferencia": string;
 }

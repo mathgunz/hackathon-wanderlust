@@ -13,6 +13,7 @@ export class Agenda {
      "duracao": string;
 
      "status": string;
+     "statusPage"?: string;
 
      "tipo": string;
 
