@@ -26,40 +26,47 @@
         </div>
       </div>
       <div class="col-lg-12">
-        <form method="post" id="pagamento" novalidate="novalidate">
+        <form [formGroup]="pagamentoForm" id="pagamento" novalidate="novalidate">
           <div class="row">
 
             <div class="col-lg-6 offset-lg-12">
               <div class="form-group">
                 <p><i class="fa fa-address-card" aria-hidden="true"></i> Nome Titular
-                  <input class="form-control" name="nome" id="nome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escreva o nome que encontra-se no cartão'" placeholder="Escreva o nome que encontra-se no cartão">
+                  <input class="form-control" name="nome" id="nome" type="text" onfocus="this.placeholder = ''"
+                         onblur="this.placeholder = 'Escreva o nome que encontra-se no cartão'"
+                         placeholder="Escreva o nome que encontra-se no cartão"  formControlName="nomeTitular">
                 </p>
               </div>
             </div>
             <div class="col-lg-6 offset-lg-12">
               <div class="form-group">
                 <p><i class="fa fa-address-card" aria-hidden="true"></i> CPF/CNPJ
-                  <input class="form-control" name="cpf" id="cpf" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'CPF/CNPJ'" placeholder="CPF/CNPJ">
+                  <input class="form-control" name="cpf" id="cpf" type="text" onfocus="this.placeholder = ''"
+                         onblur="this.placeholder = 'CPF/CNPJ'" placeholder="CPF/CNPJ" formControlName="cpfCnpj">
                 </p>
               </div>
             </div>
             <div class="col-lg-6 offset-lg-12">
               <div class="form-group">
                 <p><i class="fa fa-credit-card" aria-hidden="true"></i> Nr. Cartão
-                  <input class="form-control" name="nrCartao" id="nrCartao" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Informe o numero do seu cartão'" placeholder="Informe o numero do seu cartão">
+                  <input class="form-control" name="nrCartao" id="nrCartao" type="text" onfocus="this.placeholder = ''"
+                         onblur="this.placeholder = 'Informe o numero do seu cartão'"
+                         placeholder="Informe o numero do seu cartão" formControlName="nrCartao">
                 </p>
               </div>
             </div>
             <div class="col-md-4 offset-lg-12">
               <div class="form-group">
                 <p><i class="fa fa-credit-card" aria-hidden="true"></i> CVV
-                  <input class="form-control" name="cvv" id="cvv" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = '000'" placeholder="000">
+                  <input class="form-control" name="cvv" id="cvv" type="text" onfocus="this.placeholder = ''"
+                         onblur="this.placeholder = '000'" placeholder="000" formControlName="cvv">
               </div>
             </div>
             <div class="col-lg-2 col-md-12 offset-lg-12">
               <div class="form-group">
                 <p><i class="fa fa-calendar" aria-hidden="true"></i> Data Validade
-                  <input class="form-control" name="data" id="data" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'MM/AA'" placeholder="MM/AA">
+                  <input class="form-control" name="data" id="data" type="text" onfocus="this.placeholder = ''"
+                         onblur="this.placeholder = 'MM/AA'" placeholder="MM/AA" formControlName="dataValidade">
               </div>
             </div>
             <div class="col-lg-2 col-md-12 offset-lg-12">
