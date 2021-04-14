@@ -30,7 +30,7 @@ export class AgendasService {
         tipo: createAgendaDto.tipo,
         data: createAgendaDto.data,
         duracao: createAgendaDto.duracao,
-        status: 'PENDENTE_CONFIRMACAO_CLIENTE',
+        status: createAgendaDto.status,
         descricao: createAgendaDto.descricao,
         guia: guia,
         passeio: passeio,

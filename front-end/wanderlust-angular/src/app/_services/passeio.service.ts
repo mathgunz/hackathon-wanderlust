@@ -34,7 +34,8 @@ export class PasseioService {
       guiaId: guiaId,
       passeioId: Number(value.passeioIdSelecionado),
       tipo: 'PERSONALIZADO',
-      valor: Number(value.valorPasseio)
+      valor: Number(value.valorPasseio),
+      status: 'PENDENTE_CONFIRMACAO_CLIENTE'
     }
 
     console.log('PasseioService:createAgenda:'+JSON.stringify(createAgenda));
