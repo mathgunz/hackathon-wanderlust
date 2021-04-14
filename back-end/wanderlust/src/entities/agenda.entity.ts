@@ -31,7 +31,7 @@ export class Agendas {
      @Column()
      tipo: string;
 
-     @OneToMany(type => ClientesAgendados, clientesAgendados => clientesAgendados.agenda, {eager:true})
+     @OneToMany(type => ClientesAgendados, clientesAgendados => clientesAgendados.agenda)
      clientesAgendados?: ClientesAgendados[];
 
      @Column()
