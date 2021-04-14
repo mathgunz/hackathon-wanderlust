@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -27,6 +28,9 @@ export class HomeGuiaComponent implements OnInit {
 
   agendas: Agenda[] = [];
 
+  agendasNotificacoes: Agenda[] = [];
+
+
   agendaGuiaForm = this.formBuilder.group({
     passeio:'',
     descricao:'',
@@ -34,7 +38,8 @@ export class HomeGuiaComponent implements OnInit {
     status:'',
     clienteNome:'',
     detalhes:'',
-    agendas: ['']
+    agendas: [''],
+    agendasNotificacoes: ['']
   });
 
 
@@ -45,13 +50,34 @@ export class HomeGuiaComponent implements OnInit {
 
         console.log('lista de agendas do Guia:'+JSON.stringify(agendas));
 
-        this.agendas = agendas;
+        this.agendas = agendas.filter(function(agenda){
+          return agenda.status === 'AGENDADO'
+        });
       },
       error: (error) => {
         console.log('DEU RUIM CONSULTA DE AGENDAS DO GUIA');
       }
     });
 
+    this.agendaService.findByGuiaId(this.guiaId).subscribe({
+      next: (agendasNotificacoes) => {
+          this.agendasNotificacoes = agendasNotificacoes.filter(function(agenda){
+            return agenda.status === 'PENDENTE_CONFIRMACAO_GUIA'
+          });
+      },
+      error: (error) => {
+        console.log('DEU RUIM CONSULTA SOLICITACOES DE AGENDAS DO GUIA');
+      }
+    });
+
+  }
+
+  filterByStatus(obj: Agenda){
+    if (obj.status === '') {
+      return true;
+    }else {
+      return false;
+    }
   }
 
   onSubmit(){
@@ -66,6 +92,18 @@ export class HomeGuiaComponent implements OnInit {
 
     const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/detalhe-agendamento-guia/'+agenda.id;
     this.router.navigateByUrl(returnUrl);
+
+  }
+
+  closeModal(id: string){
+
+  };
+
+  detalhesNotificacao(id: string){
+    this.modalService.open(id);
+  }
+
+  contratarPasseioPersonalizado(){
 
   }
 

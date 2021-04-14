@@ -32,4 +32,12 @@ export class AgendaService {
         return agenda;
       }));
   }
+
+  findByGuiaIdAndStatus(guiaId: any, status: string) {
+    return this.http.get<Agenda[]>(
+      `http://localhost:3000/agendas/?guiaId=` + guiaId+'&status='+status)
+      .pipe(map(agendas => {
+        return agendas;
+      }));
+  }
 }
