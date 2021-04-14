@@ -30,7 +30,7 @@
                   </td>
 
                   <td style="width: 14%;" align="center">
-                    <a (click)="detalhesNotificacao('detalhe-guia-modal');" class="table-link">
+                    <a (click)="detalhesNotificacao('detalhe-guia-modal', clientesAgendado.cliente);" class="table-link">
                       <span class="fa-stack" aria-hidden="true">
                         <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
                         <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
@@ -126,9 +126,9 @@
       <a href="chat.html"><i class="fa fa-whatsapp" aria-hidden="true"></i>Fale com seu cliente</a>
     </p>
     <div class=" flex-row d-flex justify-content-start ">
-      <button onclick="encerrar()" class="button button-contactForm boxed-btn">Encerrar Atendimento</button>
+      <button (click)="encerrarAtendimento('detalhe-guia-modal');" class="button button-contactForm boxed-btn">Encerrar Atendimento</button>
       <div class="col-3 nav-right flex-row d-flex justify-content-end align-items-center">
-        <button class="button button-contactForm boxed-btn" (click)="contratarPasseioPersonalizado();">Fechar</button><button class="button button-contactForm boxed-btn" (click)="closeModal('erro-login-guia-modal');">Fechar</button>
+        <button class="button button-contactForm boxed-btn" (click)="contratarPasseioPersonalizado('detalhe-guia-modal');">Contratar Passeio</button>
       </div>
     </div>
   </div>

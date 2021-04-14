@@ -55,7 +55,7 @@ const routes: Routes = [
   { path: 'passeios', component: PasseiosComponent },
   { path: 'cadastro-guia', component: GuiaComponent },
   { path: 'cadastro-passeio-guia-fixo', component: CadastroPasseioComponent },
-  { path: 'cadastro-passeio-guia-personalizado', component: CadastroPasseioPersonalizadoComponent },
+  { path: 'cadastro-passeio-guia-personalizado/:clienteId', component: CadastroPasseioPersonalizadoComponent },
   { path: 'detalhe-agendamento-guia/:agendaId', component: DetalhesAgendamentoGuiaComponent },
 
 ];

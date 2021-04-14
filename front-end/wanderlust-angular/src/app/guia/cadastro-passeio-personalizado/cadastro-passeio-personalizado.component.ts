@@ -28,7 +28,6 @@ export class CadastroPasseioPersonalizadoComponent implements OnInit {
 
   guiaId: number = 1;
   passeios: PasseioResponseModel[] = [];
-  clienteId: number = 1;
   cliente: ClienteResponse = new ClienteResponse();
   passeioIdSelecionado: number = 0;
 
@@ -45,7 +44,9 @@ export class CadastroPasseioPersonalizadoComponent implements OnInit {
 
   ngOnInit(){
 
-    this.clienteService.buscarClientePorId(this.clienteId).subscribe({
+    const clienteId = Number(this.route.snapshot.paramMap.get('clienteId'));
+
+    this.clienteService.buscarClientePorId(clienteId).subscribe({
       next: (cliente) => {
         this.cliente = cliente
         console.log(this.cliente)

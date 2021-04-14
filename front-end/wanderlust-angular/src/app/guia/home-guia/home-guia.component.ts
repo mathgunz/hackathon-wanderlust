@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from 'src/app/_modal';
+import { Clientes } from 'src/app/_models';
 import { Agenda } from 'src/app/_models/agenda';
 import { AgendaService, AlertService, PasseioService } from 'src/app/_services';
 
@@ -29,6 +30,7 @@ export class HomeGuiaComponent implements OnInit {
   agendas: Agenda[] = [];
 
   agendasNotificacoes: Agenda[] = [];
+  clienteSelecionado: Clientes = new Clientes();
 
 
   agendaGuiaForm = this.formBuilder.group({
@@ -99,12 +101,23 @@ export class HomeGuiaComponent implements OnInit {
 
   };
 
-  detalhesNotificacao(id: string){
+  detalhesNotificacao(id: string, cliente: Clientes){
+
+    this.clienteSelecionado = cliente;
     this.modalService.open(id);
   }
 
-  contratarPasseioPersonalizado(){
+  contratarPasseioPersonalizado(id: string){
 
+
+    const returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'cadastro-passeio-guia-personalizado/'+this.clienteSelecionado.id;
+    this.router.navigateByUrl(returnUrl);
+
+    this.modalService.close(id);
+  }
+
+  encerrarAtendimento(id: string){
+    this.modalService.close(id);
   }
 
 }
