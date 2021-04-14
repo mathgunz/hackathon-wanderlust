@@ -32,6 +32,9 @@ import {
   DetalhePasseiosClienteComponent,
   IndexClienteComponent,
   PasseiosAnterioresComponent,
+  ListaGuiaComponent,
+  DetalheGuiaComponent,
+  PagamentoComponent
 } from './cliente';
 
 import {
@@ -40,7 +43,6 @@ import {
   AlertComponent,
   HeaderSlideComponent,
 } from './_components';
-
 
 @NgModule({
   declarations: [
@@ -70,7 +72,10 @@ import {
     IndexClienteComponent,
     PasseiosAnterioresComponent,
     LoginGuiaComponent,
-    PerfilGuiaComponent
+    PerfilGuiaComponent,
+    ListaGuiaComponent,
+    DetalheGuiaComponent,
+    PagamentoComponent
   ],
   imports: [
     BrowserModule,
