@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.9'
 
 services:
 
@@ -21,6 +21,15 @@ services:
       - wanderlust-postgres
     networks:
       - backend
+
+  front:
+    image: jvictor07/wanderlust-angular:latest
+    networks:
+      - backend
+    ports:
+      - 80:80 
+    networks:
+      backend:
 
 networks:
   backend:

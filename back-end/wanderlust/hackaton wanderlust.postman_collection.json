@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "7895852a-5d8d-42ef-a221-d6b987525480",
+		"name": "hackaton wanderlust",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "guias",
+			"item": [
+				{
+					"name": "guias",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"nicolas\",\n    \"sobrenome\":\"graciano\",\n    \"telefone\": 11994456761,\n    \"cadastur\": \"1234s5dsd\",\n    \"dataNascimento\":\"2021-01-01\",\n    \"endereco\": {\n        \"endereco\": \"rua marco rutini 224\",\n        \"cidade\": \"jundiai\"\n    },\n    \"email\":\"matheusgraciano_@hotmail.com\",\n    \"senha\":\"mathsenha\",\n    \"descricao\":\"descricao\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/guias/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"guias",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "guias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/guias/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"guias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clientes",
+			"item": [
+				{
+					"name": "clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"matheus\",\n    \"sobrenome\":\"graciano\",\n    \"telefone\": 11994456761,\n    \"dataNascimento\": \"2021-02-02\",\n    \"endereco\": {\n        \"endereco\": \"rua marco rutini 224\",\n        \"cidade\": \"São Paulo\",\n        \"estado\": \"SP\"\n    },\n    \"email\":\"matheusgraciano_@hotmail.com\",\n    \"senha\":\"mathsenha\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/clientes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientes local",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"matheus\",\n    \"sobrenome\":\"graciano\",\n    \"telefone\": 11994456761,\n    \"dataNascimento\":\"2021-01-01\",\n    \"endereco\": {\n        \"endereco\": \"rua marco rutini 224\",\n        \"cidade\": \"São Paulo\",\n        \"estado\": \"SP\"\n    },\n    \"email\":\"matheusgraciano_@hotmail.com\",\n    \"senha\":\"mathsenha\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "passeios",
+			"item": [
+				{
+					"name": "passeios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"Beach Park2\",\n    \"descricao\":\"Parque aquatico de Fortaleza.\",\n    \"endereco\": {\n        \"endereco\": \"rua marco rutini 224\",\n        \"cidade\":\"jundiai\",\n        \"estado\":\"São Paulo\"\n\n    },\n    \"tipo\": \"sol\",\n    \"duracao\":\"10:00\",\n    \"valor\":250\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/passeios?guiaId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"passeios"
+							],
+							"query": [
+								{
+									"key": "guiaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "passeios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/passeios?guiaId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"passeios"
+							],
+							"query": [
+								{
+									"key": "guiaId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "agendas",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"clienteId\":1,\n    \"data\":\"2021-04-20\",\n    \"descricao\":\"yhtjhgjhjgh\",\n    \"duracao\":\"16:13\",\n    \"guiaId\":1,\n    \"passeioId\":1,\n    \"tipo\":\"PERSONALIZADO\",\n    \"valor\":25,\n    \"pontoReferencia\":\"sadasdasdfsdfsd sfsdfsd sfd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/agendas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"agendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/agendas?clienteId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"agendas"
+							],
+							"query": [
+								{
+									"key": "clienteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/agendas/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"agendas",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login guia",
+					"item": []
+				},
+				{
+					"name": "login cliente",
+					"item": [
+						{
+							"name": "login cliente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"matheusgraciano_@hotmail.com\",\n    \"senha\":\"mathsenha\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/login/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"login",
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
