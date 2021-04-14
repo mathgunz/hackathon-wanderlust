@@ -1,1 +1,140 @@
-<p>index-cliente works!</p>
+
+<div class="slider-area ">
+  <!-- Mobile Menu -->
+  <div class="single-slider slider-height2 d-flex align-items-center"
+       [ngStyle]="{backgroundImage:'url(../../assets/img/hero/contact_hero.jpg)'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="hero-cap text-center">
+            <h2>Bem vindo Wanderlusteiro!</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================ Home cliente start ================= -->
+<main>
+  <section class="blog_area section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-tittle text-center">
+            <h4><span>Hey Wanderlusteiro!</span></h4>
+            <h2>Qual sua próxima trip?</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div>
+              <form id="buscaGuia">
+                <div class="col-lg-12" align="text-center">
+                  <div class="row">
+                    <div class="col-lg-12 offset-lg-12">
+                      <div class="form-group">
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Destino:
+                          <input class="form-control" name="dataInicial" id="cidade" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Qual seu próximo destino?'" placeholder="Qual seu próximo destino?">
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 offset-lg-12">
+                      <div class="form-group">
+                        <p><i class="fa fa-calendar" aria-hidden="true"></i> Data Inicial
+                          <input class="form-control" name="dataInicial" id="dataInicial" type="date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'DD/MM/AAAA'" placeholder="DD/MM/AAAA">     </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-12">
+                      <div class="form-group">
+                        <p><i class="fa fa-calendar" aria-hidden="true"></i> Data Final
+                          <input class="form-control" name="dataInicial" id="dataFinal" type="date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'DD/MM/AAAA'" placeholder="DD/MM/AAAA">     </div>
+                    </div>
+                    <div class="col-lg-2 offset-lg-12">
+                      <p><i class="fa fa-user" aria-hidden="true"></i> Viajantes:
+                        <select name="select" id="selectPessoas" >
+                          <option value="">Qtde. Pessoas</option>
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3 ou +</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-2 offset-lg-12" align="center">
+                      <button type="submit" class="button button-contactForm boxed-btn" onclick="buscarGuia()">buscar</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form  id="aprovacoesCliente">
+      <section class="blog_area section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-tittle text-center">
+                <h4><span>Wanderlusteiro, aprove seus passeios personalizados</span></h4>
+                <h2>Notificações</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-6 col-lg-4 col-md-4" align="center">
+              <div class="blog_left_sidebar">
+                <article class="blog_item">
+                  <div class="blog_details">
+                    <h2>Guia: <output name="guia">Maria Tereza Buarque</output></h2>
+
+                    <p><i class="fa fa-info"></i> Status: <output name="guia">Pendente de Aprovação</output></p>
+                    <p><i class="fa fa-map-signs" aria-hidden="true"></i> Passeio: <output name="passeio">Litoral Oeste - Jeri</output></p>
+                    <p><i class="fa fa-calendar"></i> Data do Passeio: <output name="data">25/05/2021</output></p>
+                    <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Personalizado</output></p>
+                    <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor:R$ <output name="valor">280,00</output></p>
+                    <p> <img src="assets/img/icon/whatsapp.png" alt="" style="height:30px;width:25px;">
+                      <a href="chat.html"><i class="fa fa-whatsapp" aria-hidden="true"></i>Fale com seu guia</a></p>
+                    <div class="col-lg-8 col-md-10 col-8 nav-left flex-row d-flex justify-content-start align-items-center">
+                      <button onclick="cancelar()" class="button button-contactForm boxed-btn">Não Aprovar</button>
+                      <div class="col-lg-8 col-md-12 col-8 nav-right flex-row d-flex justify-content-end align-items-center">
+                        <button onclick="aprovar()" type="submit" class="button button-contactForm boxed-btn">Aprovar Passeio</button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-4 col-md-4" align="center">
+              <div class="blog_left_sidebar">
+                <article class="blog_item">
+                  <div class="blog_details">
+                    <h2>Guia: <output name="guia">Felipe Souza</output></h2>
+
+                    <p><i class="fa fa-info"></i> Status: <output name="guia">Pendente de Aprovação</output></p>
+                    <p><i class="fa fa-map-signs" aria-hidden="true"></i> Passeio: <output name="passeio">Rota dos Cristais - Jeri</output></p>
+                    <p><i class="fa fa-calendar"></i> Data do Passeio: <output name="data">26/05/2021</output></p>
+                    <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Personalizado</output></p>
+                    <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor:R$ <output name="valor">200,00</output></p>
+                    <p> <img src="assets/img/icon/whatsapp.png" alt="" style="height:30px;width:25px;">
+                      <a href="chat.html"><i class="fa fa-whatsapp" aria-hidden="true"></i>Fale com seu guia</a></p>
+                    <div class="col-lg-8 col-md-10 col-8 nav-left flex-row d-flex justify-content-start align-items-center">
+                      <button onclick="cancelar()" class="button button-contactForm boxed-btn">Não Aprovar</button>
+                      <div class="col-lg-8 col-md-12 col-8 nav-right flex-row d-flex justify-content-end align-items-center">
+                        <button onclick="aprovar()" type="submit" class="button button-contactForm boxed-btn">Aprovar Passeio</button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+  </section>
+</main>
+<!-- ================ Home cliente end ================= -->
+

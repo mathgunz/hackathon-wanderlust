@@ -1,1 +1,88 @@
-<p>detalhe-passeios-fixo works!</p>
+<!-- slider Area Start-->
+<div class="slider-area ">
+  <!-- Mobile Menu -->
+  <div class="single-slider slider-height2 d-flex align-items-center"
+       [ngStyle]="{backgroundImage:'url(../../assets/img/hero/contact_hero.jpg)'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="hero-cap text-center">
+            <h2>Passeios Fixo</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- slider Area End-->
+<!--================Detalhe Area =================-->
+<section class="blog_area single-post-area section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-tittle text-center">
+          <h4><span>Wanderlusteiro(a)</span></h4>
+          <h2>Aqui encontram-se informações sobre o passeio fixo!</h2>
+        </div>
+      </div>
+      <form class="col-lg-12">
+        <div class="col-lg-12 posts-list" align="center">
+          <div class="section-top-border">
+            <h2><output name="nomePasseio">Lado Leste-Jericoacoara</output></h2>
+            <div class="row gallery-item">
+
+              <div class="col-md-6">
+                <a href="assets/img/elements/lagoa-paraiso-ce.jpg" class="img-pop-up">
+                  <div class="single-gallery-image" style="background: url(assets/img/elements/lagoa-paraiso-ce.jpg);"></div>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="assets/img/elements/dunas-por-do-sol.jpg" class="img-pop-up">
+                  <div class="single-gallery-image" style="background: url(assets/img/elements/dunas-por-do-sol.jpg);"></div>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="assets/img/elements/pedra-furada.jpg" class="img-pop-up">
+                  <div class="single-gallery-image" style="background: url(assets/img/elements/pedra-furada.jpg);"></div>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="assets/img/elements/buraco-azul-ce.jpeg" class="img-pop-up">
+                  <div class="single-gallery-image" style="background: url(assets/img/elements/buraco-azul-ce.jpeg);"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="single-post">
+            <div class="blog_details" align="left">
+              <h2>Sobre o passeio:</h2>
+              <p><i class="fa fa-map-marker"></i> Descrição do Passeio: <output name="descricao"> Pedra Furada, Buraco Azul, Lagoa do Paraíso, Dunas do Pôr do Sol e Árvore da Preguiça</output></p>
+              <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração: <output name="duracao">8hrs</output></p>
+              <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Sol e Praia</output></p>
+              <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor: R$ <output name="valor">250,00</output></p>
+              <p><i class="fa fa-location-arrow"></i> Ponto de Encontro: <output name="endereco">Praça Central</output></p>
+              <h2>Datas Disponíveis:</h2>
+              <input list="datas" placeholder="Escolha a data:"/>
+              <datalist id="datas">
+                <option value="24/04/2020">
+                <option value="24/04/2020">
+                <option value="24/04/2020">
+                <option value="24/04/2020">
+              </datalist>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form class="col-lg-12 col-md-12" method="post">
+        <div class="col-lg-12" align="center">
+          <div class="col-lg-12 col-md-12 col-10 nav-right flex-row d-flex justify-content-end align-items-center">
+            <button onclick="contratarGuia()" type="submit" class="button button-contactForm boxed-btn">Contratar Guia</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- ================ detalhe passeio fixo  end ================= -->
+
