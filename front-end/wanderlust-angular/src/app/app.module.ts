@@ -32,6 +32,9 @@ import {
   DetalhePasseiosClienteComponent,
   IndexClienteComponent,
   PasseiosAnterioresComponent,
+  ListaGuiaComponent,
+  DetalheGuiaComponent,
+  PagamentoComponent
 } from './cliente';
 
 import {
@@ -41,7 +44,6 @@ import {
   HeaderSlideComponent,
 } from './_components';
 import { DetalhesAgendamentoGuiaComponent } from './guia/detalhes-agendamento-guia/detalhes-agendamento-guia.component';
-
 
 @NgModule({
   declarations: [
@@ -72,7 +74,10 @@ import { DetalhesAgendamentoGuiaComponent } from './guia/detalhes-agendamento-gu
     PasseiosAnterioresComponent,
     LoginGuiaComponent,
     PerfilGuiaComponent,
-    DetalhesAgendamentoGuiaComponent
+    DetalhesAgendamentoGuiaComponent,
+    ListaGuiaComponent,
+    DetalheGuiaComponent,
+    PagamentoComponent
   ],
   imports: [
     BrowserModule,
