@@ -8,7 +8,6 @@ import { CreateAgendaModel, Passeio, PasseioResponseModel } from '../_models/pas
   providedIn: 'root'
 })
 export class PasseioService {
-
   constructor(private http: HttpClient) { }
 
   buscarPasseioPorGuiaId(guiaId: number){
@@ -20,6 +19,30 @@ export class PasseioService {
       console.log('Passeios:'+passeios);
       return passeios;
     }));
+  }
+
+  agendarFixo(value: any, guiaId: number) {
+
+    const createAgenda: CreateAgendaModel = {
+      data: value.dataDoPasseio,
+      descricao: value.descricao,
+      duracao: value.duracao,
+      guiaId: guiaId,
+      passeioId: Number(value.passeioIdSelecionado),
+      tipo: 'FIXO',
+      valor: Number(value.valorPasseio),
+      status: 'AGENDADO',
+      pontoReferencia: value.pontoReferencia
+    }
+
+    return this.http.post<CreateAgendaModel>(
+      `http://localhost:3000/agendas`, createAgenda
+    ).pipe(map(agenda => {
+
+      console.log('Agenda Criada:'+agenda);
+      return agenda;
+    }));
+
   }
 
   agendarPersonalizado(value: any, guiaId: number, clienteId: number | undefined, agendaId: number) {
@@ -50,8 +73,6 @@ export class PasseioService {
       console.log('Agenda Criada:'+agenda);
       return agenda;
     }));
-
-
     }));
   }
 

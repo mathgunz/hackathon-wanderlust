@@ -1,68 +1,105 @@
+<!-- slider Area Start-->
 <div class="slider-area ">
-   <!-- Mobile Menu -->
-   <div class="single-slider slider-height2 d-flex align-items-center"
-   [ngStyle]="{backgroundImage:'url(../../assets/img/hero/contact_hero.jpg)'}">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="hero-cap text-center">
-            <h2>Cadastro Passeios</h2>
+  <!-- Mobile Menu -->
+  <div class="single-slider slider-height2 d-flex align-items-center"
+  [ngStyle]="{backgroundImage:'url(../../assets/img/hero/contact_hero.jpg)'}">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-12">
+                  <div class="hero-cap text-center">
+                      <h2>Roteiro Fixo</h2>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
-    </div>
   </div>
 </div>
 <!-- slider Area End-->
-<!--================Blog Area =================-->
-<section class="blog_area single-post-area section-padding">
+<!--================Contratacao Personalizado  Area =================-->
+<section class="contact-section">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-tittle text-center">
-          <h1>Vamos realizar o sonho de mais um Wanderlusteiro(a)?</h1>
-        </div>
-      </div>
-    </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="section-tittle text-center">
+                  <h4><span>Hey, Guia</span></h4>
+                  <h2>Vamos agendar um passeio? </h2>
+              </div>
+              <form [formGroup]="cadastroPasseioFixoGuiaForm" id="personalizado" novalidate="novalidate" (ngSubmit)="onSubmit()" >
 
-    <div class="single-post">
-      <div class="blog_details" align="left">
+                  <div class="col-lg-12" align="text-center">
+                      <h3>Informações da contratação:</h3>
+                      <div class="row">
+                          <div class="col-lg-6 offset-lg-12">
+                              <div class="form-group">
+                                    <div class="input-group-icon mt-10">
+                                      <div id="default-select">
+                                          <p><i class="fa fa-map-signs" aria-hidden="true"></i> Selecione Passeio:
+                                          <select formControlName="passeioIdSelecionado" class="form-select">
+                                            <option value=0>
+                                              Selecione um Passeio
+                                            </option>
+                                              <option *ngFor="let passeio of passeios; let i = index" [value]="passeios[i].id">
+                                                {{passeios[i].nome}}
+                                              </option>
+                                          </select>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
 
-        <p><i class="fa fa-user"></i> Id do Guia: <output name="guia">40300</output></p>
-        <p><i class="fa fa-map-marker"></i> Passeio Contratado:
-          <input name="nomePasseio"
-                 id="nomePasseio"
-                 type="text"
-                 onfocus="this.placeholder = ''"
-                 onblur="this.placeholder = 'Nome do Passeio'"
-                 placeholder=" Nome do Passeio">
-        </p>
-
-        <p><i class="fa fa-location-arrow"></i> Descri��o dos Passeios:
-        <div class="form-group">
-            <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Decreva informações Informações do Passeio.'" placeholder="Decreva aqui informações do Passeio."></textarea>
-        </div>
-        <p><i class="fa fa-calendar"></i> Data Inicial: <input name="data"></p>
-        <p><i class="fa fa-calendar"></i> Data Final: <input name="data"></p>
-        <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Dura��o(Horas): <input name="duracao"></p>
-        <p><i class="fa fa-location-arrow"></i> Ponto de Encontro: </p>
-        <div class="form-group">
-         <input class="form-control valid" name="endereco" id="endereco" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Informe o local de encontro. Ex: Pousada Maria Bonita'" placeholder="Informe o local de encontro. Ex: Pousada Maria Bonita">
-        </div>
-        <p><i class="fa fa-map"></i> Tipo de Passeio (Fixo/Personalizado): <input name="tipoPasseio"></p>
-        <p><i class="fa fa-map"></i> Tipo (Radical/Gastronômico e etc): <input name="tipoPasseio"></p>
-        <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor: R$ <input name="valor"></p>
-      </div>
-
-
-      <form class="col-lg-9 col-md-12" method="post">
-        <div class="col-lg-12" align="center">
-          <div class="col-lg-6 col-md-12 col-10 nav-right flex-row d-flex justify-content-end align-items-center">
-            <button onclick="cadastrar()" type="submit" class="button button-contactForm boxed-btn">Cadastrar</button>
+                          <div class="col-md-2 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração:
+                                      <input formControlName="duracao" class="form-control valid" name="duracao" id="duracao" type="time">
+                              </div>
+                          </div>
+                          <div class="col-lg-12 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-map-marker"></i> Descrição do Passeio:
+                                      <textarea formControlName="descricao" class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Decreva informações do Passeio.'" placeholder="Decreva informações do Passeio."></textarea>
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="col-lg-12 offset-lg-12">
+                            <div class="form-group">
+                                <p><i class="fa fa-user"></i> Ponto Referencia:
+                                    <input formControlName="pontoReferencia" class="form-control valid" name="cliente" id="cliente" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ponto de Referencia'" placeholder="Ponto de Referencia">
+                                </p>
+                            </div>
+                          </div>
+                          <div class="col-md-3 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-calendar"></i> Data:
+                                      <input formControlName="dataDoPasseio" class="form-control valid" name="data" id="data" type="date">
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="col-md-2 offset-lg-12">
+                              <div class="form-group">
+                                  <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor:
+                                      <input formControlName="valorPasseio" class="form-control valid" name="valor" id="valor" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'R$250,00'" placeholder="R$250,00">
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="col-lg-12 col-md-4 offset-lg-12" align="center">
+                              <button type="submit" class="button button-contactForm boxed-btn">Enviar para aprovação do Cliente</button>
+                          </div>
+                      </div>
+                  </div>
+              </form>
           </div>
-        </div>
-      </form>
-    </div>
+      </div>
   </div>
-
 </section>
+
+<jw-modal id="sucesso-agendamento-passeio-modal">
+  <h1>Sucesso!</h1>
+  <p>Agendamento realizado com sucesso!</p>
+  <button class="button button-contactForm boxed-btn" (click)="moverParaHome();">Ok</button>
+</jw-modal>
+
+<jw-modal id="erro-agendamento-passeio-modal">
+  <h1>Error!</h1>
+  <p>N�o foi possivel realizar o agendamento, por favor tente novamente!</p>
+  <button class="button button-contactForm boxed-btn" (click)="closeModal('erro-agendamento-passeio-modal');">Fechar</button>
+</jw-modal>
