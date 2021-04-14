@@ -25,6 +25,7 @@ import {
   IndexClienteComponent,
   PasseiosAnterioresComponent
 } from './cliente';
+import { DetalhesAgendamentoGuiaComponent } from './guia/detalhes-agendamento-guia/detalhes-agendamento-guia.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -39,7 +40,7 @@ const routes: Routes = [
   { path: 'detalhes', component: DetalhePasseiosClienteComponent },
   { path: 'home-cliente', component: IndexClienteComponent },
   { path: 'passeios-anteriores', component: PasseiosAnterioresComponent },
-  
+
   //guia
   { path: 'home-guia', component: HomeGuiaComponent },
   { path: 'login-guia', component: LoginGuiaComponent },
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: 'cadastro-guia', component: GuiaComponent },
   { path: 'cadastro-passeio-guia-fixo', component: CadastroPasseioComponent },
   { path: 'cadastro-passeio-guia-personalizado', component: CadastroPasseioPersonalizadoComponent },
+  { path: 'detalhe-agendamento-guia/:agendaId', component: DetalhesAgendamentoGuiaComponent },
 ];
 
 @NgModule({

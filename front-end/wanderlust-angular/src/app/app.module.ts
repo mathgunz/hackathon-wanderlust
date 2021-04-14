@@ -40,6 +40,7 @@ import {
   AlertComponent,
   HeaderSlideComponent,
 } from './_components';
+import { DetalhesAgendamentoGuiaComponent } from './guia/detalhes-agendamento-guia/detalhes-agendamento-guia.component';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import {
     IndexClienteComponent,
     PasseiosAnterioresComponent,
     LoginGuiaComponent,
-    PerfilGuiaComponent
+    PerfilGuiaComponent,
+    DetalhesAgendamentoGuiaComponent
   ],
   imports: [
     BrowserModule,

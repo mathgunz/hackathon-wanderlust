@@ -94,75 +94,56 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-12">
-        <div class="main-box clearfix">
-          <div class="table-responsive">
-            <table class="table user-list">
-              <thead>
-                <tr>
-                  <th class="text-center"><span>Passeio</span></th>
-                  <th class="text-center"><span>Data</span></th>
-                  <th class="text-center"><span>Duração</span></th>
-                  <th class="text-center"><span>Status</span></th>
-                  <th class="text-center"><span>Cliente</span></th>
-                  <th class="text-center"><span>Detalhes </span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-center">
-                    <p><output name="passeio">Litoral Leste-Jericoacoara</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="dataPasseio">25/04/2021</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="duracao">8 hrs</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="statusPasseio"> Agendado</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="nomeCliente">Felipe Souza</output></p>
-                  </td>
-                  <td style="width: 14%;" align="center">
-                    <a href="detalhe_agendamento_guia.html" class="table-link">
-                      <span class="fa-stack" aria-hidden="true">
-                        <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
-                        <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
-                      </span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text-center">
-                    <p><output name="passeio">Rota dos Cristais-Jeri</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="dataPasseio">26/04/2021</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="duracao">9 hrs</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="statusPasseio"> Agendado</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="nomeCliente">Ariane Silva</output></p>
-                  </td>
-                  <td style="width: 14%;" align="center">
-                    <a href="detalhe_agendamento_guia.html" class="table-link">
-                      <span class="fa-stack" aria-hidden="true">
-                        <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
-                        <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
-                      </span>
-                    </a>
-                  </td>
-                </tr>
-            </table>
+      <form [formGroup]="agendaGuiaForm" id="passeio" novalidate="novalidate" (ngSubmit)="onSubmit()">
+        <div class="col-lg-12">
+          <div class="main-box clearfix">
+            <div class="table-responsive">
+              <table class="table user-list">
+                <thead>
+                  <tr>
+                    <th class="text-center"><span>Passeio</span></th>
+                    <th class="text-center"><span>Data</span></th>
+                    <th class="text-center"><span>Duração</span></th>
+                    <th class="text-center"><span>Status</span></th>
+                    <th class="text-center"><span>Cliente</span></th>
+                    <th class="text-center"><span>Detalhes </span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let agenda of agendas">
+                    <td class="text-center">
+                      <p><output name="passeio">{{agenda.passeio.nome}}</output></p>
+                    </td>
+                    <td class="text-center">
+                      <p><output name="dataPasseio">{{agenda.data}}</output></p>
+                    </td>
+                    <td class="text-center">
+                      <p><output name="duracao">{{agenda.duracao}}</output></p>
+                    </td>
+                    <td class="text-center">
+                      <p><output name="statusPasseio">{{agenda.duracao}}</output></p>
+                    </td>
+                    <td class="text-center">
+                      <ul *ngFor="let clientesAgendado of agenda.clientesAgendados">
+                        <li>
+                          {{clientesAgendado.cliente.nome}}
+                        </li>
+                      </ul>
+                    </td>
+                    <td style="width: 14%;" align="center">
+                      <a (click)="detalhesAgendamentoGuiaModal(agenda)" class="table-link">
+                        <span class="fa-stack" aria-hidden="true">
+                          <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
+                          <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </section>
