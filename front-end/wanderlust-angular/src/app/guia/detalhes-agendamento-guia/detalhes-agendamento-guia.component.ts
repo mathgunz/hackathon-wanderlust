@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from 'src/app/_modal';
+import { Guia } from 'src/app/_models';
 import { Agenda } from 'src/app/_models/agenda';
 import { AlertService, AgendaService } from 'src/app/_services';
 
@@ -21,15 +22,16 @@ export class DetalhesAgendamentoGuiaComponent implements OnInit {
     private agendaService: AgendaService,
   ) { }
 
-  guiaId: number = 1;
-  clienteId: number = 1;
   agenda: Agenda = new Agenda();
+  guia: Guia = new Guia();
 
   detalhesAgendaGuiaForm = this.formBuilder.group({
     agenda:''
   });
 
   ngOnInit(): void {
+
+    this.guia = JSON.parse(localStorage.getItem('currentUser') || '{}');
 
     const agendaId = Number(this.route.snapshot.paramMap.get('agendaId'));
 
@@ -43,5 +45,4 @@ export class DetalhesAgendamentoGuiaComponent implements OnInit {
         }
     });
   }
-
 }

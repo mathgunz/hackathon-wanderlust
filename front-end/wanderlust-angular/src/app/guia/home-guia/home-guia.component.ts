@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from 'src/app/_modal';
-import { Clientes } from 'src/app/_models';
+import { Clientes, Guia } from 'src/app/_models';
 import { Agenda } from 'src/app/_models/agenda';
 import { AgendaService, AlertService, PasseioService } from 'src/app/_services';
 
@@ -23,15 +23,13 @@ export class HomeGuiaComponent implements OnInit {
     private agendaService: AgendaService,
   ) { }
 
-
-  guiaId: number = 1;
-  clienteId: number = 1;
-
+  guia: Guia = new Guia();
   agendas: Agenda[] = [];
+
+  clienteId: number = 1;
 
   agendasNotificacoes: Agenda[] = [];
   clienteSelecionado: Clientes = new Clientes();
-
 
   agendaGuiaForm = this.formBuilder.group({
     passeio:'',
@@ -47,7 +45,9 @@ export class HomeGuiaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.agendaService.findByGuiaId(this.guiaId).subscribe({
+    this.guia = JSON.parse(localStorage.getItem('currentUser') || '{}');
+
+    this.agendaService.findByGuiaId(this.guia.id).subscribe({
       next: (agendas) => {
 
         console.log('lista de agendas do Guia:'+JSON.stringify(agendas));
@@ -61,7 +61,7 @@ export class HomeGuiaComponent implements OnInit {
       }
     });
 
-    this.agendaService.findByGuiaId(this.guiaId).subscribe({
+    this.agendaService.findByGuiaId(this.guia.id).subscribe({
       next: (agendasNotificacoes) => {
           this.agendasNotificacoes = agendasNotificacoes.filter(function(agenda){
             return agenda.status === 'PENDENTE_CONFIRMACAO_GUIA'

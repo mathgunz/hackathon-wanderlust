@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from 'src/app/_modal';
+import { Guia } from 'src/app/_models';
 import { ClienteResponse } from 'src/app/_models/cliente';
 import { PasseioResponseModel } from 'src/app/_models/passeio';
 import { AlertService } from 'src/app/_services';
@@ -26,10 +27,10 @@ export class CadastroPasseioPersonalizadoComponent implements OnInit {
   ) {
   }
 
-  guiaId: number = 1;
   passeios: PasseioResponseModel[] = [];
   cliente: ClienteResponse = new ClienteResponse();
   passeioIdSelecionado: number = 0;
+  guia: Guia = new Guia();
 
   cadastroPasseioPersonalizadoGuiaForm = this.formBuilder.group({
     passeios: [''],
@@ -44,6 +45,8 @@ export class CadastroPasseioPersonalizadoComponent implements OnInit {
 
   ngOnInit(){
 
+    this.guia = JSON.parse(localStorage.getItem('currentUser') || '{}');
+
     const clienteId = Number(this.route.snapshot.paramMap.get('clienteId'));
 
     this.clienteService.buscarClientePorId(clienteId).subscribe({
@@ -56,7 +59,7 @@ export class CadastroPasseioPersonalizadoComponent implements OnInit {
       }
     });
 
-    this.passeioService.buscarPasseioPorGuiaId(this.guiaId).subscribe({
+    this.passeioService.buscarPasseioPorGuiaId(this.guia.id).subscribe({
       next: (passeios) => {
 
         this.passeios = passeios;
@@ -71,7 +74,7 @@ export class CadastroPasseioPersonalizadoComponent implements OnInit {
 
   onSubmit(){
 
-    this.passeioService.agendarPersonalizado(this.cadastroPasseioPersonalizadoGuiaForm.value, this.guiaId, this.cliente.id).subscribe({
+    this.passeioService.agendarPersonalizado(this.cadastroPasseioPersonalizadoGuiaForm.value, this.guia.id, this.cliente.id).subscribe({
       next: (agenda) =>{
         this.modalService.open('sucesso-agendamento-passeio-modal');
       },

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Guia } from 'src/app/_models';
 import { ModalService } from '../../_modal';
 import { AlertService, PasseioService } from '../../_services';
 
@@ -21,7 +22,7 @@ export class PasseiosComponent implements OnInit {
   ) {
   }
 
-  guiaId: number = 1;
+  guia: Guia = new Guia();
 
   passeiosGuiaForm = this.formBuilder.group({
     nome: "",
@@ -34,11 +35,12 @@ export class PasseiosComponent implements OnInit {
   });
 
   ngOnInit(): void {
+    this.guia = JSON.parse(localStorage.getItem('currentUser') || '{}');
   }
 
   onSubmit(){
 
-    this.passeioService.create(this.passeiosGuiaForm.value, this.guiaId).subscribe({
+    this.passeioService.create(this.passeiosGuiaForm.value, this.guia.id).subscribe({
       next: (passeio) => {
 
         this.modalService.open('sucesso-cadastro-passeio-modal')
