@@ -61,10 +61,17 @@ export class PasseioService {
     }
 
     console.log('para excluir:'+ agendaId);
-    return this.http.delete<boolean>(
+    this.http.delete<boolean>(
       `http://localhost:3000/agendas/`+agendaId
     ).pipe(map(excluido => {
       console.log('foi excluido:'+ excluido);
+      return excluido;
+    })).subscribe({
+      next:(sad) =>{
+
+      }
+    });
+
 
     return this.http.post<CreateAgendaModel>(
       `http://localhost:3000/agendas`, createAgenda
@@ -72,7 +79,6 @@ export class PasseioService {
 
       console.log('Agenda Criada:'+agenda);
       return agenda;
-    }));
     }));
   }
 
