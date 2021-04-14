@@ -23,9 +23,7 @@ services:
       - backend
 
   front:
-    build:
-      context: ../../front-end/wanderlust-angular
-      dockerfile: Dockerfile
+    image: jvictor07/wanderlust-angular:latest
     networks:
       - backend
     ports:
