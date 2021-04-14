@@ -1,4 +1,6 @@
 ﻿export class Guia {
+
+    "id": number;
     "nome": string;
     "sobrenome": string;
     "documento": number;

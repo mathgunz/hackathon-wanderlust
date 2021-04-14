@@ -1,4 +1,5 @@
-import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
+
 import { Agendas, ClientesAgendados } from 'src/entities/agenda.entity';
 import { AgendasService } from './agendas.service';
 import { CreateAgendaDto, FilterAgendasDto } from './dtos/agendas.dto';
@@ -21,6 +22,11 @@ export class AgendasController {
     @Post()
     async create(@Body() createAgendaDto: CreateAgendaDto): Promise<Agendas> {
       return await this.agendasService.create(createAgendaDto);    
+    }
+
+    @Delete('/:id')
+    async delete(@Param('id') id: number): Promise<boolean> {
+        return await this.agendasService.delete(id);    
     }
 
     @Put('/:id/clientes/:clienteId')

@@ -1,11 +1,13 @@
-﻿export class Clientes {
+﻿import { EnderecosModel } from "./endereco";
+
+export class Clientes {
 
      "id"?: number;
      "nome": string;
      "sobrenome": string;
      "dataNascimento": Date;
      "telefone": number;
-    //  "endereco": Enderecos;
+     "endereco": EnderecosModel;
      "email": string;
      "senha": string;
 }

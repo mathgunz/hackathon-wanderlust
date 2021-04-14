@@ -11,7 +11,13 @@ export class AgendasRepository extends Repository<Agendas> {
 
         const guias = await this.createQueryBuilder('agendas')
         .leftJoinAndSelect('agendas.guia', 'guia')
+        .leftJoinAndSelect('agendas.clientesAgendados', 'clientesAgendado')
+        .leftJoinAndSelect('clientesAgendado.cliente', 'cliente')
+        .leftJoinAndSelect('cliente.endereco', 'endereco')
+        .leftJoinAndSelect('agendas.passeio', 'passeio')
         .orWhere('guia.id = :guiaId', {guiaId: query.guiaId})
+        .orWhere('cliente.id = :clienteId', {clienteId: query.clienteId})
+        .orWhere('agendas.status = :status', {status: query.status})
         .getMany();
   
         return guias;

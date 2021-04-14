@@ -26,6 +26,12 @@ export class CreateAgendaDto {
 
     @IsNumber()
     valor: number;
+
+    @IsString()
+    pontoReferencia: string;
+
+    @IsString()
+    status?: string
 }
 
 export class UpdateAgendaDto extends CreateAgendaDto {}
@@ -33,6 +39,15 @@ export class UpdateAgendaDto extends CreateAgendaDto {}
 export class FilterAgendasDto {
 
     @IsNumber()
-    guiaId: number;
+    @IsOptional()
+    guiaId?: number;
+
+    @IsNumber()
+    @IsOptional()
+    clienteId?: number;
+
+    @IsString()
+    @IsOptional()
+    status?: string;
 
 }

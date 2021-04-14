@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { User } from '../_models';
+import { Guia, User } from '../_models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
@@ -28,6 +28,7 @@ export class AuthenticationService {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('currentUser', JSON.stringify(user));
                 this.currentUserSubject.next(user);
+
                 return user;
             }));
     }
@@ -36,11 +37,11 @@ export class AuthenticationService {
       return this.http.post<any>(
         `http://localhost:3000/login/guias`
         , { email, senha })
-          .pipe(map(user => {
+          .pipe(map(guia => {
               // store user details and jwt token in local storage to keep user logged in between page refreshes
-              localStorage.setItem('currentUser', JSON.stringify(user));
-              this.currentUserSubject.next(user);
-              return user;
+              localStorage.setItem('currentUser', JSON.stringify(guia));
+              this.currentUserSubject.next(guia);
+              return guia;
           }));
     }
 

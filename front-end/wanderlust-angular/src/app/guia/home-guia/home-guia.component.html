@@ -9,64 +9,28 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-10" align="center">
         <div class="main-box clearfix">
           <div class="table-responsive">
             <table class="table user-list">
               <thead>
                 <tr>
-                  <th class="text-center"><span>Passeio</span></th>
-                  <th class="text-center"><span>Data</span></th>
-                  <th class="text-center"><span>Duração</span></th>
-                  <th class="text-center"><span>Status</span></th>
                   <th class="text-center"><span>Cliente</span></th>
+                  <th class="text-center"><span>Data Solicitação</span></th>
                   <th class="text-center"><span>Detalhes </span></th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
+              <tbody *ngFor="let agendaNotificacao of agendasNotificacoes">
+                <tr *ngFor="let clientesAgendado of agendaNotificacao.clientesAgendados">
                   <td class="text-center">
-                    <p><output name="passeio">Litoral Leste-Jericoacoara</output></p>
+                    <p><output name="passeio">{{clientesAgendado.cliente.nome}}</output></p>
                   </td>
                   <td class="text-center">
-                    <p><output name="dataPasseio">25/04/2021</output></p>
+                    <p><output name="dataPasseio">{{agendaNotificacao.data | date: 'dd/MM/yyyy'}}</output></p>
                   </td>
-                  <td class="text-center">
-                    <p><output name="duracao">8 hrs</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="statusPasseio"> Agendado</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="nomeCliente">Felipe Souza</output></p>
-                  </td>
+
                   <td style="width: 14%;" align="center">
-                    <a href="detalhe_agendamento_guia.html" class="table-link">
-                      <span class="fa-stack" aria-hidden="true">
-                        <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
-                        <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
-                      </span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text-center">
-                    <p><output name="passeio">Rota dos Cristais-Jeri</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="dataPasseio">26/04/2021</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="duracao">9 hrs</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="statusPasseio"> Agendado</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="nomeCliente">Ariane Silva</output></p>
-                  </td>
-                  <td style="width: 14%;" align="center">
-                    <a href="detalhe_agendamento_guia.html" class="table-link">
+                    <a (click)="detalhesNotificacao('detalhe-guia-modal', agendaNotificacao, clientesAgendado.cliente);" class="table-link">
                       <span class="fa-stack" aria-hidden="true">
                         <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
                         <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
@@ -94,75 +58,79 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-12">
-        <div class="main-box clearfix">
-          <div class="table-responsive">
-            <table class="table user-list">
-              <thead>
-                <tr>
-                  <th class="text-center"><span>Passeio</span></th>
-                  <th class="text-center"><span>Data</span></th>
-                  <th class="text-center"><span>Duração</span></th>
-                  <th class="text-center"><span>Status</span></th>
-                  <th class="text-center"><span>Cliente</span></th>
-                  <th class="text-center"><span>Detalhes </span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-center">
-                    <p><output name="passeio">Litoral Leste-Jericoacoara</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="dataPasseio">25/04/2021</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="duracao">8 hrs</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="statusPasseio"> Agendado</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="nomeCliente">Felipe Souza</output></p>
-                  </td>
-                  <td style="width: 14%;" align="center">
-                    <a href="detalhe_agendamento_guia.html" class="table-link">
-                      <span class="fa-stack" aria-hidden="true">
-                        <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
-                        <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
-                      </span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text-center">
-                    <p><output name="passeio">Rota dos Cristais-Jeri</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="dataPasseio">26/04/2021</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="duracao">9 hrs</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="statusPasseio"> Agendado</output></p>
-                  </td>
-                  <td class="text-center">
-                    <p><output name="nomeCliente">Ariane Silva</output></p>
-                  </td>
-                  <td style="width: 14%;" align="center">
-                    <a href="detalhe_agendamento_guia.html" class="table-link">
-                      <span class="fa-stack" aria-hidden="true">
-                        <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
-                        <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
-                      </span>
-                    </a>
-                  </td>
-                </tr>
-            </table>
+      <form [formGroup]="agendaGuiaForm" id="passeio" novalidate="novalidate" (ngSubmit)="onSubmit()">
+        <div class="col-lg-12" align="center">
+          <div class="main-box clearfix">
+            <div class="table-responsive">
+              <table class="table user-list">
+                <thead>
+                  <tr>
+                    <th class="text-center"><span>Passeio</span></th>
+                    <th class="text-center"><span>Data</span></th>
+                    <th class="text-center"><span>Duração</span></th>
+                    <th class="text-center"><span>Status</span></th>
+                    <th class="text-center"><span>Cliente</span></th>
+                    <th class="text-center"><span>Detalhes </span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let agenda of agendas">
+                    <td class="text-center">
+                      <p><output name="passeio">{{agenda.passeio.nome}}</output></p>
+                    </td>
+                    <td class="text-center">
+                      <p><output name="dataPasseio">{{agenda.data | date:'dd/MM/yyyy' }}</output></p>
+                    </td>
+                    <td class="text-center">
+                      <p><output name="duracao">{{agenda.duracao}}</output></p>
+                    </td>
+                    <td class="text-center">
+                      <p><output name="statusPasseio">{{agenda.statusPage}}</output></p>
+                    </td>
+                    <td class="text-center">
+                      <ul *ngFor="let clientesAgendado of agenda.clientesAgendados">
+                        <li>
+                          {{clientesAgendado.cliente.nome}}
+                        </li>
+                      </ul>
+                    </td>
+                    <td style="width: 14%;" align="center">
+                      <a (click)="detalhesAgendamentoGuiaModal(agenda)" class="table-link">
+                        <span class="fa-stack" aria-hidden="true">
+                          <i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
+                          <p><i class="fa fa-search-plus fa-stack-1x " aria-hidden="true"></i></p>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </section>
+
+
+<jw-modal class="" id="detalhe-guia-modal">
+
+  <div class="blog_details">
+    <h2>Wanderlusteiro: <output name="cliente">{{clienteSelecionado.nome}}</output></h2>
+
+    <p><i class="fa fa-info"></i> Status: {{agendaSelecionada.statusPage}}</p>
+    <p><i class="fa fa-calendar"></i> Data do Passeio: {{agendaSelecionada.data | date:'dd/MM/yyyy' }}</p>
+    <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade: São Paulo</p>
+    <p><i class="fa fa-map"></i> Tipo de Passeio: {{agendaSelecionada.tipo}}</p>
+    <p> <img src="assets/img/icon/whatsapp.png" alt="" style="height:30px;width:25px;">
+      <a href="chat.html"><i class="fa fa-whatsapp" aria-hidden="true"></i>Fale com seu cliente</a>
+    </p>
+    <div class=" flex-row d-flex justify-content-start ">
+      <button (click)="encerrarAtendimento('detalhe-guia-modal');" class="button button-contactForm boxed-btn">Encerrar Atendimento</button>
+      <div class="col-3 nav-right flex-row d-flex justify-content-end align-items-center">
+        <button class="button button-contactForm boxed-btn" (click)="contratarPasseioPersonalizado('detalhe-guia-modal');">Contratar Passeio</button>
+      </div>
+    </div>
+  </div>
+
+</jw-modal>

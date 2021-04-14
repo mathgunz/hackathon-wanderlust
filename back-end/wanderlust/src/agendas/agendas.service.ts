@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { threadId } from 'node:worker_threads';
 import { ClientesRepository } from 'src/clientes/clientes.repository';
 import { Agendas, ClientesAgendados } from 'src/entities/agenda.entity';
 import { GuiasRepository } from 'src/guias/guias.repository';
@@ -8,7 +9,7 @@ import { CreateAgendaDto, FilterAgendasDto } from './dtos/agendas.dto';
 
 @Injectable()
 export class AgendasService {
-  
+
   constructor(private readonly agendasRepository: AgendasRepository
     , private readonly guiasRepository: GuiasRepository
     , private readonly passeiosRepository: PasseiosRepository
@@ -30,11 +31,12 @@ export class AgendasService {
         tipo: createAgendaDto.tipo,
         data: createAgendaDto.data,
         duracao: createAgendaDto.duracao,
-        status: 'PENDENTE_CONFIRMACAO_CLIENTE',
+        status: createAgendaDto.status,
         descricao: createAgendaDto.descricao,
         guia: guia,
         passeio: passeio,
-        valor: createAgendaDto.valor
+        valor: createAgendaDto.valor,
+        pontoReferencia: createAgendaDto.pontoReferencia
       }
 
       const agendaResult = await this.agendasRepository.save(agenda);
@@ -56,7 +58,17 @@ export class AgendasService {
     }
 
     async get(id: number): Promise<Agendas> {
-      return await this.agendasRepository.findOne(id);
+      return await this.agendasRepository.findOne(id, 
+        {
+          join:{
+            alias: 'agenda',
+            leftJoinAndSelect: {
+              passeio: 'agenda.passeio',
+              clientesAgendados: 'agenda.clientesAgendados',
+              clientes: 'clientesAgendados.cliente',
+              enderecos: 'clientes.endereco'
+            }
+      }});
     }
 
     async add(id: number, clienteId: number): Promise<boolean> {
@@ -91,4 +103,30 @@ export class AgendasService {
 
       return salvo;
     }
+
+    async delete(id: number) : Promise<boolean>{
+
+      const agenda = await this.agendasRepository.findOne(id, 
+        {
+          join:{
+            alias: 'agenda',
+            leftJoinAndSelect: {
+              passeio: 'agenda.passeio',
+              clientesAgendados: 'agenda.clientesAgendados',
+              clientes: 'clientesAgendados.cliente'
+            }
+      }});
+
+
+      agenda.clientesAgendados.forEach(element => {
+         this.clientesAgendadosRepository.delete(element);
+      });
+
+      const atualizada = await this.agendasRepository.findOne(id);
+      
+      await this.agendasRepository.delete(atualizada);
+
+      return true;
+    }
+    
 }

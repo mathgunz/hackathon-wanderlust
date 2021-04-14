@@ -24,4 +24,6 @@ export class CreateAgendaModel {
   "clienteId"?: number;
   "descricao": string;
   "valor": number;
+  "status": string;
+  "pontoReferencia": string;
 }

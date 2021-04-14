@@ -42,6 +42,7 @@ import {
   AlertComponent,
   HeaderSlideComponent,
 } from './_components';
+import { DetalhesAgendamentoGuiaComponent } from './guia/detalhes-agendamento-guia/detalhes-agendamento-guia.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import {
     PasseiosAnterioresComponent,
     LoginGuiaComponent,
     PerfilGuiaComponent,
+    DetalhesAgendamentoGuiaComponent,
     ListaGuiaComponent,
     DetalheGuiaComponent,
     PagamentoComponent

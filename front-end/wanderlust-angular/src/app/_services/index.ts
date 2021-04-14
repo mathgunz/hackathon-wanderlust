@@ -5,3 +5,4 @@ export * from './guia.service';
 export * from './local-storage.service';
 export * from './passeio.service';
 export * from './user.service';
+export * from './agenda.service';
