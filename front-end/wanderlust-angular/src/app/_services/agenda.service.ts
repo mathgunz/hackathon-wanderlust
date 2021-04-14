@@ -24,4 +24,12 @@ export class AgendaService {
         return agendas;
       }));
   }
+
+  findById(agendaId: any) {
+    return this.http.get<Agenda>(
+      `http://localhost:3000/agendas/`+agendaId)
+      .pipe(map(agenda => {
+        return agenda;
+      }));
+  }
 }

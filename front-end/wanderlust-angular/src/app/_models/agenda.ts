@@ -22,6 +22,8 @@ export class Agenda {
 
      "valor": number;
 
+     "pontoReferencia": string;
+
 }
 
 export class ClientesAgendados {

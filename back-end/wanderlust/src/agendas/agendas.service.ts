@@ -34,7 +34,8 @@ export class AgendasService {
         descricao: createAgendaDto.descricao,
         guia: guia,
         passeio: passeio,
-        valor: createAgendaDto.valor
+        valor: createAgendaDto.valor,
+        pontoReferencia: createAgendaDto.pontoReferencia
       }
 
       const agendaResult = await this.agendasRepository.save(agenda);
@@ -56,7 +57,16 @@ export class AgendasService {
     }
 
     async get(id: number): Promise<Agendas> {
-      return await this.agendasRepository.findOne(id);
+      return await this.agendasRepository.findOne(id, 
+        {
+          join:{
+            alias: 'agenda',
+            leftJoinAndSelect: {
+              passeio: 'agenda.passeio',
+              clientesAgendados: 'agenda.clientesAgendados',
+              clientes: 'clientesAgendados.cliente'
+            }
+      }});
     }
 
     async add(id: number, clienteId: number): Promise<boolean> {

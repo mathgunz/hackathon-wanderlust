@@ -1,1 +1,63 @@
-<p>detalhes-agendamento-guia works!</p>
+<!-- slider Area Start-->
+<div class="slider-area ">
+  <!-- Mobile Menu -->
+  <div class="single-slider slider-height2 d-flex align-items-center"
+    [ngStyle]="{backgroundImage:'url(../../assets/img/hero/contact_hero.jpg)'}">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="hero-cap text-center">
+            <h2>Agendamento</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- slider Area End-->
+<!--================Detalhe agendamento start =================-->
+<section class="blog_area single-post-area section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-tittle text-center">
+          <h4><span>Hey, Guia </span></h4>
+          <h2>Aqui encontram-se os detalhes do seu agendamento!</h2>
+        </div>
+      </div>
+      <form [formGroup]="detalhesAgendaGuiaForm" class="col-lg-12">
+        <div class="col-lg-12 posts-list" align="center">
+
+          <div class="single-post">
+            <div class="blog_details" align="left">
+              <h2>Informações do agendamento:</h2>
+              <p><i class="fa fa-map-signs"></i> Nome do Passeio Contratado: {{agenda.passeio.nome}}</p>
+              <p><i class="fa fa-map-marker"></i> Descrição do Passeio Contratado: {{agenda.descricao}}</p>
+              <i class="fa fa-user"></i> Clientes:
+                 <ul *ngFor="let clientesAgendado of agenda.clientesAgendados">
+                <li>
+                  {{clientesAgendado.cliente.nome}} - Celular:  {{clientesAgendado.cliente.telefone}}
+                </li>
+              </ul>
+              <p></p>
+              <p><i class="fa fa-calendar"></i> Data: {{agenda.data}}</p>
+              <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração: <output name="duracao">{{agenda.duracao}}</output>
+              </p>
+              <p><i class="fa fa-map"></i> Tipo de Passeio: {{agenda.passeio.tipo}}</p>
+              <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: {{agenda.tipo}}
+              </p>
+              <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor Pago: R$ {{agenda.valor}}</p>
+              <p><i class="fa fa-location-arrow"></i> Ponto de Encontro: {{agenda.pontoReferencia}}
+              </p>
+              <p><i class="fa fa-check-square" aria-hidden="true"></i> Status: {{agenda.status}}
+              </p>
+              <p>
+              <h2>Dúvidas:</h2> <img src="assets/img/icon/whatsapp.png" alt="" style="height:30px;width:25px;">
+              <a href="chat.html"><i class="fa fa-whatsapp" aria-hidden="true"></i>Fale com seu cliente</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

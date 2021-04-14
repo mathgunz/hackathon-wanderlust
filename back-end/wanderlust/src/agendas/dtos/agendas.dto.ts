@@ -26,6 +26,9 @@ export class CreateAgendaDto {
 
     @IsNumber()
     valor: number;
+
+    @IsString()
+    pontoReferencia: string;
 }
 
 export class UpdateAgendaDto extends CreateAgendaDto {}

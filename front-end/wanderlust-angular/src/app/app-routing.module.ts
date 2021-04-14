@@ -49,7 +49,8 @@ const routes: Routes = [
   { path: 'cadastro-guia', component: GuiaComponent },
   { path: 'cadastro-passeio-guia-fixo', component: CadastroPasseioComponent },
   { path: 'cadastro-passeio-guia-personalizado', component: CadastroPasseioPersonalizadoComponent },
-  { path: 'detalhe-agendamento-guia/:agendaId', component: DetalhesAgendamentoGuiaComponent },
+  // { path: 'detalhe-agendamento-guia/:agendaId', component: DetalhesAgendamentoGuiaComponent },
+  { path: 'detalhe-agendamento-guia', component: DetalhesAgendamentoGuiaComponent },
 ];
 
 @NgModule({

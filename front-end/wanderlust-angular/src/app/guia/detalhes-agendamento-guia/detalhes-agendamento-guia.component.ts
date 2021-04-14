@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from 'src/app/_modal';
+import { Agenda } from 'src/app/_models/agenda';
 import { AlertService, AgendaService } from 'src/app/_services';
 
 @Component({
@@ -20,12 +21,28 @@ export class DetalhesAgendamentoGuiaComponent implements OnInit {
     private agendaService: AgendaService,
   ) { }
 
+  guiaId: number = 1;
+  clienteId: number = 1;
+  agendaId: number = 6;
+  agenda: Agenda = new Agenda();
+
+  detalhesAgendaGuiaForm = this.formBuilder.group({
+    agenda:''
+  });
+
   ngOnInit(): void {
 
-    const id = Number(this.route.snapshot.paramMap.get('agendaId'));
+    // const id = Number(this.route.snapshot.paramMap.get('agendaId'));
 
-    console.log('detalhes agendaid:'+id);
-
+    this.agendaService.findById(this.agendaId).subscribe({
+        next: (agenda) => {
+            this.agenda = agenda;
+            console.log('detalhes do guia:'+agenda);
+        },
+        error: (error) => {
+          console.log('erro ao recuerar dados da agenda');
+        }
+    });
   }
 
 }

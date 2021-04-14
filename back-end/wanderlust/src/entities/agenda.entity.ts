@@ -40,6 +40,8 @@ export class Agendas {
      @Column()
      valor: number;
 
+     @Column({nullable:true})
+     pontoReferencia: string;
 }
 
 @Entity({schema:'wanderlust'})
