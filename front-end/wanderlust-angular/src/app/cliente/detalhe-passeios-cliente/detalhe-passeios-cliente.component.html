@@ -26,10 +26,10 @@
           <h2>Aqui encontram-se os detalhes do seu passeio!</h2>
         </div>
       </div>
-      <form [formGroup]="detalhePasseiosClienteForm" class="col-lg-12">
+      <form [formGroup]="detalhePasseiosClienteForm" (ngSubmit)="onSubmit()" class="col-lg-12">
         <div class="col-lg-12 posts-list" align="center">
           <div class="section-top-border">
-            <h2><output name="cidade">Jericoacoara - Ceará</output></h2>
+            <h2><output name="cidade">{{detalhesPasseios.nomePasseio}}</output></h2>
             <div class="row gallery-item">
 
               <div class="col-md-6">
@@ -58,16 +58,16 @@
           <div class="single-post">
             <div class="blog_details" align="left">
               <h2>Informações do passeio:</h2>
-              <p><i class="fa fa-map-signs"></i> Nome do Passeio: <output name="descricao">Litoral Leste - Jericoacara</output></p>
-              <p><i class="fa fa-map-marker"></i> Descrição do Passeio Contratado: <output name="descricao">Pedra Furada, Buraco Azul, Lagoa do Paraíso, Dunas do Pôr do Sol e Árvore da Preguiça</output></p>
-              <p><i class="fa fa-user"></i> Guia contratado(a): <output name="guia">Maria Tereza Buarque</output></p>
-              <p><i class="fa fa-calendar"></i> Data: <output name="data">25/04/2021</output></p>
-              <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração: <output name="duracao">8hrs</output></p>
-              <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Sol e Praia</output></p>
-              <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: <output name="roteiro">Fixo</output></p>
-              <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor Pago:R$ <output name="valor">250,00</output></p>
-              <p><i class="fa fa-location-arrow"></i> Ponto de Encontro: <output name="endereco">Praça Central</output></p>
-              <p><i class="fa fa-check-square" aria-hidden="true"></i> Status: <output name="status">Á iniciar</output></p>
+              <p><i class="fa fa-map-signs"></i> Nome do Passeio: {{detalhesPasseios.nomepasseio}}</p>
+              <p><i class="fa fa-map-marker"></i> Descrição do Passeio Contratado: {{detalhesPasseios.descricao}}</p>
+              <p><i class="fa fa-user"></i> Guia contratado(a): name="guia">{{detalhesPasseios.guia}}</p>
+              <p><i class="fa fa-calendar"></i> Data: {{detalhesPasseios.data}}</p>
+              <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração: {{detalhesPasseios.duracao}}</p>
+              <p><i class="fa fa-map"></i> Tipo de Passeio: {{detalhesPasseios.tipopasseio}}</p>
+              <p><i class="fa fa-globe" aria-hidden="true"></i> Roteiro: {{detalhesPasseios.roteiro}}</p>
+              <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor Pago: {{detalhesPasseios.valor}}</p>
+              <p><i class="fa fa-location-arrow"></i> Ponto de Encontro: {{detalhesPasseios.detalhesPasseios}}</p>
+              <p><i class="fa fa-check-square" aria-hidden="true"></i> Status: {{detalhesPasseios.status}}</p>
             </div>
           </div>
 
@@ -89,7 +89,7 @@
                   <div class="detials">
                     <p>Viagem Anterior</p>
                     <a href="#">
-                      <h4><output name="anterior">Porto Seguro</output></h4>
+                      <h4><output name="anterior">{{detalhesPasseios.anterior}}</output></h4>
                     </a>
                   </div>
                 </div>
@@ -98,7 +98,7 @@
                   <div class="detials">
                     <p>Próxima Viagem</p>
                     <a href="#">
-                      <h4><output name="proxima">Chapada das Mesas</output></h4>
+                      <h4><output name="proxima">{{detalhesPasseios.proxima}}</output></h4>
                     </a>
                   </div>
                   <div class="arrow">

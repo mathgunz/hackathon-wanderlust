@@ -14,7 +14,7 @@ services:
       - backend
 
   wanderlust:
-    image: mathgunz16/wanderlust:latest
+    image: mathgunz16/wanderlust:1.0.0
     ports:
       - 3000:3000
     depends_on:
@@ -27,9 +27,7 @@ services:
     networks:
       - backend
     ports:
-      - 80:80 
-    networks:
-      backend:
+      - 80:80
 
 networks:
   backend:
