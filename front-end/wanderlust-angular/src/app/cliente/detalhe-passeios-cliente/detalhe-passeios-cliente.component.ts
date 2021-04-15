@@ -6,6 +6,7 @@ import { AlertService } from 'src/app/_services';
 import { ClienteService } from 'src/app/_services/cliente.service';
 import { PasseioService } from 'src/app/_services/passeio.service';
 import { GuiaService } from 'src/app/_services/guia.service';
+import { DetalhesPasseios } from './dtos/detalhe.passeio.dtos';
 
 @Component({
   selector: 'app-detalhe-passeios-cliente',
@@ -21,7 +22,10 @@ export class DetalhePasseiosClienteComponent implements OnInit {
       private alertService: AlertService,
       private passeioService: PasseioService,
       private clienteService: ClienteService,
-      private guiaService: GuiaService,) { }
+      private guiaService: GuiaService) { }
+
+
+  detalhesPasseios: DetalhesPasseios = new DetalhesPasseios;
 
   detalhePasseiosClienteForm=this.formBuilder.group({
     nomedoPasseio:"",
@@ -33,12 +37,16 @@ export class DetalhePasseiosClienteComponent implements OnInit {
     valor:"",
     enderecoPasseio:"",
     status:"",
-
+    detalhesPasseios:""
   });
   loading = false;
   submitted = false;
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+
   }
 
 }
