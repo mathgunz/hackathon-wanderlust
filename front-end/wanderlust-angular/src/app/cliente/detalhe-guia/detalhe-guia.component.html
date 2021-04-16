@@ -26,7 +26,7 @@
           <h2>Aqui encontra-se informações do seu guia!</h2>
         </div>
       </div>
-      <form [formGroup]="detalheGuiaForm" class="col-lg-12">
+      <form [formGroup]="detalheGuiaForm" (ngSubmit)="onSubmit()" class="col-lg-12">
         <div class="col-lg-12 posts-list" align="center">
           <div class="col-xl-5 col-lg-6 col-md-6">
             <div class="single-place mb-40">
@@ -36,9 +36,9 @@
               <div class="place-cap">
                 <div class="place-cap-top">
 
-                  <h2><output name="nome"> Maria Tereza Buarque</output></h2>
-                  <p><i class="fa fa-id-card" aria-hidden="true"></i> Nr. Cadastur: <output name="cadastur"> 12345</output></p>
-                  <p><i class="fa fa-phone" aria-hidden="true"></i> (85)99584-5675</p>
+                  <h2>{{detalheGuia.nomeGuia}}</h2>
+                  <p><i class="fa fa-id-card" aria-hidden="true"></i> Nr. Cadastur:{{detalheGuia.cadastur}}</p>
+                  <p><i class="fa fa-phone" aria-hidden="true"></i>{{detalheGuia.telefone}} </p>
                 </div>
               </div>
             </div>
@@ -46,28 +46,26 @@
           <div class="single-post">
             <div class="blog_details" align="left">
               <h2>Sobre o  Guia:</h2>
-              <p> <output name="guiaDescricao">Atuo na área de turismo ha mais de 10 anos , realizo passeios fixos e personalizados com especialização
-                em Sol e Praia na regiao de Jeri. Venha conhecer Jeri !
-                Me acompanhe no instan : @mariabuarque !
+              <p>{{detalheGuia.descricao}}
                 <span style='font-size:20px;'>&#127758;</span>
-              </output></p>
+             </p>
               <h2>Passeios Fixos:</h2>
               <div class="col-lg-6 offset-lg-12">
                 <div class="form-group">
                   <p><a href="detalhe-passeios-fixo.html"><i class="fa fa-map-signs" aria-hidden="true"></i>
-                    <output name="nomePasseio"> Litoral Leste - Jericoacara </output></a>
+                    {{detalheGuia.nomedoPasseio}}</a>
                 </div>
               </div>
               <div class="col-lg-6 offset-lg-12">
                 <div class="form-group">
                   <p><a href="detalhe-passeios-fixo.html"><i class="fa fa-map-signs" aria-hidden="true"></i>
-                    <output name="nomePasseio"> Litoral oeste - Jericoacara</output></a>
+                    {{detalheGuia.nomedoPasseio}}</a>
                 </div>
               </div>
               <div class="col-lg-6 offset-lg-12">
                 <div class="form-group">
                   <p><a href="detalhe-passeios-fixo.html"><i class="fa fa-map-signs" aria-hidden="true"></i>
-                    <output name="nomePasseio"> Rota das Emoções</output></a>
+                    {{detalheGuia.nomedoPasseio}}</a>
                 </div>
               </div>
               <h2>Passeios Personalizados:</h2>

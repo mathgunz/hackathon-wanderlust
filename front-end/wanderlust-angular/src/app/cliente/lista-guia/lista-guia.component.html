@@ -28,7 +28,7 @@
           </div>
         </div>
       </div>
-      <form [formGroup]="listaGuiaForm">
+      <form [formGroup]="listaGuiaForm" (ngSubmit)="onSubmit()" >
         <div class="row">
           <div class="col-xl-4 col-lg-4 col-md-6">
             <div class="single-place mb-30">
@@ -39,12 +39,12 @@
                 <div class="place-cap-top">
                                     <span><i class="fas fa-star"></i>
                                         <output name="avaliacao"><span>9.6 Incrível</span></output> </span>
-                  <h3><output name="nome"><a href="detalhe-guia.html"> Maria Tereza Buarque</a></output></h3>
-                  <p class="dolor">A partir de R$<output name="valor">250</output></p>
+                  <h3><a href="detalhe-guia.html"> </a>{{listaGuia.nomeGuia}}</h3>
+                  <p class="dolor">A partir de R${{listaGuia.valor}}</p>
                 </div>
                 <div class="place-cap-bottom">
                   <ul>
-                    <li><i class="fas fa-map-marker-alt"></i><output name="cidade">Jericoacoara</output></li>
+                    <li><i class="fas fa-map-marker-alt"></i>{{listaGuia.cidade}}</li>
                   </ul>
                 </div>
               </div>
@@ -59,12 +59,12 @@
                 <div class="place-cap-top">
                                     <span><i class="fas fa-star"></i>
                                     <output name="avaliacao"><span>9.0 Incrível</span></output> </span>
-                  <h3><output name="nome"><a href="detalhe-guia.html">Felipe Souza Trindade</a></output></h3>
-                  <p class="dolor">A partir de R$<output name="valor">220</output></p>
+                  <h3><a href="detalhe-guia.html">{{listaGuia.nomeGuia}}</a></h3>
+                  <p class="dolor">A partir de R${{listaGuia.valor}}</p>
                 </div>
                 <div class="place-cap-bottom">
                   <ul>
-                    <li><i class="fas fa-map-marker-alt"></i><output name="cidade">Jericoacoara</output></li>
+                    <li><i class="fas fa-map-marker-alt"></i>{{listaGuia.cidade}}</li>
                   </ul>
                 </div>
               </div>
@@ -79,12 +79,12 @@
                 <div class="place-cap-top">
                                     <span><i class="fas fa-star"></i>
                                     <output name="avaliacao"><span>8.8 Ótimo</span></output> </span>
-                  <h3><output name="nome"><a href="detalhe-guia.html">Laura Castilho</a></output></h3>
-                  <p class="dolor">A partir de R$<output name="valor">180</output></p>
+                  <h3><a href="detalhe-guia.html">{{listaGuia.nomeGuia}}</a></h3>
+                  <p class="dolor">A partir de R${{listaGuia.valor}}</p>
                 </div>
                 <div class="place-cap-bottom">
                   <ul>
-                    <li><i class="fas fa-map-marker-alt"></i><output name="cidade">Jericoacoara</output></li>
+                    <li><i class="fas fa-map-marker-alt"></i>{{listaGuia.cidade}}</li>
                   </ul>
                 </div>
               </div>
@@ -99,12 +99,12 @@
                 <div class="place-cap-top">
                                     <span><i class="fas fa-star"></i>
                                     <output name="avaliacao"><span>9.2 Incrível</span></output> </span>
-                  <h3><output name="nome"><a href="detalhe-guia.html">Gabriel de Oliveira</a></output></h3>
-                  <p class="dolor">A partir de R$<output name="valor">210</output></p>
+                  <h3><a href="detalhe-guia.html">{{listaGuia.nomeGuia}}</a></h3>
+                  <p class="dolor">A partir de R${{listaGuia.valor}}</p>
                 </div>
                 <div class="place-cap-bottom">
                   <ul>
-                    <li><i class="fas fa-map-marker-alt"></i><output name="cidade">Jericoacoara</output></li>
+                    <li><i class="fas fa-map-marker-alt"></i>{{listaGuia.cidade}}</li>
                   </ul>
                 </div>
               </div>
@@ -119,12 +119,12 @@
                 <div class="place-cap-top">
                                    <span><i class="fas fa-star"></i>
                                     <output name="avaliacao"><span>8.8 Ótimo</span></output> </span>
-                  <h3><output name="nome"><a href="detalhe-guia.html">Juliana Silva Santana</a></output></h3>
-                  <p class="dolor">A partir de R$<output name="valor">R$185</output></p>
+                  <h3><a href="detalhe-guia.html">{{listaGuia.nomeGuia}}</a></h3>
+                  <p class="dolor">A partir de R${{listaGuia.valor}}</p>
                 </div>
                 <div class="place-cap-bottom">
                   <ul>
-                    <li><i class="fas fa-map-marker-alt"></i><output name="cidade">Jericoacoara</output></li>
+                    <li><i class="fas fa-map-marker-alt"></i>{{listaGuia.cidade}}</li>
                   </ul>
                 </div>
               </div>
@@ -139,12 +139,12 @@
                 <div class="place-cap-top">
                                      <span><i class="fas fa-star"></i>
                                     <output name="avaliacao"><span>8.0 Muito Bom</span></output> </span>
-                  <h3><output name="nome"><a href="detalhe-guia.html">João Medeiros da Costa</a></output></h3>
-                  <p class="dolor">A partir de R$<output name="valor">R$160</output></p>
+                  <h3><a href="detalhe-guia.html">{{listaGuia.nomeGuia}}</a></h3>
+                  <p class="dolor">A partir de R${{listaGuia.valor}}</p>
                 </div>
                 <div class="place-cap-bottom">
                   <ul>
-                    <li><i class="fas fa-map-marker-alt"></i><output name="cidade">Jericoacoara</output></li>
+                    <li><i class="fas fa-map-marker-alt"></i>{{listaGuia.cidade}}</li>
                   </ul>
                 </div>
               </div>

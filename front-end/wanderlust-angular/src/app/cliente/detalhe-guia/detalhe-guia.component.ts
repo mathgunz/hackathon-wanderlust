@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from 'src/app/_services';
 import { PasseioService } from 'src/app/_services/passeio.service';
 import { GuiaService } from 'src/app/_services/guia.service';
+import { DetalheGuia } from './dtos/detalhe.guia.dtos';
 
 @Component({
   selector: 'app-detalhe-guia',
@@ -17,10 +18,13 @@ export class DetalheGuiaComponent implements OnInit {
           private route: ActivatedRoute,
           private router: Router,
           private alertService: AlertService,
-          private passeioService: PasseioService,) { }
+          private passeioService: PasseioService,
+          private guiaService: GuiaService) { }
+
+detalheGuia: DetalheGuia = new DetalheGuia;
 
   detalheGuiaForm = this.formBuilder.group({
-   nome:"",
+   nomeGuia:"",
    sobrenome:"",
    cadastur:"",
    telefone:"",
@@ -34,5 +38,7 @@ export class DetalheGuiaComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onSubmit(){
 
+  }
 }

@@ -23,43 +23,43 @@
                     <h4><span>Hey, Wanderlusteiro(a)</span></h4>
                     <h2>Minhas Infos </h2>
                 </div>
-                <form  method="post" id="perfil" novalidate="novalidate">
+                <form  [formGroup]="perfilForm" (ngSubmit)="onSubmit()"  novalidate="novalidate">
                     <div class="col-lg-12" align="text-center">
                         <div class="row">
                             <div class="col-lg-6 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-address-card" aria-hidden="true"></i> Nome
-                                        <output class="form-control w-100" name="nome" id="nome"></output>
+                                        <output class="form-control w-100" name="nome" id="nome">{{perfilCliente.nome}}</output>
                                 </div>
                             </div>
                             <div class="col-lg-6 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-address-card" aria-hidden="true"></i> Sobrenome
-                                        <output class="form-control w-100" name="sobrenome" id="sobrenome"></output>
+                                        <output class="form-control w-100" name="sobrenome" id="sobrenome">{{perfilCliente.sobrenome}}</output>
                                 </div>
                             </div>
                             <div class="col-md-4 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-birthday-cake" aria-hidden="true"></i> Data Nascimento
-                                        <output class="form-control" name="dataNasc" id="dataNasc"></output>
+                                        <output class="form-control" name="dataNasc" id="dataNasc">{{perfilCliente.dataNasc}}</output>
                                 </div>
                             </div>
                             <div class="col-md-4 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-globe" aria-hidden="true"></i> Cidade
-                                        <output class="form-control" name="cidade" id="cidade"></output>
+                                        <output class="form-control" name="cidade" id="cidade">{{perfilCliente.cidade}}</output>
                                 </div>
                             </div>
                             <div class="col-md-4 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-phone" aria-hidden="true"></i> Telefone
-                                        <output class="form-control" name="telefone" id="telefone"></output>
+                                        <output class="form-control" name="telefone" id="telefone">{{perfilCliente.telefone}}</output>
                                 </div>
                             </div>
                             <div class="col-lg-12 offset-lg-12">
                                 <div class="form-group">
                                     <p><i class="fa fa-envelope" aria-hidden="true"></i> E-mail
-                                        <output class="form-control w-100" name="email" id="email"></output>
+                                        <output class="form-control w-100" name="email" id="email">{{perfilCliente.email}}</output>
                                 </div>
                             </div>
                         </div>
