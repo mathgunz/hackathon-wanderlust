@@ -25,10 +25,10 @@
           <h2>Aqui encontram-se informações sobre o passeio fixo!</h2>
         </div>
       </div>
-      <form [formGroup]="detalhePasseiosFixoForm"  class="col-lg-12">
+      <form [formGroup]="detalhePasseiosFixoForm" (ngSubmit)="onSubmit()"  class="col-lg-12">
         <div class="col-lg-12 posts-list" align="center">
           <div class="section-top-border">
-            <h2><output name="nomePasseio">Lado Leste-Jericoacoara</output></h2>
+            <h2>{{detalhesPasseiosFixo.nomePasseio}}</h2>
             <div class="row gallery-item">
 
               <div class="col-md-6">
@@ -57,18 +57,18 @@
           <div class="single-post">
             <div class="blog_details" align="left">
               <h2>Sobre o passeio:</h2>
-              <p><i class="fa fa-map-marker"></i> Descrição do Passeio: <output name="descricao"> Pedra Furada, Buraco Azul, Lagoa do Paraíso, Dunas do Pôr do Sol e Árvore da Preguiça</output></p>
-              <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração: <output name="duracao">8hrs</output></p>
-              <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Sol e Praia</output></p>
-              <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor: R$ <output name="valor">250,00</output></p>
-              <p><i class="fa fa-location-arrow"></i> Ponto de Encontro: <output name="endereco">Praça Central</output></p>
+              <p><i class="fa fa-map-marker"></i> Descrição do Passeio:{{detalhesPasseiosFixo.descricao}}</p>
+              <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> Duração: {{detalhesPasseiosFixo.duracao}}</p>
+              <p><i class="fa fa-map"></i> Tipo de Passeio: {{detalhesPasseiosFixo.tipo}}</p>
+              <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor: R$ {{detalhesPasseiosFixo.valor}}</p>
+              <p><i class="fa fa-location-arrow"></i> Ponto de Encontro: {{detalhesPasseiosFixo.enderecoPasseio}}</p>
               <h2>Datas Disponíveis:</h2>
               <input list="datas" placeholder="Escolha a data:"/>
               <datalist id="datas">
-                <option value="24/04/2020">
-                <option value="24/04/2020">
-                <option value="24/04/2020">
-                <option value="24/04/2020">
+                <option value={{detalhesPasseiosFixo.datasDisponiveis}}>
+                <option value={{detalhesPasseiosFixo.datasDisponiveis}}>
+                <option value={{detalhesPasseiosFixo.datasDisponiveis}}>
+                <option value={{detalhesPasseiosFixo.datasDisponiveis}}>
               </datalist>
             </div>
           </div>

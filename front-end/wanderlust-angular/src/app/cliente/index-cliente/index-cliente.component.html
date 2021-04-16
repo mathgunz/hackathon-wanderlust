@@ -81,7 +81,7 @@
         </div>
       </div>
     </div>
-    <form id="aprovacoesCliente">
+    <form [formGroup]="aprovacoesClienteForm" (ngSubmit)="onSubmit()">
       <section class="blog_area section-padding">
         <div class="container">
           <div class="row">
@@ -98,15 +98,13 @@
               <div class="blog_left_sidebar">
                 <article class="blog_item">
                   <div class="blog_details">
-                    <h2>Guia: <output name="guia">Maria Tereza Buarque</output></h2>
+                    <h2>Guia: {{indexCliente.nomeGuia}}</h2>
 
-                    <p><i class="fa fa-info"></i> Status: <output name="guia">Pendente de Aprovação</output></p>
-                    <p><i class="fa fa-map-signs" aria-hidden="true"></i> Passeio: <output name="passeio">Litoral Oeste
-                        - Jeri</output></p>
-                    <p><i class="fa fa-calendar"></i> Data do Passeio: <output name="data">25/05/2021</output></p>
-                    <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Personalizado</output></p>
-                    <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor:R$ <output
-                        name="valor">280,00</output></p>
+                    <p><i class="fa fa-info"></i> Status: {{indexCliente.status}}</p>
+                    <p><i class="fa fa-map-signs" aria-hidden="true"></i> Passeio: {{indexCliente.nomePasseio}}</p>
+                    <p><i class="fa fa-calendar"></i> Data do Passeio: {{indexCliente.data}}</p>
+                    <p><i class="fa fa-map"></i> Tipo de Passeio: {{indexCliente.roteiro}}</p>
+                    <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor: R${{indexCliente.valor}}</p>
                     <p> <img src="assets/img/icon/whatsapp.png" alt="" style="height:30px;width:25px;">
                       <a href="chat.html"><i class="fa fa-whatsapp" aria-hidden="true"></i>Fale com seu guia</a></p>
                     <div
@@ -126,15 +124,13 @@
               <div class="blog_left_sidebar">
                 <article class="blog_item">
                   <div class="blog_details">
-                    <h2>Guia: <output name="guia">Felipe Souza</output></h2>
+                    <h2>Guia: {{indexCliente.nomeGuia}}</h2>
 
-                    <p><i class="fa fa-info"></i> Status: <output name="guia">Pendente de Aprovação</output></p>
-                    <p><i class="fa fa-map-signs" aria-hidden="true"></i> Passeio: <output name="passeio">Rota dos
-                        Cristais - Jeri</output></p>
-                    <p><i class="fa fa-calendar"></i> Data do Passeio: <output name="data">26/05/2021</output></p>
-                    <p><i class="fa fa-map"></i> Tipo de Passeio: <output name="tipoPasseio">Personalizado</output></p>
-                    <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor:R$ <output
-                        name="valor">200,00</output></p>
+                    <p><i class="fa fa-info"></i> Status: {{indexCliente.status}}</p>
+                    <p><i class="fa fa-map-signs" aria-hidden="true"></i> Passeio: {{indexCliente.nomePasseio}}</p>
+                    <p><i class="fa fa-calendar"></i> Data do Passeio: {{indexCliente.data}}</p>
+                    <p><i class="fa fa-map"></i> Tipo de Passeio:  {{indexCliente.roteiro}}</p>
+                    <p><i class="fa fa-credit-card" aria-hidden="true"></i> Valor:R$ {{indexCliente.valor}}</p>
                     <p> <img src="assets/img/icon/whatsapp.png" alt="" style="height:30px;width:25px;">
                       <a href="chat.html"><i class="fa fa-whatsapp" aria-hidden="true"></i>Fale com seu guia</a></p>
                     <div

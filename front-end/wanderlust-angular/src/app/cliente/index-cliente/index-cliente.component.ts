@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService, GuiaService } from 'src/app/_services';
+import { IndexCliente } from './dtos/index.cliente.dtos';
 
 @Component({
   selector: 'app-index-cliente',
@@ -9,6 +10,25 @@ import { AlertService, GuiaService } from 'src/app/_services';
   styleUrls: ['./index-cliente.component.scss']
 })
 export class IndexClienteComponent implements OnInit {
+  constructor(
+    private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
+    private alertService: AlertService,
+    private guiaService: GuiaService,
+  ) { }
+
+    indexCliente: IndexCliente = new IndexCliente;
+
+    aprovacoesClienteForm=this.formBuilder.group({
+    nomeGuia:"",
+    status:"",
+    nomePasseio:"",
+    data:"",
+    roteiro:"",
+    valor:"",
+  });
+
   proximoDestinoForm = this.formBuilder.group({
     nextTrip: "",
     initialDate: "",
@@ -18,15 +38,10 @@ export class IndexClienteComponent implements OnInit {
   loading = false;
   submitted = false;
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
-    private alertService: AlertService,
-    private guiaService: GuiaService,
-  ) { }
-
   ngOnInit(): void {
+  }
+  onSubmit(){
+
   }
 
   buscarGuias(): void {
