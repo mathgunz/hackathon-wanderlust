@@ -1,6 +1,6 @@
 export class DetalhesPasseios {
 
-  "nomePasseio"?:string;
+  "nomePasseio":string;
   "descricao":string;
   "guia":string;
   "data":string;
