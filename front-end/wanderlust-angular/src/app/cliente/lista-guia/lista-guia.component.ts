@@ -3,6 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from 'src/app/_services';
 import { GuiaService } from 'src/app/_services/guia.service';
+import { ListaGuia } from './dtos/lista.guia.dtos';
 
 @Component({
   selector: 'app-lista-guia',
@@ -16,8 +17,9 @@ export class ListaGuiaComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private alertService: AlertService,
-        private guiaService: GuiaService,) { }
+        private guiaService: GuiaService) { }
 
+  listaGuia: ListaGuia = new ListaGuia;
 
    listaGuiaForm=this.formBuilder.group({
     nomeGuia:"",
@@ -31,5 +33,7 @@ export class ListaGuiaComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onSubmit(){
 
+  }
 }

@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from 'src/app/_services';
 import { PasseioService } from 'src/app/_services/passeio.service';
-
+import { ContratacaoFixo } from './dtos/contratacao.fixo.dtos';
 
 @Component({
   selector: 'app-contratacao-fixo',
@@ -21,10 +21,14 @@ export class ContratacaoFixoComponent implements OnInit {
   ) {
   }
 
+  contratacaoFixo: ContratacaoFixo = new ContratacaoFixo;
+
   contratacaoPasseioFixoForm = this.formBuilder.group({
-    nome: "",
+    nomeCidade: "",
+    nomePasseio:"",
     descricao: "",
     guia:"",
+    cadastur:"",
     tipo:"",
     dataDoPasseio:"",
     duracao:"",
@@ -39,5 +43,7 @@ export class ContratacaoFixoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+ onSubmit(){
 
+  }
 }

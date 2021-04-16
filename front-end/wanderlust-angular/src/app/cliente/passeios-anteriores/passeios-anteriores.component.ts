@@ -6,6 +6,7 @@ import { AlertService } from 'src/app/_services';
 import { ClienteService } from 'src/app/_services/cliente.service';
 import { PasseioService } from 'src/app/_services/passeio.service';
 import { GuiaService } from 'src/app/_services/guia.service';
+import { PasseiosAnteriores } from './dtos/passeios.anteriores.dtos';
 
 @Component({
   selector: 'app-passeios-anteriores',
@@ -22,6 +23,8 @@ export class PasseiosAnterioresComponent implements OnInit {
                     private clienteService: ClienteService,
                     ) { }
 
+  passeiosAnteriores: PasseiosAnteriores = new PasseiosAnteriores;
+
   passeiosAnterioresForm=this.formBuilder.group({
   cidadePasseio:"",
   dataPasseio:"",
@@ -30,7 +33,7 @@ export class PasseiosAnterioresComponent implements OnInit {
   descricaoPasseio:"",
   roteiro:"",
   valor:"",
-
+  avaliacao:"",
   });
 
   loading = false;
@@ -38,5 +41,7 @@ export class PasseiosAnterioresComponent implements OnInit {
 
   ngOnInit(): void {
   }
+ onSubmit(){
 
+  }
 }
